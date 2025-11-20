@@ -1,14 +1,14 @@
 # Node.js (server)
-server/node_modules/
+server/node_modules
 server/.DS_Store
 server/npm-debug.log
-server/.vscode/
+server/.vscode
 
 # React
-client/node_modules/
+client/node_modules
 client/.DS_Store
 client/npm-debug.log
-client/.vscode/
+client/.vscode
 client/.env.local
 
 
