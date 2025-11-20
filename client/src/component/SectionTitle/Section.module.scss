@@ -1,0 +1,43 @@
+.section {
+    padding: 38px 0;
+    position: relative;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 22px;
+        
+        h1 {
+            color: #800020;
+            font-size: 28px;
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+}
+
+.page {
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 76px;
+        
+        h1 {
+            font-size: 48px;
+            color: #800020;
+            text-align: center;
+            margin: 0;
+        }
+
+        p {
+            color: #04294f;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}
