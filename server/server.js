@@ -86,8 +86,9 @@ app.get("*", (req, res) => {
 });
 
 // ✅ MongoDB კავშირი
+const mongoApi = process.env.MONGODB_URL || 'mongodb+srv://datto1313:Kaikaco123.@cluster0.ondghzb.mongodb.net/academy?retryWrites=true&w=majority'
 mongoose
-    .connect(process.env.MONGODB_URL, {
+    .connect(mongoApi, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
