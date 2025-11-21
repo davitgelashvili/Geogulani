@@ -3,6 +3,7 @@ server/node_modules
 server/.DS_Store
 server/npm-debug.log
 server/.vscode
+server/.env.local
 
 # React
 client/node_modules
