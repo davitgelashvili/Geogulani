@@ -76,10 +76,12 @@ app.get("/api/ip", (req, res) => {
 app.use("/api", mainrRouter);
 
 // ✅ React-ის ბილდის ფაილების სერვინგი
-app.use(express.static(path.join(__dirname, "../client/build")));
+// app.use(express.static(path.join(__dirname, "../client/build")));
+app.use(express.static(path.join(__dirname, "./../client/build")));
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+    // res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+    res.sendFile(path.join(__dirname, "./../client/build", "index.html"));
 });
 
 // ✅ MongoDB კავშირი
