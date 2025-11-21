@@ -1,37 +1,78 @@
 .header {
-    background-color: #800020;
     width: 100%;
-    padding: 16px 0;
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
 
-    &__call {
-        padding: 0;
-        border: none;
-        background-color: transparent;
+.socbar {
+    width: 100%;
+    background-color: #aa012c;
+    padding: 7px 0;
+}
+
+.logo {
+    display: block;
+
+    img {
+        height: 44px;
     }
+}
 
-    &__logo {
-        display: block;
-
-        img {
-            height: 44px;
-        }
-    }
+.navbar {
+    width: 100%;
+    background-color: #800020;
 }
 
 .menu {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
 
-    li {
+    a,p {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        white-space: nowrap;
+    }
+    
+    &__category {
+        margin: 0;
+        padding: 0 11px 11px 11px;
+        position: absolute;
+        background-color: #800020;
+        display: none;
+        top: calc(100%);
+
+        &--link {
+            margin: 6px 0;
+        }
+    }
+
+    &__item {
         list-style: none;
-        padding-left: -15px;
-        padding-right: -15px;
+        position: relative;
+        margin: 0 6px;
+        height: 100%;
+        display: flex;
+        align-items: center;
 
-        a {
-            display: block;
-            margin: 6px 15px;
-            text-decoration: none;
-            color: #2a2a2a;
+        &:hover {
+            ul {
+                display: block;
+            }
+        }
+
+        &--link {
+            padding: 11px 6px;
+        }
+
+        p {
+            cursor: default;
+            margin: 0;
         }
     }
 }
