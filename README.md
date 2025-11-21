@@ -1,16 +1,10 @@
-# FlyInspectors – Full-Stack Application
+# geogulani – Full-Stack Application
 
-flyinspectors/client/ 
-flyinspectors/server/
+/client/
+/server/
 
-root foler: (flyinspectors)
-npm install
+cd client
+npm i --legacy-peer-deps
 
 cd server
-npm install
-
-cd ../client
-npm install
-
-npm run dev
-
+npm i
