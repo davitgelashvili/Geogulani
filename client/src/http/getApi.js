@@ -9,7 +9,7 @@ const axiosInstance = axios.create({
 
 // GET
 async function getData(url, config = {}) {
-    console.log(process.env.REACT_APP_API_URL || 'http://localhost:5001/api')
+    console.log(process.env)
     try {
         const res = await axiosInstance.get(url, config);
         return res.data;
