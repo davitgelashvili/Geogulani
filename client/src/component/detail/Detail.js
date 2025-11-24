@@ -5,23 +5,24 @@ import PageTitle from '../SectionTitle/PageTitle';
 import Card from '../Card/Card';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { useParams } from 'react-router-dom';
+import { ImageBox } from '../ImageBox/ImageBox';
+import Loading from '../Loading/Loading';
 
 export const Detail = () => {
+    const [load, setLoad] = useState(true)
     const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true)
     const params = useParams()
 
     useEffect(() => {
         async function fetchData() {
             try {
-                setLoading(true)
                 const blogs = await getApi.getData(`/${params.name}/${params.id}`);
                 setData(blogs);
                 console.log(blogs)
             } catch (err) {
                 console.error('Error fetching blogs:', err);
             } finally {
-                setLoading(false)
+                setLoad(false)
             }
         }
 
@@ -29,17 +30,22 @@ export const Detail = () => {
         console.log(params)
     }, [params]);
 
-    if (!data) return null
+    // if (!data) return null
     return (
         <Section>
-            <SectionTitle
-                title={data?.title?.ka}
-            />
-            <figure>
-                <img src={data.cover} alt='cover' />
-            </figure>
+            {load && <Loading />}
+            {!load && (
+                <>
+                    <SectionTitle
+                        title={data?.title?.ka}
+                    />
+                    <figure>
+                        <ImageBox src={data?.cover} alt='cover' />
+                    </figure>
 
-            <div dangerouslySetInnerHTML={{ __html: data?.desc?.ka }}></div>
+                    <div dangerouslySetInnerHTML={{ __html: data?.desc?.ka }}></div>
+                </>
+            )}
         </Section>
     )
 }

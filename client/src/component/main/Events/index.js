@@ -5,8 +5,11 @@ import styles from './styles.module.scss'
 import { Link } from 'react-router-dom'
 import getApi from '../../../http/getApi'
 import Card from '../../Card/Card'
+import Loading from '../../Loading/Loading'
+import { SectionLink } from '../../SectionTitle/SectionLink'
 
 export const LatestEvents = () => {
+    const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
         page: 1,
@@ -22,6 +25,8 @@ export const LatestEvents = () => {
                 setTotalPages(blogs.totalPages); // თუ გიგზავნის საერთო გვერდებს
             } catch (err) {
                 console.error('Error fetching blogs:', err);
+            } finally {
+                setLoad(false)
             }
         }
 
@@ -30,6 +35,7 @@ export const LatestEvents = () => {
     return (
         <Section>
             <SectionTitle title={'latest events'} />
+            {load && <Loading />}
             <div className='row'>
                 {data && data?.map((item) => {
                     return (
@@ -45,7 +51,7 @@ export const LatestEvents = () => {
                 })}
             </div>
             <div className='d-flex justify-content-center'>
-                <Link to={'/events'}>View All</Link>
+                <SectionLink link={'/events'} text={'View All'} />
             </div>
         </Section>
     )

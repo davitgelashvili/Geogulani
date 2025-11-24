@@ -1,0 +1,32 @@
+
+
+.box {
+    --bg: #c2c2c2;
+    --shimmer: #939393;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg, "red");
+    background-image: linear-gradient(-60deg, var(--bg), var(--bg) 35%, var(--shimmer) 50%, var(--bg) 65%);
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: left center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    animation: shimmer 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: -800px 0;
+    }
+
+    to {
+        background-position: 800px 0;
+    }
+}

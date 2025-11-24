@@ -8,8 +8,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import styles from './styles.module.scss'
 import getApi from '../../../http/getApi'
+import { ImageBox } from '../../ImageBox/ImageBox'
+import Loading from '../../Loading/Loading'
 
 export const Camps = () => {
+    const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
         page: 1,
@@ -25,6 +28,8 @@ export const Camps = () => {
                 setTotalPages(blogs.totalPages); // თუ გიგზავნის საერთო გვერდებს
             } catch (err) {
                 console.error('Error fetching blogs:', err);
+            } finally {
+                setLoad(false)
             }
         }
 
@@ -77,10 +82,12 @@ export const Camps = () => {
                     text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
                 />
                 <div className={styles['camps-container']}>
-                    <div className='row'>
-                        <div className='col-6'>
-                            <SectionTitle
-                                title={'Neque porro quisquam est qui'} />
+                    <div>
+                        <SectionTitle
+                            title={'Neque porro quisquam est qui'} />
+                    </div>
+                    <div className='row flex-wrap-reverse flex-lg-row'>
+                        <div className='col-lg-8'>
                             <div>
                                 <p>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -90,9 +97,9 @@ export const Camps = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className='col'>
+                        <div className='col-4'>
                             <figure className={styles['cover']}>
-                                <img src='https://static.tkt.ge/next/static/images/zugdidi.jpg' alt='cover' />
+                                <ImageBox src='https://static.tkt.ge/next/static/images/zugdidi.jpg' alt='cover' />
                             </figure>
                         </div>
                     </div>
@@ -100,10 +107,11 @@ export const Camps = () => {
             </Section>
             <Section>
                 <SectionTitle title={'Upcoming Camps 2025'} />
+                {load && <Loading />}
                 <div className='row'>
                     {data && data?.map((item) => {
                         return (
-                            <div className='col-4' key={item._id}>
+                            <div className='col-sm-6 col-lg-4' key={item._id}>
                                 <Card
                                     cover={item.cover}
                                     title={item.title.ka}
@@ -120,7 +128,7 @@ export const Camps = () => {
                 <div className='row'>
                     {experinceData && experinceData?.map((item) => {
                         return (
-                            <div className='col-4' key={item._id}>
+                            <div className='col-md-6 col-lg-4' key={item._id}>
                                 <ServiceCard
                                     cover={item.cover}
                                     title={item.title}

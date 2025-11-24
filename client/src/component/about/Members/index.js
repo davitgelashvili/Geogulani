@@ -101,7 +101,7 @@ export const Members = () => {
                 <div className='row'>
                     {benefits && benefits?.map((item) => {
                         return (
-                            <div className='col-4' key={item._id}>
+                            <div className='col-6 col-lg-4' key={item._id}>
                                 <ServiceCard
                                     cover={item.cover}
                                     title={item.title}
@@ -117,7 +117,7 @@ export const Members = () => {
                 <div className='row'>
                     {typesData && typesData?.map((item) => {
                         return (
-                            <div className='col-4' key={item._id}>
+                            <div className='col-lg-4' key={item._id}>
                                 <Card
                                     cover={item.cover}
                                     title={item.title}
@@ -134,7 +134,7 @@ export const Members = () => {
                 <div className='row'>
                     {apply && apply?.map((item) => {
                         return (
-                            <div className='col-3' key={item._id}>
+                            <div className='col-sm-6 col-lg-3' key={item._id}>
                                 <ServiceCard
                                     cover={item.cover}
                                     title={item.title}

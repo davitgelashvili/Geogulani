@@ -3,6 +3,7 @@ import Section from '../../SectionTitle/Section'
 import SectionTitle from '../../SectionTitle/SectionTitle'
 import styles from './styles.module.scss'
 import PageTitle from '../../SectionTitle/PageTitle'
+import { ImageBox } from '../../ImageBox/ImageBox'
 
 export const About = () => {
     return (
@@ -14,13 +15,15 @@ export const About = () => {
                 />
                 <div>
                     <div className='row'>
-                        <div className='col-3'>
+                        <div>
+                            <SectionTitle title={'Acient Georgia Symbol'} />
+                        </div>
+                        <div className='col-4 col-lg-3 d-flex justify-content-center'>
                             <figure className={styles['cover']}>
-                                <img src='https://static.tkt.ge/next/static/images/zugdidi.jpg' alt='cover' />
+                                <ImageBox src={'https://static.tkt.ge/next/static/images/zugdidi.jpg'} alt={'cover'} className={styles['cover__img']} />
                             </figure>
                         </div>
-                        <div className='col'>
-                            <SectionTitle title={'Acient Georgia Symbol'} />
+                        <div className='col-auto col-md'>
                             <div className={styles['text']}>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
                             </div>

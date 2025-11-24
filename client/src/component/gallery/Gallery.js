@@ -4,8 +4,10 @@ import Section from '../SectionTitle/Section';
 import PageTitle from '../SectionTitle/PageTitle';
 import Card from '../Card/Card';
 import GalleryCard from '../GalleryCard/GalleryCard';
+import Loading from '../Loading/Loading';
 
 export const Gallery = () => {
+    const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
         page: 1,
@@ -21,6 +23,8 @@ export const Gallery = () => {
                 setTotalPages(blogs.totalPages); // თუ გიგზავნის საერთო გვერდებს
             } catch (err) {
                 console.error('Error fetching blogs:', err);
+            } finally {
+                setLoad(false)
             }
         }
 
@@ -32,10 +36,11 @@ export const Gallery = () => {
                 title={'Gallery'}
                 text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
             />
+            {load && <Loading />}
             <div className='row'>
                 {data && data?.map((item) => {
                     return (
-                        <div className='col-3' key={item._id}>
+                        <div className='col-sm-6 col-md-4 col-lg-3' key={item._id}>
                             <GalleryCard
                                 cover={item.cover}
                                 title={item.title.ka}

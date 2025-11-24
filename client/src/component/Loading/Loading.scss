@@ -1,10 +1,10 @@
-$spinner: #f58220;
+$spinner: #aa012c;
 $background: transparent;
 $size: 30px;
 
 .spinner {
-  position: absolute;
-  top: calc(50% - #{$size / 2});
+  position: relative;
+  // top: calc(50% - #{$size / 2});
   left: calc(50% - #{$size / 2});
   width: $size;
   height: $size;

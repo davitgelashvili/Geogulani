@@ -6,8 +6,10 @@ import PageTitle from '../../SectionTitle/PageTitle'
 import Card from '../../Card/Card'
 import { Link } from 'react-router-dom'
 import getApi from '../../../http/getApi'
+import Loading from '../../Loading/Loading'
 
 export const Courses = () => {
+    const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
         page: 1,
@@ -23,6 +25,8 @@ export const Courses = () => {
                 setTotalPages(blogs.totalPages); // თუ გიგზავნის საერთო გვერდებს
             } catch (err) {
                 console.error('Error fetching blogs:', err);
+            } finally {
+                setLoad(false)
             }
         }
 
@@ -35,15 +39,16 @@ export const Courses = () => {
                     title={'Online Courses'}
                     text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
                 />
+                {load && <Loading />}
                 <div className='row'>
                     {data && data?.map((item) => {
                         return (
-                            <div className='col-4' key={item._id}>
+                            <div className='col-md-6 col-lg-4' key={item._id}>
                                 <Card
                                     cover={item.cover}
                                     title={item.title.ka}
                                     desc={item.desc.ka}
-                                    contactLink={'/contact'}/>
+                                    contactLink={'/contact'} />
                             </div>
                         )
                     })}

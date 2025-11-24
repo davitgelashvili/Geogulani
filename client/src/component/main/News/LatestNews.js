@@ -7,8 +7,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import styles from './styles.module.scss'
 import getApi from '../../../http/getApi'
+import Loading from '../../Loading/Loading'
+import { SectionLink } from '../../SectionTitle/SectionLink'
 
 export const LatestNews = () => {
+    const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
         page: 1,
@@ -24,6 +27,8 @@ export const LatestNews = () => {
                 setTotalPages(blogs.totalPages); // თუ გიგზავნის საერთო გვერდებს
             } catch (err) {
                 console.error('Error fetching blogs:', err);
+            } finally {
+                setLoad(false)
             }
         }
 
@@ -33,11 +38,27 @@ export const LatestNews = () => {
     return (
         <Section>
             <SectionTitle title={'Latest News'} />
+            {load && <Loading />}
             <Swiper
-                spaceBetween={25}
-                slidesPerView={4}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
+                breakpoints={{
+                    // when window width is >= 320px
+                    580: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    // when window width is >= 768px
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    // when window width is >= 1024px
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 25,
+                    },
+                }}
             >
                 {data && data?.map((item) => {
                     return (
@@ -53,7 +74,7 @@ export const LatestNews = () => {
                 })}
             </Swiper>
             <div className='d-flex justify-content-center'>
-                <Link to={'/blogs'}>View All</Link>
+                <SectionLink link={'/blogs'} text={'View All'} />
             </div>
         </Section>
     )
