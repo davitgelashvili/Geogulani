@@ -6,6 +6,7 @@ import Loading from '../Loading/Loading';
 export default function UploadWidget({ setData, title, value, name = 'cover' }) {
     const [imageUrl, setImageUrl] = useState('');
     const [load, setLoad] = useState(false);
+    const API = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
 
     // თუ არსებობს value, მაშინ თავიდანვე შევინახოთ არსებული გამოსახულება
     useEffect(() => {
@@ -23,7 +24,7 @@ export default function UploadWidget({ setData, title, value, name = 'cover' }) 
         formData.append('image', selectedFile);
 
         try {
-            const res = await axios.post(`${process.env.REACT_APP_API_URL}/upload/image`, formData, {
+            const res = await axios.post(`${API}/upload/image`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

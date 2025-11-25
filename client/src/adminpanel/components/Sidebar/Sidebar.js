@@ -39,6 +39,11 @@ export default function Sidebar() {
             _id: 'da23csacsf',
             title: 'ივენთები',
             url: '/adminpanel/events'
+        },
+        {
+            _id: 'd23dsadcsa2d',
+            title: 'მიმართვა',
+            url: '/adminpanel/message'
         }
     ]
 

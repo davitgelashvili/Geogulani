@@ -9,9 +9,12 @@ import GalleryCard from '../../GalleryCard/GalleryCard';
 import getApi from '../../../http/getApi';
 import Loading from '../../Loading/Loading';
 import { SectionLink } from '../../SectionTitle/SectionLink';
+import { Popup } from '../../Popup/Popup';
 
 export const LatestGallery = () => {
     const [load, setLoad] = useState(true)
+    const [popupShow, setPopup] = useState(false)
+    const [_id, set_id] = useState('')
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
         page: 1,
@@ -34,46 +37,59 @@ export const LatestGallery = () => {
 
         fetchData();
     }, [params]);
+
+    function closePopup() {
+        document.body.style.overflow = 'unset'
+        setPopup(false)
+        set_id('')
+    }
+
     return (
-        <Section>
-            <SectionTitle title={'Gallery'} />
-            {load && <Loading />}
-            <Swiper
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-                breakpoints={{
-                    // when window width is >= 320px
-                    580: {
-                        slidesPerView: 2,
-                        spaceBetween: 10,
-                    },
-                    // when window width is >= 768px
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    // when window width is >= 1024px
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 25,
-                    },
-                }}
-            >
-                {data && data?.map((item) => {
-                    return (
-                        <SwiperSlide key={item._id}>
-                            <GalleryCard
-                                cover={item.cover}
-                                title={item.title.ka}
-                                desc={item.desc.ka}
-                            />
-                        </SwiperSlide>
-                    )
-                })}
-            </Swiper>
-            <div className='d-flex justify-content-center'>
-                <SectionLink link={'/gallery'} text={'View All'}/>
-            </div>
-        </Section>
+        <>
+            <Section>
+                <SectionTitle title={'Gallery'} />
+                {load && <Loading />}
+                <Swiper
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    breakpoints={{
+                        // when window width is >= 320px
+                        580: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        },
+                        // when window width is >= 768px
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        // when window width is >= 1024px
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 25,
+                        },
+                    }}
+                >
+                    {data && data?.map((item) => {
+                        return (
+                            <SwiperSlide key={item._id}>
+                                <GalleryCard
+                                    cover={item.cover}
+                                    title={item.title.ka}
+                                    desc={item.desc.ka}
+                                    _id={item._id}
+                                    setPopup={setPopup}
+                                    set_id={set_id}
+                                />
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
+                <div className='d-flex justify-content-center'>
+                    <SectionLink link={'/gallery'} text={'View All'} />
+                </div>
+            </Section>
+            {popupShow && <Popup id={_id} name={'gallery'} closePopup={closePopup} />}
+        </>
     )
 }
