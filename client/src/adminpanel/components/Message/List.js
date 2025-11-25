@@ -32,7 +32,7 @@ export default function MessageList() {
         if (!confirm) return;
 
         try {
-            await getApi.deleteData(`/camps/${id}`);
+            await getApi.deleteData(`/message/${id}`);
             setData(prev => prev.filter(blog => blog._id !== id));
             alert('წაშლა წარმატებით დასრულდა');
         } catch (err) {
