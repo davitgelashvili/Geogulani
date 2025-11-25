@@ -6,7 +6,7 @@ import Loading from '../Loading/Loading';
 export default function UploadWidget({ setData, title, value, name = 'cover' }) {
     const [imageUrl, setImageUrl] = useState('');
     const [load, setLoad] = useState(false);
-    const API = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
+    const API = process.env.REACT_APP_API_URL || 'https://geogulani.com/api';
 
     // თუ არსებობს value, მაშინ თავიდანვე შევინახოთ არსებული გამოსახულება
     useEffect(() => {
