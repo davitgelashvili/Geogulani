@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 
 export default function Menu() {
+    const [activeSubmenu, setActiveSubmenu] = useState(null)
     const data = [
         {
             title: 'Home',
@@ -69,22 +70,29 @@ export default function Menu() {
         }
     ]
 
+    function handleToggle(title) {
+        setActiveSubmenu(prevTitle => (prevTitle === title ? null : title))
+    }
+
     return (
-        <ul className={`${styles['menu']}`}>
+        <ul className={`${styles['menu']} position-absolute `}>
             {data && data?.map((item) => {
+                const isCurrentSubmenuOpen = activeSubmenu === item.title;
                 return (
                     <li className={`${styles['menu__item']}`} key={item?.title}>
                         {item?.url && <Link className={`${styles['menu__item--link']}`} to={item?.url}>{item?.title}</Link>}
                         {item?.data && (
                             <>
-                                <p className={`${styles['menu__item--link']}`}>{item?.title}</p>
-                                <ul className={`${styles['menu__category']}`} data-name={item.title}>
-                                    {item?.data?.map((_item) => {
-                                        return (
-                                            <Link to={_item?.url} className={`${styles['menu__category--link']}`} key={_item?.title}>{_item?.title}</Link>
-                                        )
-                                    })}
-                                </ul>
+                                <p className={`${styles['menu__item--link']} ${isCurrentSubmenuOpen ? styles['active'] : ''}`} onClick={() => handleToggle(item.title)}>{item?.title}</p>
+                                {isCurrentSubmenuOpen && (
+                                    <ul className={`${styles['menu__category']}`} data-name={item.title}>
+                                        {item?.data?.map((_item) => {
+                                            return (
+                                                <Link to={_item?.url} className={`${styles['menu__category--link']}`} key={_item?.title} onClick={()=>setActiveSubmenu(null)}>{_item?.title}</Link>
+                                            )
+                                        })}
+                                    </ul>
+                                )}
                             </>
                         )}
                     </li>

@@ -1,0 +1,12 @@
+.message {
+    &__cover {
+        width: 100%;
+        margin: 0;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 import CustomButton from '../../CustomButton/CustomButton'
@@ -7,6 +7,7 @@ import Logo from './Logo'
 import Menu from './Menu'
 
 export default function NavBar() {
+    const [active, setActive] = useState(false)
     const data = [
         {
             title: 'Home',
@@ -67,8 +68,23 @@ export default function NavBar() {
                     <div className='col-auto'>
                         <Logo />
                     </div>
-                    <div className='col'>
-                        <Menu />
+                    <div className='col d-flex justify-content-end align-items-center'>
+                        <div className='d-block d-lg-none'>
+                            {active && <Menu />}
+                        </div>
+                        <div className='d-none d-lg-block'>
+                            <Menu />
+                        </div>
+                        <div className='d-block d-lg-none'>
+                            <button onClick={()=>setActive(!active)}>burger</button>
+                        </div>
+                        <div className='d-block'>
+                            <select>
+                                <option>ka</option>
+                                <option>en</option>
+                                <option>ko</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>

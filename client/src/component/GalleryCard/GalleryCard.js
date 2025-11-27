@@ -3,7 +3,7 @@ import styles from './GalleryCard.module.scss'
 import { Link } from 'react-router-dom'
 import { ImageBox } from '../ImageBox/ImageBox'
 
-export default function GalleryCard({ cover, title, desc, _id, setPopup, set_id }) {
+export default function GalleryCard({ cover, title, position, desc, _id, setPopup, set_id }) {
     function openPopup() {
         document.body.style.overflow = 'hidden'
         setPopup(true)
@@ -20,7 +20,8 @@ export default function GalleryCard({ cover, title, desc, _id, setPopup, set_id 
             {title && desc && (
                 <div>
                     <h1>{title}</h1>
-                    <div className={styles['itemcard__text--desc']} dangerouslySetInnerHTML={{ __html: desc }}></div>
+                    <p>{position}</p>
+                    {/* <div className={styles['itemcard__text--desc']} dangerouslySetInnerHTML={{ __html: desc }}></div> */}
                 </div>
             )}
         </div>

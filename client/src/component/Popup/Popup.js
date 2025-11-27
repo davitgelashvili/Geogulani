@@ -29,20 +29,23 @@ export const Popup = ({ id, name, closePopup }) => {
             <div className={styles.popup__bg} onClick={() => closePopup()}></div>
             {load && <Loading />}
             {!load && (
-                <div className='container'>
+                <div className={`container ${styles.custom_container}`}>
                     <div className={styles.popup__content}>
                         <div className='container'>
                             <div className='row'>
-                                <div className='col-8'>
-                                    <figure>
+                                <div className='col-lg-auto'>
+                                    <figure className={styles.popup__cover}>
                                         <ImageBox src={data?.cover} alt='cover' />
                                     </figure>
                                 </div>
-                                <div className='col-4'>
-                                    <SectionTitle
-                                        title={data?.title?.ka}
-                                    />
-                                    <div dangerouslySetInnerHTML={{ __html: data?.desc?.ka }}></div>
+                                <div className='col'>
+                                    <div className={styles.popup__text}>
+                                        <SectionTitle
+                                            title={data?.title?.ka}
+                                        />
+                                        <p>{data?.position?.ka}</p>
+                                        <div dangerouslySetInnerHTML={{ __html: data?.desc?.ka }}></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -60,6 +60,7 @@ export const Team = () => {
                                 <GalleryCard
                                     cover={item?.cover}
                                     title={item?.title.ka}
+                                    position={item?.position.ka}
                                     desc={item?.desc.ka}
                                     _id={item._id}
                                     setPopup={setPopup}

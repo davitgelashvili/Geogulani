@@ -8,9 +8,9 @@ const uploadRouter = express.Router();
 const upload = multer({ dest: 'uploads/' });
 
 cloudinary.config({
-  cloud_name: 'drqjr0n4r',
-  api_key: '771335389864798',
-  api_secret: '9EsAadXC-h9iQ7iN7iJ6CRpXLpY'
+  cloud_name: 'dox8wltod',
+  api_key: '647329218327454',
+  api_secret: 'xvIrfdul5u_n8cRaiK6Fz8rZnqk'
 });
 
 uploadRouter.post('/image', upload.single('image'), async (req, res) => {

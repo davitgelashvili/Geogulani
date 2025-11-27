@@ -50,9 +50,9 @@ export default function AddTeam() {
           cover: team?.cover || '',
           category: team?.category || '',
           position: {
-            en: team?.desc?.en || '',
-            ka: team?.desc?.ka || '',
-            ru: team?.desc?.ru || '',
+            en: team?.position?.en || '',
+            ka: team?.position?.ka || '',
+            ru: team?.position?.ru || '',
           },
         });
       } catch (err) {
