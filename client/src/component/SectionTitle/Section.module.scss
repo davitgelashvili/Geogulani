@@ -1,26 +1,35 @@
 .section {
-    padding: 38px 0;
+    // padding: 38px 0;
+    padding: 96px 0;
     position: relative;
+    background-color: #e5e7eb;
 
     &__head {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
-        margin-bottom: 22px;
-        
+        margin-bottom: 32px;
+
         h1 {
-            color: #800020;
-            font-size: 28px;
+            color: #a30026;
+            font-size: 30px;
             text-align: center;
+            font-size: 30px;
+            font-weight: 700;
             margin: 0;
         }
     }
 
     &__link {
         text-decoration: none;
-        color: #aa012c;
-        font-size: 14px;
+        color: #a30026;
+        font-size: 16px;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration:underline
+        }
     }
 
 }
@@ -32,10 +41,10 @@
         justify-content: space-between;
         flex-direction: column;
         margin-bottom: 76px;
-        
+
         h1 {
             font-size: 48px;
-            color: #800020;
+            color: #a30026;
             text-align: center;
             margin: 0;
         }

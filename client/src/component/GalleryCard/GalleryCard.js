@@ -20,7 +20,7 @@ export default function GalleryCard({ cover, title, position, desc, _id, setPopu
             {title && desc && (
                 <div>
                     <h1>{title}</h1>
-                    <p>{position}</p>
+                    {/* <p>{position}</p> */}
                     {/* <div className={styles['itemcard__text--desc']} dangerouslySetInnerHTML={{ __html: desc }}></div> */}
                 </div>
             )}

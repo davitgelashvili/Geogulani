@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 
-export default function Menu() {
+export default function Menu({className}) {
     const [activeSubmenu, setActiveSubmenu] = useState(null)
     const data = [
         {
@@ -13,7 +13,7 @@ export default function Menu() {
             title: 'About',
             data: [
                 {
-                    title: 'asociation',
+                    title: 'Asociation',
                     url: '/about',
                 },
                 {
@@ -75,7 +75,7 @@ export default function Menu() {
     }
 
     return (
-        <ul className={`${styles['menu']} position-absolute `}>
+        <ul className={`${styles['menu']} position-absolute ${className}`}>
             {data && data?.map((item) => {
                 const isCurrentSubmenuOpen = activeSubmenu === item.title;
                 return (

@@ -1,16 +1,23 @@
 .itemcard {
-    background-color: #fff;
-    border-radius: 20px;
+    background-color: #f0f9ff;
+    border-radius: 8px;
     overflow: hidden;
     margin: 15px 0;
     box-shadow: 0px 0 17px -10px #2a2a2a;
+    // box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition-duration: 300ms;
+    
+    &:hover {
+        transform: translateY(-6px)
+    }
 
     &__cover {
-        height: 200px;
+        height: 192px;
         width: 100%;
         margin: 0;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
         overflow: hidden;
 
         &--img {
@@ -21,31 +28,36 @@
     }
 
     &__text {
-        padding: 18px 12px;
+        padding: 24px;
 
         &--title {
+            height: 56px;
             margin: 0;
-            font-size: 22px;
-            text-overflow: ellipsis;
+            margin-bottom: 8px;
+            color: #111827;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 700;
             overflow: hidden;
+            text-overflow: ellipsis;
             word-break: break-word;
-            height: 50px;
-            line-height: 22px;
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
         }
 
         &--desc {
-            font-size: 16px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            word-break: break-word;
             max-height: 66px;
-            line-height: 16px;
+            color: #4b5563;
+            font-size: 14px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
             display: -webkit-box;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 4;
+            -webkit-line-clamp: 3;
+
 
             p {
                 margin: 0;
@@ -53,12 +65,13 @@
         }
 
         &--link {
-            margin: 15px 0 0 0;
+            margin: 16px 0 0 0;
             display: block;
         }
 
         &--contact {
             margin: auto;
+            margin: 16px 0 0 0;
             background-color: #800020;
             color: #fff;
             display: block;

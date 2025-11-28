@@ -34,7 +34,7 @@ export const LatestEvents = () => {
     }, [params]);
     return (
         <Section>
-            <SectionTitle title={'latest events'} />
+            <SectionTitle title={'Latest Events'} />
             {load && <Loading />}
             <div className='row'>
                 {data && data?.map((item) => {

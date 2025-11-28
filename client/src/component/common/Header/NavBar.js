@@ -69,14 +69,10 @@ export default function NavBar() {
                         <Logo />
                     </div>
                     <div className='col d-flex justify-content-end align-items-center'>
+                        {active && <Menu className={'d-flex d-lg-none'} />}
+                        <Menu className={'d-none d-lg-flex'} />
                         <div className='d-block d-lg-none'>
-                            {active && <Menu />}
-                        </div>
-                        <div className='d-none d-lg-block'>
-                            <Menu />
-                        </div>
-                        <div className='d-block d-lg-none'>
-                            <button onClick={()=>setActive(!active)}>burger</button>
+                            <button onClick={() => setActive(!active)}>burger</button>
                         </div>
                         <div className='d-block'>
                             <select>
