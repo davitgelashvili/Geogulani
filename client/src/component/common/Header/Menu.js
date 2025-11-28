@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 
-export default function Menu({className}) {
+export default function Menu({ className, setActive }) {
     const [activeSubmenu, setActiveSubmenu] = useState(null)
     const data = [
         {
@@ -80,7 +80,10 @@ export default function Menu({className}) {
                 const isCurrentSubmenuOpen = activeSubmenu === item.title;
                 return (
                     <li className={`${styles['menu__item']}`} key={item?.title}>
-                        {item?.url && <Link className={`${styles['menu__item--link']}`} to={item?.url}>{item?.title}</Link>}
+                        {item?.url && <Link className={`${styles['menu__item--link']}`} to={item?.url} onClick={() => {
+                            setActiveSubmenu(null)
+                            setActive(false)
+                        }}>{item?.title}</Link>}
                         {item?.data && (
                             <>
                                 <p className={`${styles['menu__item--link']} ${isCurrentSubmenuOpen ? styles['active'] : ''}`} onClick={() => handleToggle(item.title)}>{item?.title}</p>
@@ -88,7 +91,10 @@ export default function Menu({className}) {
                                     <ul className={`${styles['menu__category']}`} data-name={item.title}>
                                         {item?.data?.map((_item) => {
                                             return (
-                                                <Link to={_item?.url} className={`${styles['menu__category--link']}`} key={_item?.title} onClick={()=>setActiveSubmenu(null)}>{_item?.title}</Link>
+                                                <Link to={_item?.url} className={`${styles['menu__category--link']}`} key={_item?.title} onClick={() => {
+                                                    setActive(false)
+                                                    setActiveSubmenu(null)
+                                                }}>{_item?.title}</Link>
                                             )
                                         })}
                                     </ul>

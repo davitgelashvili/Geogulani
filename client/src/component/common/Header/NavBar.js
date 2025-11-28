@@ -65,17 +65,17 @@ export default function NavBar() {
         <div className={`${styles['navbar']}`}>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-auto'>
+                    <div className='col-auto d-flex align-items-center'>
                         <Logo />
                     </div>
                     <div className='col d-flex justify-content-end align-items-center'>
-                        {active && <Menu className={'d-flex d-lg-none'} />}
-                        <Menu className={'d-none d-lg-flex'} />
+                        {active && <Menu className={'d-flex d-lg-none'} setActive={setActive}/>}
+                        <Menu className={'d-none d-lg-flex'} setActive={setActive}/>
                         <div className='d-block d-lg-none'>
                             <button onClick={() => setActive(!active)}>burger</button>
                         </div>
                         <div className='d-block'>
-                            <select>
+                            <select className={styles.language}>
                                 <option>ka</option>
                                 <option>en</option>
                                 <option>ko</option>
