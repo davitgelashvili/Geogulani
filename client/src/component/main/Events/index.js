@@ -39,7 +39,7 @@ export const LatestEvents = () => {
             <div className='row'>
                 {data && data?.map((item) => {
                     return (
-                        <div className='col-6' key={item._id}>
+                        <div className='col-lg-6' key={item._id}>
                             <Card
                                 cover={item.cover}
                                 title={item.title.ka}

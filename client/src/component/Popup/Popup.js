@@ -29,7 +29,7 @@ export const Popup = ({ id, name, closePopup }) => {
             <div className={styles.popup__bg} onClick={() => closePopup()}></div>
             {load && <Loading />}
             {!load && (
-                <div className={`container ${styles.custom_container}`}>
+                <div className={`${styles.custom_container}`}>
                     <div className={styles.popup__content}>
                         <div className='container'>
                             <div className='row'>

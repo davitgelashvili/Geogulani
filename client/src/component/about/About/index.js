@@ -18,7 +18,7 @@ export const About = () => {
                         <div>
                             <SectionTitle title={'Acient Georgia Symbol'} />
                         </div>
-                        <div className='col-4 col-lg-3 d-flex justify-content-center'>
+                        <div className='col-12 col-lg-3 d-flex justify-content-center'>
                             <figure className={styles['cover']}>
                                 <ImageBox src={'https://static.tkt.ge/next/static/images/zugdidi.jpg'} alt={'cover'} className={styles['cover__img']} />
                             </figure>

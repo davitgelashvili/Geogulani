@@ -46,7 +46,7 @@ export const LatestGallery = () => {
 
     return (
         <>
-            <Section bgColor={'#fff1f2'}>
+            <Section bgColor={'#fff1f2b3'}>
                 <SectionTitle title={'Gallery'}/>
                 {load && <Loading />}
                 <Swiper
@@ -54,93 +54,7 @@ export const LatestGallery = () => {
                     onSwiper={(swiper) => console.log(swiper)}
                     breakpoints={{
                         // when window width is >= 320px
-                        580: {
-                            slidesPerView: 2,
-                            spaceBetween: 10,
-                        },
-                        // when window width is >= 768px
-                        768: {
-                            slidesPerView: 3,
-                            spaceBetween: 20,
-                        },
-                        // when window width is >= 1024px
-                        1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 25,
-                        },
-                    }}
-                >
-                    {data && data?.map((item) => {
-                        return (
-                            <SwiperSlide key={item._id}>
-                                <GalleryCard
-                                    cover={item.cover}
-                                    title={item.title.ka}
-                                    desc={item.desc.ka}
-                                    _id={item._id}
-                                    setPopup={setPopup}
-                                    set_id={set_id}
-                                />
-                            </SwiperSlide>
-                        )
-                    })}
-                </Swiper>
-                <div className='d-flex justify-content-center'>
-                    <SectionLink link={'/gallery'} text={'View All'} />
-                </div>
-            </Section>
-            <Section bgColor={'#a300263b'}>
-                <SectionTitle title={'Gallery'}/>
-                {load && <Loading />}
-                <Swiper
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    breakpoints={{
-                        // when window width is >= 320px
-                        580: {
-                            slidesPerView: 2,
-                            spaceBetween: 10,
-                        },
-                        // when window width is >= 768px
-                        768: {
-                            slidesPerView: 3,
-                            spaceBetween: 20,
-                        },
-                        // when window width is >= 1024px
-                        1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 25,
-                        },
-                    }}
-                >
-                    {data && data?.map((item) => {
-                        return (
-                            <SwiperSlide key={item._id}>
-                                <GalleryCard
-                                    cover={item.cover}
-                                    title={item.title.ka}
-                                    desc={item.desc.ka}
-                                    _id={item._id}
-                                    setPopup={setPopup}
-                                    set_id={set_id}
-                                />
-                            </SwiperSlide>
-                        )
-                    })}
-                </Swiper>
-                <div className='d-flex justify-content-center'>
-                    <SectionLink link={'/gallery'} text={'View All'} />
-                </div>
-            </Section>
-            <Section bgColor={'#2a2a2a'}>
-                <SectionTitle title={'Gallery'} color={'#fff'}/>
-                {load && <Loading />}
-                <Swiper
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    breakpoints={{
-                        // when window width is >= 320px
-                        580: {
+                        0: {
                             slidesPerView: 2,
                             spaceBetween: 10,
                         },

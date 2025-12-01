@@ -50,7 +50,7 @@ export const Gallery = () => {
                 <div className='row'>
                     {data && data?.map((item) => {
                         return (
-                            <div className='col-sm-6 col-md-4 col-lg-3' key={item._id}>
+                            <div className='col-6 col-md-4 col-lg-3' key={item._id}>
                                 <GalleryCard
                                     cover={item.cover}
                                     title={item.title.ka}

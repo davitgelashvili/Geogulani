@@ -5,8 +5,12 @@
     border-radius: 20px;
     overflow: hidden;
 
+    
     &__img {
         height: 100%;
+        @media (max-width: 991px) {
+            width: 100%;
+        }
     }
 }
 
