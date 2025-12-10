@@ -2,6 +2,11 @@
     // max-width: 1024px;
     width: 100%;
     margin: auto;
+
+    &__text {
+        font-size: 18px;
+        line-height: 28px;
+    }
 }
 .cover {
     width: 100%;

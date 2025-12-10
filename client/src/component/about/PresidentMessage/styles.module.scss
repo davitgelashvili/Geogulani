@@ -9,4 +9,14 @@
             width: 100%;
         }
     }
+
+    &__title {
+        font-size: 24px;
+    }
+
+    &__text {
+        line-height: 32px;
+        font-size: 18px;
+        text-align: justify;
+    }
 }

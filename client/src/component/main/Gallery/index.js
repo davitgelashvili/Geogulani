@@ -45,9 +45,9 @@ export const LatestGallery = () => {
     }
 
     return (
-        <>
-            <Section bgColor={'#fff1f2b3'}>
-                <SectionTitle title={'Gallery'}/>
+        <div style={{position: 'fixed', bottom: 0, width: '100%', height: '100vh', backgroundColor: 'rgba(255, 241, 242, 0.7)', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
+            <Section>
+                <SectionTitle title={'გალერია'}/>
                 {load && <Loading />}
                 <Swiper
                     onSlideChange={() => console.log('slide change')}
@@ -90,6 +90,6 @@ export const LatestGallery = () => {
                 </div>
             </Section>
             {popupShow && <Popup id={_id} name={'gallery'} closePopup={closePopup} />}
-        </>
+        </div>
     )
 }

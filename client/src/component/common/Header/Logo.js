@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
-import logo from './../../../assets/images/logo.png'
+import logo from './../../../assets/images/logo_ka.png'
 
 export default function Logo() {
     return (

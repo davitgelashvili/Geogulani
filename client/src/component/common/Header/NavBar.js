@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 import CustomButton from '../../CustomButton/CustomButton'
-import logo from './../../../assets/images/logo.png'
 import Logo from './Logo'
 import Menu from './Menu'
 

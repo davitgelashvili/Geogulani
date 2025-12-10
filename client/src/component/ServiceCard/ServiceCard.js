@@ -11,7 +11,7 @@ export default function ServiceCard({ cover, title, desc }) {
                 </figure>
             )}
             {title && desc && (
-                <div>
+                <div className={styles['item__text']}>
                     <h1>{title}</h1>
                     <div className={styles['itemcard__text--desc']} dangerouslySetInnerHTML={{ __html: desc }}></div>
                 </div>

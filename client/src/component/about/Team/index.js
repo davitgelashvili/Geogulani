@@ -48,7 +48,7 @@ export const Team = () => {
         <>
             <Section>
                 <PageTitle
-                    title={'Our Team'}
+                    title={'ჩვენი გუნდი'}
                     text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
                 />
                 <SectionTitle title={'Leadership'} />

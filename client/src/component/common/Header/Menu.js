@@ -17,6 +17,10 @@ export default function Menu({ className, setActive }) {
                     url: '/about',
                 },
                 {
+                    title: 'Georgia Calligraphy',
+                    url: '/geocalligraphy',
+                },
+                {
                     title: 'Message',
                     url: '/message',
                 },

@@ -7,60 +7,31 @@ import ServiceCard from '../../ServiceCard/ServiceCard'
 import Card from '../../Card/Card'
 
 export const Members = () => {
-    const benefits = [
-        {
-            _id: 'd1dsc',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: 'TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '3fea',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: 'TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '42dfassd',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: 'TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '2ggddvsddf',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: 'TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '3r3fds',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: 'TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '3r3fds',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: 'TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        }
-    ]
 
     const typesData = [
         {
             _id: 'vevsa3ca',
-            title: 'student membership',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+            title: 'სტანდარტული წევრი',
+            desc: `
+            სტანდარტული წევრები პირველები იგებენ ასოციაციის სიახლეებს, ყოველგვარი საფასურის გარეშე მონაწილეობენ დაგეგმილ ღონისძიებებში და ქმნიან საკუთარ პროფილებს საერთაშორისო კალიგრაფიის ქსელში.
+            <p>საწევრო გადასახადი:</p> <strong>საქართველო  – 10 ₾ / თვეში</strong>
+            `,
         },
         {
             _id: 'fa2cas',
-            title: 'professional membership',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+            title: 'საერთაშორისო წევრი',
+            desc: `
+            სტანდარტული წევრები პირველები იგებენ ასოციაციის სიახლეებს, ყოველგვარი საფასურის გარეშე მონაწილეობენ დაგეგმილ ღონისძიებებში და ქმნიან საკუთარ პროფილებს საერთაშორისო კალიგრაფიის ქსელში.
+            <p>საწევრო გადასახადი:</p> <strong>საერთაშორისო  – 10 € / თვეში</strong>
+            `,
         },
         {
             _id: 'sda2dcsasd',
-            title: 'master membership',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+            title: 'საპატიო წევრი',
+            desc: `
+            <p>საპატიო წევრობა ენიჭებათ იმ პირებს, რომლებიც გამორჩეულად ნაყოფიერად მოღვაწეობენ ქართული კალიგრაფიის ხელოვნების განვითარებისათვის, პოპულარიზაციისა და გავრცელებისათვის.</p></br>
+            საპატიო წევრებს ირჩევს ასოციაციის დირექტორატი. მათ გადაეცემათ ასოციაციის სპეციალური გრან-პრი  და აქვთ შესაძლებლობა მიიღონ მონაწილეობა ასოციაციის მიერ ორგანიზებულ ნებისმიერ ღონისძიებაში, ფესტივალებსა და საერთაშორისო ფორუმებში.
+            `,
         }
     ]
 
@@ -68,52 +39,30 @@ export const Members = () => {
         {
             _id: 'dsad23ca',
             cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+            title: 'მოსწავლეთა კლუბი',
+            desc: `
+            კლუბი განკუთვნილია 6-18 წლის ასაკის მოსწავლეთათვის,  წევრები მიიღებენ სპეციალურ სასწავლო მასალებს, ისინი პროფესიონალ კალიგრაფებთან შეისწავლიან ხელოვნების ამ დარგს და ექნებათ მონაწილეობის შესაძლებლობა ბავშვთა კონკურსებსა და ახალგაზრდულ ფესტივალებში; ასევე სარგებლობენ განსაკუთრებული შეღავათებითა და ექსკლუზიური შეთავაზებებით.
+            <p>საწევრო გადასახადი:</p><strong>12 ₾ / წელიწადში</strong>
+            `,
         },
         {
             _id: 'dsd2c',
             cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '2 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: 'das2f322',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '3 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: 'da23cefs',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '4 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
+            title: 'უფროსთა კლუბი',
+            desc: `
+                წევრები იღებენ ექსკლუზიურ წვდომას შემოქმედებით პროგრამებსა და მასტერკლასებზე, პერსონალურ პროფესიულ კონსულტაციებს, მონაწილეობენ კონკურსებსა და ფესტივალებში, ასევე სარგებლობენ განსაკუთრებული შეღავათებითა და ექსკლუზიური შეთავაზებებით.
+                <p>საწევრო გადასახადი:</p><strong>120 ₾ / წელიწადში</strong>
+            `,
+        }
     ]
     return (
         <>
             <Section>
                 <PageTitle
-                    title={'Membership'}
+                    title={'წევრობა'}
                     text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
                 />
-                <SectionTitle title={'member benefits'} />
-                <div className='row'>
-                    {benefits && benefits?.map((item) => {
-                        return (
-                            <div className='col-6 col-lg-4' key={item._id}>
-                                <ServiceCard
-                                    cover={item.cover}
-                                    title={item.title}
-                                    desc={item.desc}
-                                />
-                            </div>
-                        )
-                    })}
-                </div>
-            </Section>
-            <Section>
-                <SectionTitle title={'member types'} />
+                {/* <SectionTitle title={'წევრობა'} /> */}
                 <div className='row'>
                     {typesData && typesData?.map((item) => {
                         return (
@@ -130,11 +79,11 @@ export const Members = () => {
                 </div>
             </Section>
             <Section>
-                <SectionTitle title={'how to apply'} />
+                <SectionTitle title={'კლუბი'} />
                 <div className='row'>
                     {apply && apply?.map((item) => {
                         return (
-                            <div className='col-sm-6 col-lg-3' key={item._id}>
+                            <div className='col-lg-6' key={item._id}>
                                 <ServiceCard
                                     cover={item.cover}
                                     title={item.title}
@@ -144,6 +93,11 @@ export const Members = () => {
                         )
                     })}
                 </div>
+            </Section>
+            <Section>
+                <Card
+                    title={'📌 კლუბების წევრებს ვთავაზობთ 50%- მდე  ფასდაკლებას ასოციაციის ყველა პროდუქციასა და აქტივობაზე.'}
+                />
             </Section>
         </>
     )

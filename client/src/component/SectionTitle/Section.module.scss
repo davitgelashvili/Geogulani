@@ -2,7 +2,7 @@
     // padding: 38px 0;
     padding: 96px 0;
     position: relative;
-    background-color: #e5e7eb;
+    background-color: transparent;
 
     @media (max-width: 991px) {
         padding: 76px 0;
@@ -54,6 +54,7 @@
             color: #a30026;
             text-align: center;
             margin: 0;
+            margin-bottom: 32px;
 
             @media (max-width: 991px) {
                 font-size: 40px;
@@ -64,6 +65,8 @@
             color: #04294f;
             text-align: center;
             margin: 0;
+            line-height: 32px;
+            font-size: 18px;
         }
     }
 }

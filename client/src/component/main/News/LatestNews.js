@@ -36,8 +36,8 @@ export const LatestNews = () => {
     }, [params]);
 
     return (
-        <Section>
-            <SectionTitle title={'Latest News'} />
+        <Section bgColor={'#e5e7eb'}>
+            <SectionTitle title={'სიახლეები'} />
             {load && <Loading />}
             <Swiper
                 onSlideChange={() => console.log('slide change')}

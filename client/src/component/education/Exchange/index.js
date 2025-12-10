@@ -78,7 +78,7 @@ export const Exchange = () => {
 
             <Section>
                 <PageTitle
-                    title={'Cultural Exchange & Travel'}
+                    title={'კულტურული ინტერაქცია'}
                     text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
                 />
                 <SectionTitle title={'Current Exchange Program'} />

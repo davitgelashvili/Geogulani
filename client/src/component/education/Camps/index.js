@@ -78,22 +78,29 @@ export const Camps = () => {
         <>
             <Section>
                 <PageTitle
-                    title={'Calligraphy Camps'}
+                    title={'კალიგრაფიული ბანაკები'}
                     text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
                 />
                 <div className={styles['camps-container']}>
                     <div>
                         <SectionTitle
-                            title={'Neque porro quisquam est qui'} />
+                            title={'1 კვირიანი საერთაშორისო ბანაკი'} />
                     </div>
                     <div className='row flex-wrap-reverse flex-lg-row'>
                         <div className='col-lg-8'>
-                            <div>
+                            <div className={styles['camps-container__text']}>
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                გამორჩეული გამოცდილება მათთვის, ვისაც სურს ქართული კალიგრაფიის ღრმა წვდომა და შემოქმედებით გარემოში საკუთარი შესაძლებლობების განვითარება.
                                 </p>
+                                <ul>
+                                    <li>ყოველდღიური ინტენსიური მასტერკლასები პროფესიონალი კალიგრაფებისგან;</li>
+                                    <li>სწავლება სამ კალიგრაფიულ სისტემაში – მხედრული, ასომთავრული, ნუსხური;</li>
+                                    <li>კულტურული მარშრუტები, ეკლესიების, ისტორიული მონუმენტებისა და მუზეუმების მონახულება;</li>
+                                    <li>საღამოს შემოქმედებითი სესიები და თემატური შეხვედრები;</li>
+                                    <li>ბანაკის დასასრულს – ასამბლეა და მონაწილეთა ნამუშევრების ოფიციალური გამოფენა.</li>
+                                </ul>
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                ბანაკები ტარდება როგორც საქართველოში, ასევე უცხოეთში პარტნიორი ორგანიზაციების აქტიური ჩართულობით.
                                 </p>
                             </div>
                         </div>

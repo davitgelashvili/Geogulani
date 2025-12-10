@@ -33,8 +33,8 @@ export const LatestEvents = () => {
         fetchData();
     }, [params]);
     return (
-        <Section>
-            <SectionTitle title={'Latest Events'} />
+        <Section bgColor={'#e5e7eb'}>
+            <SectionTitle title={'ღონისძიებები'} />
             {load && <Loading />}
             <div className='row'>
                 {data && data?.map((item) => {

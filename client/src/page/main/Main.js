@@ -7,9 +7,11 @@ import { LatestGallery } from '../../component/main/Gallery'
 export default function MainPage() {
   return (
     <>
-      <WeAre />
-      <LatestNews />
-      <LatestEvents />
+      <div style={{background: '#fff', marginBottom: '100vh', position: 'relative', zIndex: 1, boxShadow: '0px 0px 41px 0px #2a2a2a'}}>
+        <WeAre />
+        <LatestNews />
+        <LatestEvents />
+      </div>
       <LatestGallery />
     </>
   )

@@ -2,14 +2,29 @@ import React from 'react'
 import SectionTitle from '../../SectionTitle/SectionTitle'
 import Section from '../../SectionTitle/Section'
 import styles from './styles.module.scss'
+import logo from './../../../assets/images/logo_ka.png'
+
 
 export const WeAre = () => {
+    const title = {
+        ka: 'ჩვენ შესახებ',
+        en: '',
+        ru: '',
+    }
+    const desc = {
+        ka: 'ქართული კალიგრაფიის პირველი საერთაშორისო ასოციაცია შეიქმნა უძველესი და უნიკალური ქართული კალიგრაფიული ხელოვნების მრავალფეროვნების ასახვისა და თანამედროვეობაში გაცოცხლების მიზნით. ჩვენ ვცდილობთ შევინარჩუნოთ მრავალსაუკუნოვანი ტრადიცია და მოვძებნოთ მოდერნული შემოქმედებითი ფორმები, რათა  ფართო აუდიტორიას გავაცნოთ  კაცობრიობის  არამატერიალურ კულტურულ მემკვიდრეობად აღიარებული  ქართული  ანბანი.  ჩვენი ასოციაცია აერთიანებს როგორც პროფესიონალ კალიგრაფებს, ასევე მათაც, ვინც დაინტერესებულია კალიგრაფიული ხელოვნების შესწავლით. ჩვენ გვსურს უნიკალური ქართული კალიგრაფიის შენარჩუნება, განვითარება და მისი დაბრუნება თანამედროვე ქართულ   კულტურასა  და  განათლებაში.',
+        en: '',
+        ru: '',
+    }
     return (
-        <Section bgColor={'#ebf8ff'}>
+        <Section bgColor={'#fff'}>
             <div className={styles.weare}>
-                <SectionTitle title={'Who We Are'} />
+                <SectionTitle title={title.ka} />
+                <img src={logo} alt='logo' style={{width: '200px'}}/>
                 <p className={styles.text}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    {
+                        desc.ka
+                    }
                 </p>
             </div>
         </Section>

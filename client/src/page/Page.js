@@ -13,6 +13,8 @@ import BlogPage from './blog/Blog'
 import GalleryPage from './gallery/Gallery'
 import DetailPage from './detail/Detail'
 import EventsPage from './events/Events'
+import GeocalligraphyPage from './geocalligraphy/Geocalligraphy'
+import { Footer } from '../component/common/Footer/Footer'
 
 export default function Page() {
   return (
@@ -22,6 +24,7 @@ export default function Page() {
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/about' element={<AboutPage />} />
+          <Route path='/geocalligraphy' element={<GeocalligraphyPage />} />
           <Route path='/teams' element={<TeamPage />} />
           <Route path='/message' element={<MessagePage />} />
           <Route path='/members' element={<MembersPage />} />
@@ -34,6 +37,7 @@ export default function Page() {
           <Route path='/:name/:id' element={<DetailPage />} />
         </Routes>
       </>
+      <Footer />
     </>
   )
 }

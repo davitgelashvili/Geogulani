@@ -37,7 +37,7 @@ export const PresidentMessage = () => {
         <>
             <Section>
                 <PageTitle
-                    title={'Presidents Message'}
+                    title={'პრეზიდენტის მისალმება'}
                     text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
                 />
                 {load && <Loading />}
@@ -50,8 +50,8 @@ export const PresidentMessage = () => {
                                 </figure>
                             </div>
                             <div className='col-lg-8'>
-                                <h1>{item?.title?.ka}</h1>
-                                <div dangerouslySetInnerHTML={{ __html: item?.desc?.ka}}></div>
+                                {/* <h1 className={styles.message__title}>{item?.title?.ka}</h1> */}
+                                <div className={styles.message__text} dangerouslySetInnerHTML={{ __html: item?.desc?.ka}}></div>
                             </div>
                         </div>
                     )
