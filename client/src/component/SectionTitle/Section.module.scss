@@ -3,6 +3,7 @@
     padding: 96px 0;
     position: relative;
     background-color: transparent;
+    width: 100%;
 
     @media (max-width: 991px) {
         padding: 76px 0;
@@ -11,9 +12,19 @@
     &__head {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
+        justify-content: center;
         margin-bottom: 32px;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
+
+        &--img {
+            width: 200px;
+            @media (max-width: 991px) {
+                margin: 20px;
+            }
+        }
 
         h1 {
             color: #a30026;
@@ -46,8 +57,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-direction: column;
         margin-bottom: 76px;
+
+        img {
+            width: 200px;
+        }
 
         h1 {
             font-size: 48px;

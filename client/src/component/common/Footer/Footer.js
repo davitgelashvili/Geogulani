@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import Menu from '../Header/Menu'
 import SocBar from '../Header/SocBar'
 import { Link } from 'react-router-dom'
+import logo from './../../../assets/images/footer_logo.png'
 
 export const Footer = () => {
     return (
@@ -10,7 +11,7 @@ export const Footer = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-lg-6'>
-                        <h1>LOGO</h1>
+                        <img src={logo} alt='logo' className={styles.footer__logo} />
                     </div>
                     <div className='col-lg-6 d-flex flex-column align-items-end'>
                         <ul className={styles.footer__menu}>

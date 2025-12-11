@@ -38,7 +38,7 @@ export const PresidentMessage = () => {
             <Section>
                 <PageTitle
                     title={'პრეზიდენტის მისალმება'}
-                    text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
+                    text={'ქართული კალიგრაფიის პირველი საერთაშორისო ასოციაციის პრეზიდენტი'}
                 />
                 {load && <Loading />}
                 {data && data.map((item) => {

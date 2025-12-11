@@ -6,6 +6,11 @@
     position: relative;
     z-index: 1;
 
+    &__logo {
+        width: 100%;
+        max-width: 250px;
+    }
+
     &__menu {
         margin: 0;
         padding: 0;

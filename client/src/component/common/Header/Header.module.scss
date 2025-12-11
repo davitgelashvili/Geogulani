@@ -38,10 +38,15 @@
 .logo {
     display: flex;
     align-items: center;
-    height: 72px;
+    height: 56px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 900;
 
     img {
         height: 100%;
+        margin-right: 12px;
     }
 
     @media (max-width: 992px){

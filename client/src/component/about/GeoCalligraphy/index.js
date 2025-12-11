@@ -6,6 +6,9 @@ import PageTitle from '../../SectionTitle/PageTitle'
 import { ImageBox } from '../../ImageBox/ImageBox'
 import cover from './../../../assets/images/Anbandidi_Gospel_—_1.png'
 import cover2 from './../../../assets/images/Anbandidi_Gospel_—_12.png'
+import left from './../../../assets/images/Asset5.png'
+import right from './../../../assets/images/geocalligraphy_mkhedruli.png'
+
 
 export const GeoCalligraphy = () => {
     const title = {
@@ -30,11 +33,17 @@ export const GeoCalligraphy = () => {
     return (
         <>
             <Section>
-                <PageTitle
+                {/* <PageTitle
                     title={title.ka}
                     text={'კალიგრაფია ეს არის ლამაზად წერის ხელოვნება'}
-                />
-                <div>
+                    left={left}
+                    right={right}
+                /> */}
+                <SectionTitle
+                    title={'კალიგრაფია ეს არის ლამაზად წერის ხელოვნება'}
+                    left={left}
+                    right={right} />
+                <div className={styles['geocalligraphy']}>
                     <div className='row'>
                         <div>
                             <SectionTitle title={'ქართული კალიგრაფიის სამყაროში'} />

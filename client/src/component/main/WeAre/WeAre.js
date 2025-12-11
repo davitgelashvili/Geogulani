@@ -2,7 +2,7 @@ import React from 'react'
 import SectionTitle from '../../SectionTitle/SectionTitle'
 import Section from '../../SectionTitle/Section'
 import styles from './styles.module.scss'
-import logo from './../../../assets/images/logo_ka.png'
+import logo from './../../../assets/images/wearelogo.png'
 
 
 export const WeAre = () => {
@@ -19,8 +19,8 @@ export const WeAre = () => {
     return (
         <Section bgColor={'#fff'}>
             <div className={styles.weare}>
+                <img src={logo} alt='logo' className={styles.weare__cover}/>
                 <SectionTitle title={title.ka} />
-                <img src={logo} alt='logo' style={{width: '200px'}}/>
                 <p className={styles.text}>
                     {
                         desc.ka

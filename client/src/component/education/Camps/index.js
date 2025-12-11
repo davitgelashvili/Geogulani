@@ -36,44 +36,6 @@ export const Camps = () => {
         fetchData();
     }, [params]);
 
-    const experinceData = [
-        {
-            _id: 'd1dsc',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '3fea',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '42dfassd',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '2ggddvsddf',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '3r3fds',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '3r3fds',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        }
-    ]
     return (
         <>
             <Section>
@@ -123,23 +85,6 @@ export const Camps = () => {
                                     cover={item.cover}
                                     title={item.title.ka}
                                     desc={item.desc.ka}
-                                    contactLink={'/contact'} />
-                            </div>
-                        )
-                    })}
-                </div>
-            </Section>
-
-            <Section>
-                <SectionTitle title={'The Camp Experience'} />
-                <div className='row'>
-                    {experinceData && experinceData?.map((item) => {
-                        return (
-                            <div className='col-md-6 col-lg-4' key={item._id}>
-                                <ServiceCard
-                                    cover={item.cover}
-                                    title={item.title}
-                                    desc={item.desc}
                                     contactLink={'/contact'} />
                             </div>
                         )
