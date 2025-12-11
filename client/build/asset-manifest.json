@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.819cb861.css",
-    "main.js": "/static/js/main.08272353.js",
+    "main.css": "/static/css/main.211e25fa.css",
+    "main.js": "/static/js/main.db6d02ae.js",
     "static/js/453.258b012d.chunk.js": "/static/js/453.258b012d.chunk.js",
     "static/media/Anbandidi_Gospel_—_12.png": "/static/media/Anbandidi_Gospel_—_12.d9ed2bce94a01c862a75.png",
     "static/media/Anbandidi_Gospel_—_1.png": "/static/media/Anbandidi_Gospel_—_1.8ce045e5d3d31284d853.png",
-    "static/media/logo_ka.png": "/static/media/logo_ka.e408ae8cad4a93771bba.png",
+    "static/media/wearelogo.png": "/static/media/wearelogo.641302589586e0610a1b.png",
+    "static/media/footer_logo.png": "/static/media/footer_logo.87082b8b01509ff7b441.png",
     "static/media/original_red.png": "/static/media/original_red.be5ef6b1eb216c8c0a00.png",
+    "static/media/geocalligraphy_mkhedruli.png": "/static/media/geocalligraphy_mkhedruli.f096a6902c350f60109e.png",
+    "static/media/short-logo.png": "/static/media/short-logo.b49f3f0a7b4cbc500654.png",
+    "static/media/Asset5.png": "/static/media/Asset5.cbeec6fd0d0ca236d802.png",
     "index.html": "/index.html",
-    "main.819cb861.css.map": "/static/css/main.819cb861.css.map",
-    "main.08272353.js.map": "/static/js/main.08272353.js.map",
+    "main.211e25fa.css.map": "/static/css/main.211e25fa.css.map",
+    "main.db6d02ae.js.map": "/static/js/main.db6d02ae.js.map",
     "453.258b012d.chunk.js.map": "/static/js/453.258b012d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.819cb861.css",
-    "static/js/main.08272353.js"
+    "static/css/main.211e25fa.css",
+    "static/js/main.db6d02ae.js"
   ]
 }
