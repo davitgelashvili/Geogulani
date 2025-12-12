@@ -33,12 +33,24 @@ export const PresidentMessage = () => {
         fetchData();
     }, [params]);
 
+    const pageTitle = {
+        ka: 'პრეზიდენტის მისალმება',
+        en: '',
+        ru: '',
+    }
+
+    const pageText = {
+        ka: 'ქართული კალიგრაფიის პირველი საერთაშორისო ასოციაციის პრეზიდენტი',
+        en: '',
+        ru: '',
+    }
+
     return (
         <>
             <Section>
                 <PageTitle
-                    title={'პრეზიდენტის მისალმება'}
-                    text={'ქართული კალიგრაფიის პირველი საერთაშორისო ასოციაციის პრეზიდენტი'}
+                    title={pageTitle.ka}
+                    text={pageText.ka}
                 />
                 {load && <Loading />}
                 {data && data.map((item) => {
@@ -50,7 +62,7 @@ export const PresidentMessage = () => {
                                 </figure>
                             </div>
                             <div className='col-lg-8'>
-                                {/* <h1 className={styles.message__title}>{item?.title?.ka}</h1> */}
+                                <h1 className={styles.message__title}>{item?.title?.ka}</h1>
                                 <div className={styles.message__text} dangerouslySetInnerHTML={{ __html: item?.desc?.ka}}></div>
                             </div>
                         </div>

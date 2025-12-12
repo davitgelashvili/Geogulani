@@ -11,8 +11,13 @@ import right from './../../../assets/images/geocalligraphy_mkhedruli.png'
 
 
 export const GeoCalligraphy = () => {
+    const pageTitle = {
+        ka: 'კალიგრაფია ეს არის ლამაზად წერის ხელოვნება',
+        en: '',
+        ru: '',
+    }
     const title = {
-        ka: 'ქართული კალიგრაფია',
+        ka: 'ქართული კალიგრაფიის სამყაროში',
         en: '',
         ru: '',
     }
@@ -33,20 +38,14 @@ export const GeoCalligraphy = () => {
     return (
         <>
             <Section>
-                {/* <PageTitle
-                    title={title.ka}
-                    text={'კალიგრაფია ეს არის ლამაზად წერის ხელოვნება'}
-                    left={left}
-                    right={right}
-                /> */}
                 <SectionTitle
-                    title={'კალიგრაფია ეს არის ლამაზად წერის ხელოვნება'}
+                    title={pageTitle.ka}
                     left={left}
                     right={right} />
                 <div className={styles['geocalligraphy']}>
                     <div className='row'>
                         <div>
-                            <SectionTitle title={'ქართული კალიგრაფიის სამყაროში'} />
+                            <SectionTitle title={title.ka} />
                         </div>
                         <div className='col-lg-auto'>
                             <figure className={styles['cover']}>
@@ -60,17 +59,6 @@ export const GeoCalligraphy = () => {
                     </div>
                 </div>
             </Section>
-            {/* <Section>
-                <SectionTitle title={'Our Core Mission'} />
-                <div className={styles['text']}>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                </div>
-            </Section> */}
         </>
     )
 }

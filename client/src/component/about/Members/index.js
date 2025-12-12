@@ -55,12 +55,30 @@ export const Members = () => {
             `,
         }
     ]
+
+    const pageTitle = {
+        ka: 'წევრობა',
+        en: '',
+        ru: '',
+    }
+    const pageText = {
+        ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+        en: '',
+        ru: '',
+    }
+
+    const sectionTitle = {
+        ka: 'კლუბი',
+        en: '',
+        ru: '',
+    }
+
     return (
         <>
             <Section>
                 <PageTitle
-                    title={'წევრობა'}
-                    text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
+                    title={pageTitle.ka}
+                    text={pageText.ka}
                 />
                 {/* <SectionTitle title={'წევრობა'} /> */}
                 <div className='row'>
@@ -79,7 +97,7 @@ export const Members = () => {
                 </div>
             </Section>
             <Section>
-                <SectionTitle title={'კლუბი'} />
+                <SectionTitle title={sectionTitle.ka} />
                 <div className='row'>
                     {apply && apply?.map((item) => {
                         return (
@@ -94,11 +112,11 @@ export const Members = () => {
                     })}
                 </div>
             </Section>
-            <Section>
+            <div className='container'>
                 <Card
-                    title={'📌 კლუბების წევრებს ვთავაზობთ 50%- მდე  ფასდაკლებას ასოციაციის ყველა პროდუქციასა და აქტივობაზე.'}
+                    desc={'📌 კლუბების წევრებს ვთავაზობთ 50%- მდე  ფასდაკლებას ასოციაციის ყველა პროდუქციასა და აქტივობაზე.'}
                 />
-            </Section>
+            </div>
         </>
     )
 }

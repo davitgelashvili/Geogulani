@@ -35,9 +35,15 @@ export const LatestNews = () => {
         fetchData();
     }, [params]);
 
+    const sectionTitle = {
+        ka: 'სიახლეები',
+        en: '',
+        ru: '',
+    }
+
     return (
         <Section bgColor={'#e5e7eb'}>
-            <SectionTitle title={'სიახლეები'} />
+            <SectionTitle title={sectionTitle.ka} />
             {load && <Loading />}
             <Swiper
                 onSlideChange={() => console.log('slide change')}

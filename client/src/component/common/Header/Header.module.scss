@@ -16,7 +16,7 @@
         padding: 0;
         margin: 0;
         display: flex;
-        
+
         li {
             list-style: none;
             margin-left: 7px;
@@ -49,8 +49,9 @@
         margin-right: 12px;
     }
 
-    @media (max-width: 992px){
+    @media (max-width: 992px) {
         padding: 8px 0;
+        font-size: 18px;
     }
 
     @media (max-width: 540px) {

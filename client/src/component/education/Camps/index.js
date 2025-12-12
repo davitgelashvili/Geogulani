@@ -36,17 +36,40 @@ export const Camps = () => {
         fetchData();
     }, [params]);
 
+    const pageTitle = {
+        ka: 'კალიგრაფიული ბანაკები',
+        en: '',
+        ru: '',
+    }
+    const pageText = {
+        ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+        en: '',
+        ru: '',
+    }
+
+    const sectionTitle = {
+        ka: '1 კვირიანი საერთაშორისო ბანაკი',
+        en: '',
+        ru: '',
+    }
+
+    const section2Title = {
+        ka: 'მომავლის ბანაკები',
+        en: '',
+        ru: '',
+    }
+
     return (
         <>
             <Section>
                 <PageTitle
-                    title={'კალიგრაფიული ბანაკები'}
-                    text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
+                    title={pageTitle.ka}
+                    text={pageText.ka}
                 />
                 <div className={styles['camps-container']}>
                     <div>
                         <SectionTitle
-                            title={'1 კვირიანი საერთაშორისო ბანაკი'} />
+                            title={sectionTitle.ka} />
                     </div>
                     <div className='row flex-wrap-reverse flex-lg-row'>
                         <div className='col-lg-8'>
@@ -75,7 +98,7 @@ export const Camps = () => {
                 </div>
             </Section>
             <Section>
-                <SectionTitle title={'Upcoming Camps 2025'} />
+                <SectionTitle title={section2Title.ka} />
                 {load && <Loading />}
                 <div className='row'>
                     {data && data?.map((item) => {
@@ -85,7 +108,7 @@ export const Camps = () => {
                                     cover={item.cover}
                                     title={item.title.ka}
                                     desc={item.desc.ka}
-                                    contactLink={'/contact'} />
+                                    url={`/camps/${item._id}`} />
                             </div>
                         )
                     })}

@@ -15,6 +15,7 @@ import DetailPage from './detail/Detail'
 import EventsPage from './events/Events'
 import GeocalligraphyPage from './geocalligraphy/Geocalligraphy'
 import { Footer } from '../component/common/Footer/Footer'
+import ContactPage from './contact/Contact'
 
 export default function Page() {
   return (
@@ -34,6 +35,7 @@ export default function Page() {
           <Route path='/blogs' element={<BlogPage />} />
           <Route path='/gallery' element={<GalleryPage />} />
           <Route path='/events' element={<EventsPage />} />
+          <Route path='/contact' element={<ContactPage />} />
           <Route path='/:name/:id' element={<DetailPage />} />
         </Routes>
       </>

@@ -44,52 +44,60 @@ export const LatestGallery = () => {
         set_id('')
     }
 
+    const sectionTitle = {
+        ka: 'გალერია',
+        en: '',
+        ru: '',
+    }
+
     return (
-        <div style={{position: 'fixed', bottom: 0, width: '100%', height: '100vh', backgroundColor: 'rgba(255, 241, 242, 0.7)', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
-            <Section>
-                <SectionTitle title={'გალერია'}/>
-                {load && <Loading />}
-                <Swiper
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    breakpoints={{
-                        // when window width is >= 320px
-                        0: {
-                            slidesPerView: 2,
-                            spaceBetween: 10,
-                        },
-                        // when window width is >= 768px
-                        768: {
-                            slidesPerView: 3,
-                            spaceBetween: 20,
-                        },
-                        // when window width is >= 1024px
-                        1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 25,
-                        },
-                    }}
-                >
-                    {data && data?.map((item) => {
-                        return (
-                            <SwiperSlide key={item._id}>
-                                <GalleryCard
-                                    cover={item.cover}
-                                    title={item.title.ka}
-                                    desc={item.desc.ka}
-                                    _id={item._id}
-                                    setPopup={setPopup}
-                                    set_id={set_id}
-                                />
-                            </SwiperSlide>
-                        )
-                    })}
-                </Swiper>
-                <div className='d-flex justify-content-center'>
-                    <SectionLink link={'/gallery'} text={'View All'} />
-                </div>
-            </Section>
+        <>
+            <div style={{ position: 'fixed', bottom: 0, width: '100%', height: '100vh', backgroundColor: 'rgba(255, 241, 242, 0.7)', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
+                <Section>
+                    <SectionTitle title={sectionTitle.ka} />
+                    {load && <Loading />}
+                    <Swiper
+                        onSlideChange={() => console.log('slide change')}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        breakpoints={{
+                            // when window width is >= 320px
+                            0: {
+                                slidesPerView: 2,
+                                spaceBetween: 10,
+                            },
+                            // when window width is >= 768px
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 20,
+                            },
+                            // when window width is >= 1024px
+                            1024: {
+                                slidesPerView: 4,
+                                spaceBetween: 25,
+                            },
+                        }}
+                    >
+                        {data && data?.map((item) => {
+                            return (
+                                <SwiperSlide key={item._id}>
+                                    <GalleryCard
+                                        cover={item.cover}
+                                        title={item.title.ka}
+                                        desc={item.desc.ka}
+                                        _id={item._id}
+                                        setPopup={setPopup}
+                                        set_id={set_id}
+                                    />
+                                </SwiperSlide>
+                            )
+                        })}
+                    </Swiper>
+                    <div className='d-flex justify-content-center'>
+                        <SectionLink link={'/gallery'} text={'View All'} />
+                    </div>
+                </Section>
+            </div>
             {popupShow && <Popup id={_id} name={'gallery'} closePopup={closePopup} />}
-        </div>
+        </>
     )
 }

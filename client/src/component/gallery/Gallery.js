@@ -39,12 +39,24 @@ export const Gallery = () => {
         setPopup(false)
         set_id('')
     }
+
+    const pageTitle = {
+        ka: 'გალერია',
+        en: '',
+        ru: '',
+    }
+    const pageText = {
+        ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+        en: '',
+        ru: '',
+    }
+
     return (
         <>
             <Section>
                 <PageTitle
-                    title={'Gallery'}
-                    text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
+                    title={pageTitle.ka}
+                    text={pageText.ka}
                 />
                 {load && <Loading />}
                 <div className='row'>

@@ -6,11 +6,19 @@ export default function Menu({ className, setActive }) {
     const [activeSubmenu, setActiveSubmenu] = useState(null)
     const data = [
         {
-            title: 'Home',
+            title: {
+                ka: 'მთავარი',
+                en: 'Home',
+                ru: '',
+            },
             url: '/'
         },
         {
-            title: 'About',
+            title: {
+                ka: 'ჩვენ',
+                en: 'About',
+                ru: '',
+            },
             data: [
                 {
                     title: 'Asociation',
@@ -35,7 +43,11 @@ export default function Menu({ className, setActive }) {
             ]
         },
         {
-            title: 'Education',
+            title: {
+                ka: 'განათლება',
+                en: 'Education',
+                ru: '',
+            },
             data: [
                 {
                     title: 'Course',
@@ -52,7 +64,11 @@ export default function Menu({ className, setActive }) {
             ]
         },
         {
-            title: 'Media',
+            title: {
+                ka: 'მედია',
+                en: 'Media',
+                ru: '',
+            },
             data: [
                 {
                     title: 'News & Blogs',
@@ -69,7 +85,11 @@ export default function Menu({ className, setActive }) {
             ]
         },
         {
-            title: 'Contact',
+            title: {
+                ka: 'კონტაქტი',
+                en: 'Contact',
+                ru: '',
+            },
             url: '/contact'
         }
     ]
@@ -81,18 +101,19 @@ export default function Menu({ className, setActive }) {
     return (
         <ul className={`${styles['menu']} position-absolute ${className}`}>
             {data && data?.map((item) => {
-                const isCurrentSubmenuOpen = activeSubmenu === item.title;
+                console.log(item)
+                const isCurrentSubmenuOpen = activeSubmenu === item?.title?.en;
                 return (
-                    <li className={`${styles['menu__item']}`} key={item?.title}>
+                    <li className={`${styles['menu__item']}`} key={item?.title?.en}>
                         {item?.url && <Link className={`${styles['menu__item--link']}`} to={item?.url} onClick={() => {
                             setActiveSubmenu(null)
                             setActive(false)
-                        }}>{item?.title}</Link>}
+                        }}>{item?.title?.ka}</Link>}
                         {item?.data && (
                             <>
-                                <p className={`${styles['menu__item--link']} ${isCurrentSubmenuOpen ? styles['active'] : ''}`} onClick={() => handleToggle(item.title)}>{item?.title}</p>
+                                <p className={`${styles['menu__item--link']} ${isCurrentSubmenuOpen ? styles['active'] : ''}`} onClick={() => handleToggle(item.title.en)}>{item?.title?.ka}</p>
                                 {isCurrentSubmenuOpen && (
-                                    <ul className={`${styles['menu__category']}`} data-name={item.title}>
+                                    <ul className={`${styles['menu__category']}`} data-name={item?.title?.en}>
                                         {item?.data?.map((_item) => {
                                             return (
                                                 <Link to={_item?.url} className={`${styles['menu__category--link']}`} key={_item?.title} onClick={() => {

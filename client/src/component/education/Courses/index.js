@@ -32,12 +32,24 @@ export const Courses = () => {
 
         fetchData();
     }, [params]);
+
+    const pageTitle = {
+        ka: 'კურსები',
+        en: '',
+        ru: '',
+    }
+    const pageText = {
+        ka: 'ქართული კალიგრაფიის პირველი საერთაშორისო ასოციაცია გთავაზობთ ონლაინ (მთელი მსოფლიოს მასშტაბით) და ადგილზე გრძელვადიან, მოკლევადიან და ერთჯერად კალიგრაფიის კურსებსა და მასტერკლასებს.',
+        en: '',
+        ru: '',
+    }
+
     return (
         <>
             <Section>
                 <PageTitle
-                    title={'Online Courses'}
-                    text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
+                    title={pageTitle.ka}
+                    text={pageText.ka}
                 />
                 {load && <Loading />}
                 <div className='row'>
@@ -48,7 +60,7 @@ export const Courses = () => {
                                     cover={item.cover}
                                     title={item.title.ka}
                                     desc={item.desc.ka}
-                                    contactLink={'/contact'} />
+                                    url={`/course/${item._id}`}/>
                             </div>
                         )
                     })}

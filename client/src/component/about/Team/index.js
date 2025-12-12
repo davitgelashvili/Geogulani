@@ -44,12 +44,23 @@ export const Team = () => {
         set_id('')
     }
 
+    const pageTitle = {
+        ka: 'ჩვენი გუნდი',
+        en: '',
+        ru: '',
+    }
+    const pageText = {
+        ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+        en: '',
+        ru: '',
+    }
+
     return (
         <>
             <Section>
                 <PageTitle
-                    title={'ჩვენი გუნდი'}
-                    text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
+                    title={pageTitle.ka}
+                    text={pageText.ka}
                 />
                 <SectionTitle title={'Leadership'} />
                 {load && <Loading />}

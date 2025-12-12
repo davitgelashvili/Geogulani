@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import getApi from '../../http/getApi';
 import Section from '../SectionTitle/Section';
-import PageTitle from '../SectionTitle/PageTitle';
-import Card from '../Card/Card';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { useParams } from 'react-router-dom';
 import { ImageBox } from '../ImageBox/ImageBox';
 import Loading from '../Loading/Loading';
+import styles from './styles.module.scss'
 
 export const Detail = () => {
     const [load, setLoad] = useState(true)
@@ -39,7 +38,7 @@ export const Detail = () => {
                     <SectionTitle
                         title={data?.title?.ka}
                     />
-                    <figure>
+                    <figure className={styles.cover}>
                         <ImageBox src={data?.cover} alt='cover' />
                     </figure>
 
