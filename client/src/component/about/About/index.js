@@ -48,7 +48,7 @@ export const About = () => {
                         <div>
                             <SectionTitle title={title.ka} />
                         </div>
-                        <div className='col-12 col-lg-3'>
+                        <div className='col-12 col-lg-2'>
                             <figure className={styles['cover']}>
                                 <ImageBox src={logo} alt={'cover'} className={styles['cover__img']} />
                             </figure>

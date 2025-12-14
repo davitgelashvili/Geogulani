@@ -1,4 +1,4 @@
-.custom_container { 
+.custom_container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -49,5 +49,8 @@
 
     &__text {
         max-width: 400px;
+        overflow: auto;
+        height: 100%;
+        max-height: calc(100vh - 200px);
     }
 }

@@ -15,10 +15,11 @@ export const Footer = () => {
                     </div>
                     <div className='col-lg-6 d-flex flex-column align-items-end'>
                         <ul className={styles.footer__menu}>
-                            <li><Link to={'/'}>Home</Link></li>
-                            <li><Link to={'/'}>Home</Link></li>
-                            <li><Link to={'/'}>Home</Link></li>
-                            <li><Link to={'/'}>Home</Link></li>
+                            <li><Link to={'/'}>მთავარი</Link></li>
+                            <li><Link to={'/'}>ასოციაცია</Link></li>
+                            <li><Link to={'/'}>კურსები</Link></li>
+                            <li><Link to={'/'}>ღონისზიებები</Link></li>
+                            <li><Link to={'/'}>კონტაქტი</Link></li>
                         </ul>
                         <ul className={styles.footer__soc}>
                             <li>

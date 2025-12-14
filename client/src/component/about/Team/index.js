@@ -37,6 +37,7 @@ export const Team = () => {
 
     const leadership = data?.filter((item) => item.category === 'leadership')
     const calligraphers = data?.filter((item) => item.category === 'calligraphers')
+    const board = data?.filter((item) => item.category === 'board')
     
     function closePopup() {
         document.body.style.overflow = 'unset'
@@ -62,7 +63,7 @@ export const Team = () => {
                     title={pageTitle.ka}
                     text={pageText.ka}
                 />
-                <SectionTitle title={'Leadership'} />
+                <SectionTitle title={'დირექტორატი'} />
                 {load && <Loading />}
                 <div className='row'>
                     {leadership && leadership.map((item) => {
@@ -83,7 +84,27 @@ export const Team = () => {
                 </div>
             </Section>
             <Section>
-                <SectionTitle title={'Master Calligraphers'} />
+                <SectionTitle title={'ბორდი'} />
+                {load && <Loading />}
+                <div className='row'>
+                    {board && board.map((item) => {
+                        return (
+                            <div className='col-sm-6 col-md-4 col-lg-3' key={item?._id}>
+                                <GalleryCard
+                                    cover={item?.cover}
+                                    title={item?.title.ka}
+                                    desc={item?.desc.ka}
+                                    _id={item._id}
+                                    setPopup={setPopup}
+                                    set_id={set_id}
+                                />
+                            </div>
+                        )
+                    })}
+                </div>
+            </Section>
+            <Section>
+                <SectionTitle title={'კალიგრაფები'} />
                 {load && <Loading />}
                 <div className='row'>
                     {calligraphers && calligraphers.map((item) => {

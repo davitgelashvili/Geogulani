@@ -21,24 +21,52 @@ export default function Menu({ className, setActive }) {
             },
             data: [
                 {
-                    title: 'Asociation',
+                    title: {
+                        ka: 'ასოციაცია',
+                        en: 'Asociation',
+                        ru: ''
+                    },
                     url: '/about',
                 },
                 {
-                    title: 'Georgia Calligraphy',
+                    title: {
+                        ka: 'ქართული კალიგრაფია',
+                        en: 'Georgia Calligraphy',
+                        ru: ''
+                    },
                     url: '/geocalligraphy',
                 },
                 {
-                    title: 'Message',
+                    title: {
+                        ka: 'პრეზიდენტის მიმართვა',
+                        en: 'Message',
+                        ru: ''
+                    },
                     url: '/message',
                 },
                 {
-                    title: 'Our Team',
+                    title: {
+                        ka: 'გუნდი',
+                        en: 'Our Team',
+                        ru: ''
+                    },
                     url: '/teams',
                 },
                 {
-                    title: 'Membership',
+                    title: {
+                        ka: 'წევრები',
+                        en: 'Membership',
+                        ru: ''
+                    },
                     url: '/members',
+                },
+                {
+                    title: {
+                        ka: 'პარტნიორები',
+                        en: 'Partners',
+                        ru: ''
+                    },
+                    url: '/partners',
                 },
             ]
         },
@@ -50,15 +78,27 @@ export default function Menu({ className, setActive }) {
             },
             data: [
                 {
-                    title: 'Course',
+                    title: {
+                        ka: 'კურსები',
+                        en: 'Course',
+                        ru: ''
+                    },
                     url: '/education',
                 },
                 {
-                    title: 'Camps',
+                    title: {
+                        ka: 'ბანაკები',
+                        en: 'Camps',
+                        ru: ''
+                    },
                     url: '/camps',
                 },
                 {
-                    title: 'Exchange',
+                    title: {
+                        ka: 'საერთაშორისო ინტეგრაცია',
+                        en: 'Exchange',
+                        ru: ''
+                    },
                     url: '/exchange',
                 }
             ]
@@ -71,15 +111,27 @@ export default function Menu({ className, setActive }) {
             },
             data: [
                 {
-                    title: 'News & Blogs',
+                    title: {
+                        ka: 'სიახლეები',
+                        en: 'News',
+                        ru: ''
+                    },
                     url: '/blogs',
                 },
                 {
-                    title: 'Gallery',
+                    title: {
+                        ka: 'გლერია',
+                        en: 'Gallery',
+                        ru: ''
+                    },
                     url: '/gallery',
                 },
                 {
-                    title: 'Events',
+                    title: {
+                        ka: 'ღონისძიებები',
+                        en: 'Events',
+                        ru: ''
+                    },
                     url: '/events',
                 },
             ]
@@ -116,10 +168,10 @@ export default function Menu({ className, setActive }) {
                                     <ul className={`${styles['menu__category']}`} data-name={item?.title?.en}>
                                         {item?.data?.map((_item) => {
                                             return (
-                                                <Link to={_item?.url} className={`${styles['menu__category--link']}`} key={_item?.title} onClick={() => {
+                                                <Link to={_item?.url} className={`${styles['menu__category--link']}`} key={_item?.title.en} onClick={() => {
                                                     setActive(false)
                                                     setActiveSubmenu(null)
-                                                }}>{_item?.title}</Link>
+                                                }}>{_item?.title.ka}</Link>
                                             )
                                         })}
                                     </ul>

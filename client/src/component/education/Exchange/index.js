@@ -39,39 +39,31 @@ export const Exchange = () => {
         {
             _id: 'd1dsc',
             cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+            title: 'საერთაშორისო ფესტივალები, გამოფენები და კონფერენციები',
+            desc: `
+                <p>პროგრამის ფარგლებში ქართველი კალიგრაფები მიიღებენ მონაწილეობას:</p>
+                <p></p>
+                <li>საერთაშორისო კალიგრაფიის ფესტივალებში;</li>
+                <li>ხელოვნების ბიენალეებსა და თემატურ გამოფენებში;</li>
+                <li>პროფესიულ კონფერენციებსა და სემინარებში;</li>
+                <li>ხელოვნებისა და კულტურის საერთაშორისო ფორუმებში.</li>
+                <p></p>
+                <p>ეს პლატფორმები მათ საშუალებას აძლევს წარმოაჩინონ ქართული კალიგრაფიის განსხვავებული ხასიათი, გააცნონ სამყაროს ჩვენი უნიკალური ანბანი და სტილი, დაამყარონ პროფესიული ურთიერთობები სხვა ქვეყნების კალიგრაფებთან.</p>
+            `,
         },
         {
             _id: '3fea',
             cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+            title: 'მეცნიერული და კვლევითი თანამშრომლობა',
+            desc: `
+                <p>ჩვენ აქტიურად ვეხმარებით ქართველ კალიგრაფებს ჩართონ საერთაშორისო სამეცნიერო პრაქტიკაში, რაც მოიცავს:</p>
+                <li>ქართული ხელნაწერების, პალეოგრაფიისა და ანბანთა ისტორიის შესწავლას;</li>
+                <li>საერთაშორისო მეცნიერებთან ერთობლივ კვლევით პროექტებში მონაწილეობას;</li>
+                <li>საერთაშორისო სამეცნიერო ჟურნალებში სტატიებისა და კვლევების გამოქვეყნებას;</li>
+                <li>არქივების, ბიბლიოთეკებისა და მეცნიერებათა აკადემიის კოლექციებთან მუშაობას;</li>
+                <p>აღნიშნული მიმართულება განსაკუთრებულ მნიშვნელობას ანიჭებს ქართული კალიგრაფიის როგორც მეცნიერების, ასევე კულტურული მემკვიდრეობის საერთაშორისო დონეზე დამკვიდრებას.</p>
+            `,
         },
-        {
-            _id: '42dfassd',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '2ggddvsddf',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '3r3fds',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        },
-        {
-            _id: '3r3fds',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: '1 TITLE',
-            desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        }
     ]
     return (
         <>
@@ -79,18 +71,29 @@ export const Exchange = () => {
             <Section>
                 <PageTitle
                     title={'კულტურული ინტერაქცია'}
-                    text={'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'}
+                    text={'ჩვენი კულტურული ინტერაქციის პროგრამა აერთიანებს საერთაშორისო სიახლეებს, ხელოვნებასა და განათლებას, ასევე საერთაშორისო ფესტივალებში, გამოფენებსა და კონფერენციებში მონაწილეობას და ქართველი კალიგრაფების აქტიურ სამეცნიერო პრაქტიკაში ჩაბმას.'}
                 />
-                <SectionTitle title={'Current Exchange Program'} />
-                გაცვლითი პროგრამებისლ ისიტ // ასაწყობია ბექშიც
-            </Section>
-
-            <Section>
-                <SectionTitle title={'Progress benefit'} />
-                <div className='row'>
+                {/* <SectionTitle title={'Current Exchange Program'} /> */}
+                <div>
+                    ქართველი კალიგრაფები მიემგზავრებიან მსოფლიოს სხვადასხვა ქვეყანაში კალიგრაფიული ტრადიციებისა და კულტურის შესასწავლად და, ამავდროულად, უცხოელი კალიგრაფები და ხელოვანები ჩამოდიან საქართველოში, რათა:
+                    <li>გაეცნონ ქართულ ანბანსა და კალიგრაფიულ სტილებს;</li>
+                    <li>მონაწილეობა მიიღონ მასტერკლასებსა და ადგილობრივ ექსპედიციებში;</li>
+                    <li>გაეცნონ ქართულ ფოლკლორს, ეზიარონ ტრადიციებსა და სულიერ კულტურას.</li>
+                    <p style={{color: '#a30026'}}><strong>პროგრამის მიზნებია:</strong></p>
+                    <li>კულტურათშორისი კავშირის გაღრმავება;</li>
+                    <li>გამოცდილებების გაზიარება;</li>
+                    <li>ქართული კალიგრაფიის საერთაშორისო ცნობადობის ზრდა და განვითარება;</li>
+                    <li>ინოვაციური პროექტების წამოწყება საერთაშორისო პარტნიორებთან ერთად;</li>
+                    <li>უცხოელ ხელოვანთა ჩამოყვანა საქართველოში ქართული კალიგრაფიის შესასწავლად</li>
+                    <li>ერთობლივი მასტერკლასების, პროექტებისა და შემოქმედებითი სემინარების ჩატარება;</li>
+                    <li>ხელოვნების ინოვაციური პროექტების შექმნა და საერთაშორისო ასპარეზზე გატანა.</li>
+                </div>
+                
+                <div className='row' style={{marginTop: '32px'}}>
+                    <p>ჩვენი კულტურული ინტერაქციის პროგრამა ასევე მიზნად ისახავს ქართული კალიგრაფიის საერთაშორისო ცნობადობის გაზრდას, ქართული კალიგრაფიის პედაგოგიური სკოლისა და ბაზის შექმნას, დარგის განვითარების ხელშეწყობას როგორც შემოქმედებითი, ისე აკადემიური და სამეცნიერო თვალსაზრისით.</p>
                     {benefits && benefits?.map((item) => {
                         return (
-                            <div className='col-sm-6 col-lg-4' key={item._id}>
+                            <div className='col-sm-12 col-lg-6' key={item._id}>
                                 <ServiceCard
                                     cover={item.cover}
                                     title={item.title}

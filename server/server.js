@@ -86,7 +86,8 @@ app.get("*", (req, res) => {
 });
 
 // ✅ MongoDB კავშირი
-const mongoApi = process.env.MONGODB_URL || 'mongodb+srv://datto1313:Kaikaco123.@cluster0.ondghzb.mongodb.net/academy?retryWrites=true&w=majority'
+// const mongoApi = process.env.MONGODB_URL || 'mongodb+srv://datto1313:Kaikaco123.@cluster0.ondghzb.mongodb.net/academy?retryWrites=true&w=majority'
+const mongoApi = process.env.MONGODB_URL || 'mongodb+srv://geogulani:Geogulani123.@academy.fttn0ws.mongodb.net/'
 mongoose
     .connect(mongoApi, {
         useNewUrlParser: true,

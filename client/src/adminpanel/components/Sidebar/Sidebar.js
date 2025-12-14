@@ -44,6 +44,11 @@ export default function Sidebar() {
             _id: 'd23dsadcsa2d',
             title: 'მიმართვა',
             url: '/adminpanel/message'
+        },
+        {
+            _id: 'dsa3casca',
+            title: 'პარტნიორები',
+            url: '/adminpanel/partners'
         }
     ]
 

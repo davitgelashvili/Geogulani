@@ -111,6 +111,7 @@ export default function AddTeam() {
         <option value={''} >choose</option>
         <option value={'leadership'}>Leadership</option>
         <option value={'calligraphers'}>Calligraphers</option>
+        <option value={'board'}>board</option>
       </select>
       <div>
         <p>category: <span> {data.category}</span></p>

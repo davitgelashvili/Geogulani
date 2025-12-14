@@ -16,6 +16,7 @@ import EventsPage from './events/Events'
 import GeocalligraphyPage from './geocalligraphy/Geocalligraphy'
 import { Footer } from '../component/common/Footer/Footer'
 import ContactPage from './contact/Contact'
+import PartnersPage from './partners/Partners'
 
 export default function Page() {
   return (
@@ -36,6 +37,7 @@ export default function Page() {
           <Route path='/gallery' element={<GalleryPage />} />
           <Route path='/events' element={<EventsPage />} />
           <Route path='/contact' element={<ContactPage />} />
+          <Route path='/partners' element={<PartnersPage />} />
           <Route path='/:name/:id' element={<DetailPage />} />
         </Routes>
       </>
