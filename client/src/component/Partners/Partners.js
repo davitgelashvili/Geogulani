@@ -51,7 +51,7 @@ export const Partners = () => {
             <div className='row'>
                 {data && data?.map((item) => {
                     return (
-                        <div className='col-sm-6 col-lg-4' key={item._id}>
+                        <div className='col-6 col-lg-4' key={item._id}>
                             <Card
                                 cover={item.cover}
                                 title={item.title.ka}

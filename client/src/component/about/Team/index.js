@@ -68,7 +68,7 @@ export const Team = () => {
                 <div className='row'>
                     {leadership && leadership.map((item) => {
                         return (
-                            <div className='col-sm-6 col-md-4 col-lg-3' key={item?._id}>
+                            <div className='col-6 col-md-4 col-lg-3' key={item?._id}>
                                 <GalleryCard
                                     cover={item?.cover}
                                     title={item?.title.ka}
@@ -89,7 +89,7 @@ export const Team = () => {
                 <div className='row'>
                     {board && board.map((item) => {
                         return (
-                            <div className='col-sm-6 col-md-4 col-lg-3' key={item?._id}>
+                            <div className='col-6 col-md-4 col-lg-3' key={item?._id}>
                                 <GalleryCard
                                     cover={item?.cover}
                                     title={item?.title.ka}
@@ -109,7 +109,7 @@ export const Team = () => {
                 <div className='row'>
                     {calligraphers && calligraphers.map((item) => {
                         return (
-                            <div className='col-sm-6 col-md-4 col-lg-3' key={item?._id}>
+                            <div className='col-6 col-md-4 col-lg-3' key={item?._id}>
                                 <GalleryCard
                                     cover={item?.cover}
                                     title={item?.title.ka}

@@ -41,7 +41,7 @@ export const Gallery = () => {
     }
 
     const pageTitle = {
-        ka: 'გალერია',
+        ka: 'გალერეა',
         en: '',
         ru: '',
     }

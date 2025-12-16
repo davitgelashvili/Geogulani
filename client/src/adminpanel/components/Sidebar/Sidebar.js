@@ -17,7 +17,7 @@ export default function Sidebar() {
         },
         {
             _id: 'das23c',
-            title: 'გალერია',
+            title: 'გალერეა',
             url: '/adminpanel/gallery'
         },
         {

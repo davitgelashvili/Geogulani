@@ -54,7 +54,7 @@ export const Camps = () => {
     }
 
     const section2Title = {
-        ka: 'მომავლის ბანაკები',
+        ka: 'დაგეგმილი ბანაკები',
         en: '',
         ru: '',
     }

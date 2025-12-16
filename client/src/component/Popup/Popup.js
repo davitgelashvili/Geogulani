@@ -33,7 +33,7 @@ export const Popup = ({ id, name, closePopup }) => {
                     <div className={styles.popup__content}>
                         <div className='container'>
                             <div className='row'>
-                                <div className='col-lg-auto'>
+                                <div className='col-lg-auto d-flex justify-content-center d-lg-block'>
                                     <figure className={styles.popup__cover}>
                                         <ImageBox src={data?.cover} alt='cover' />
                                     </figure>

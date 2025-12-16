@@ -13,8 +13,8 @@ export const Footer = () => {
                     <div className='col-lg-6'>
                         <img src={logo} alt='logo' className={styles.footer__logo} />
                     </div>
-                    <div className='col-lg-6 d-flex flex-column align-items-end'>
-                        <ul className={styles.footer__menu}>
+                    <div className='col-lg-6 d-flex flex-column align-items-md-end'>
+                        <ul className={`${styles.footer__menu} d-block d-md-flex `}>
                             <li><Link to={'/'}>მთავარი</Link></li>
                             <li><Link to={'/'}>ასოციაცია</Link></li>
                             <li><Link to={'/'}>კურსები</Link></li>

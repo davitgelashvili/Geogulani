@@ -54,7 +54,7 @@ export default function Menu({ className, setActive }) {
                 },
                 {
                     title: {
-                        ka: 'წევრები',
+                        ka: 'წევრობა',
                         en: 'Membership',
                         ru: ''
                     },
@@ -120,7 +120,7 @@ export default function Menu({ className, setActive }) {
                 },
                 {
                     title: {
-                        ka: 'გლერია',
+                        ka: 'გალერეა',
                         en: 'Gallery',
                         ru: ''
                     },

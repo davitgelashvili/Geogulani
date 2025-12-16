@@ -49,9 +49,18 @@
         margin-right: 12px;
     }
 
+    @media (max-width: 1199px) {
+        height:  46px;
+    }
+
     @media (max-width: 992px) {
-        padding: 8px 0;
-        font-size: 18px;
+        height:  68px;
+        padding: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+        height:  48px;
+        padding: 4px 0;
     }
 
     @media (max-width: 540px) {
