@@ -1,0 +1,17 @@
+.label {
+    width: 100%;
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+
+    &__title{
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 8px;
+        outline: none;
+    }
+}

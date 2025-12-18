@@ -1,11 +1,14 @@
 import React from 'react'
+import styles from './../styles.module.scss'
 
 export const Cards = ({ data }) => {
   return (
-    <div>
-      <li>{data.address}</li>
-      <li>{data.phone}</li>
-      <li>{data.email}</li>
+    <div className={styles.card}>
+      {data?.map((item) => {
+        return (
+          <li dangerouslySetInnerHTML={{ __html: item }} key={item}></li>
+        )
+      })}
     </div>
   )
 }
