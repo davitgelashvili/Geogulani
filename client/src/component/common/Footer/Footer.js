@@ -1,7 +1,5 @@
 import React from 'react'
 import styles from './styles.module.scss'
-import Menu from '../Header/Menu'
-import SocBar from '../Header/SocBar'
 import { Link } from 'react-router-dom'
 import logo from './../../../assets/images/footer_logo.png'
 
@@ -16,10 +14,10 @@ export const Footer = () => {
                     <div className='col-lg-6 d-flex flex-column align-items-md-end'>
                         <ul className={`${styles.footer__menu} d-block d-md-flex `}>
                             <li><Link to={'/'}>მთავარი</Link></li>
-                            <li><Link to={'/'}>ასოციაცია</Link></li>
-                            <li><Link to={'/'}>კურსები</Link></li>
-                            <li><Link to={'/'}>ღონისზიებები</Link></li>
-                            <li><Link to={'/'}>კონტაქტი</Link></li>
+                            <li><Link to={'/about'}>ასოციაცია</Link></li>
+                            <li><Link to={'/education'}>კურსები</Link></li>
+                            <li><Link to={'/events'}>ღონისზიებები</Link></li>
+                            <li><Link to={'/contact'}>კონტაქტი</Link></li>
                         </ul>
                         <ul className={styles.footer__soc}>
                             <li>
