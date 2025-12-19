@@ -30,7 +30,7 @@ export const Contact = () => {
             />
             <div className='row'>
                 <div className='col-lg-6'>
-                    <Form />
+                    <Form courseName={''} />
                 </div>
                 <div className='col-lg-6'>
                     <ContactCards />

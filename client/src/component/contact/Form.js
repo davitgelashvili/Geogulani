@@ -10,8 +10,8 @@ export const Form = ({ courseName }) => {
     const [values, setValues] = useState({
         fullname: "",
         email: "",
-        mobile: "",
-        text: "",
+        phonenumber: "",
+        text: "" || courseName,
     })
 
     function handleChange(e) {
@@ -26,13 +26,12 @@ export const Form = ({ courseName }) => {
         setLoading(true);
 
         try {
-            await getApi.postData(`/mail`, {
-                name: values.fullname,
-                phone: values.phonenumber,
-            }).finally(() => {
+            await getApi.postData(`/mail`, values).finally(() => {
                 setValues({
                     fullname: "",
+                    email: "",
                     phonenumber: "",
+                    text: "",
                 })
                 setLoading(false)
             })
@@ -42,9 +41,9 @@ export const Form = ({ courseName }) => {
         }
     };
 
-    // useEffect(() => {
-    //     return
-    // }, [values])
+    useEffect(() => {
+        console.log(values)
+    }, [values])
 
     return (
         <div>
@@ -97,7 +96,7 @@ export const Form = ({ courseName }) => {
                         name={'text'}
                         value={values.text}
                         onChange={handleChange}
-                        style={{width: '100%'}}
+                        style={{ width: '100%' }}
                     />
                 </>
             )}

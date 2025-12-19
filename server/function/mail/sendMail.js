@@ -1,9 +1,12 @@
 const nodemailer = require("nodemailer");
 
 const sendMail = async (req, res) => {
-  const { name, phone, email } = req.body;
+  const { fullname, 
+        email, 
+        phonenumber, 
+        text, } = req.body;
 
-  if (!name || !phone) {
+  if (!email || !phonenumber) {
     return res.status(400).json({ message: "გთხოვ შეავსო ყველა ველი" });
   }
 
@@ -20,9 +23,13 @@ const sendMail = async (req, res) => {
     from: email,
     to: process.env.EMAIL_USER,
     subject: "ახალი კონტაქტის განაცხადი",
+    replyTo: email,
+    text: text,
     html: `
-      <p><strong>სახელი:</strong> ${name}</p>
-      <p><strong>ნომერი:</strong> ${phone}</p>
+      <p><strong>სახელი:</strong> ${fullname}</p>
+      <p><strong>მეილი:</strong> ${email}</p>
+      <p><strong>ნომერი:</strong> ${phonenumber}</p>
+      <p><strong>ტექსტი:</strong> ${text}</p>
     `
   };
 
