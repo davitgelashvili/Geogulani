@@ -9,6 +9,7 @@ import { Popup } from '../Popup/Popup';
 
 export const Gallery = () => {
     const [load, setLoad] = useState(true)
+    const [pageLoad, setPageLoad] = useState(false)
     const [popupShow, setPopup] = useState(false)
     const [_id, set_id] = useState('')
     const [data, setData] = useState([]);
@@ -28,11 +29,26 @@ export const Gallery = () => {
                 console.error('Error fetching blogs:', err);
             } finally {
                 setLoad(false)
+                setPageLoad(false)
             }
         }
 
         fetchData();
     }, [params]);
+
+    const handleNext = () => {
+        if (params.page < totalPages) {
+            setPageLoad(true)
+            setParams(prev => ({ ...prev, page: prev.page + 1 }));
+        }
+    };
+
+    const handlePrev = () => {
+        if (params.page > 1) {
+            setPageLoad(true)
+            setParams(prev => ({ ...prev, page: prev.page - 1 }));
+        }
+    };
 
     function closePopup() {
         document.body.style.overflow = 'unset'
@@ -75,8 +91,21 @@ export const Gallery = () => {
                         )
                     })}
                 </div>
+                <div style={{ width: '250px', height: '50px' }}>
+                    {pageLoad ? <Loading /> : (
+                        <>
+                            <button onClick={handlePrev} disabled={params.page === 1}>
+                                წინ
+                            </button>
+                            <span>გვერდი: {params.page} / {totalPages}</span>
+                            <button onClick={handleNext} disabled={params.page === totalPages}>
+                                შემდეგი
+                            </button>
+                        </>
+                    )}
+                </div>
             </Section>
-            {popupShow && <Popup id={_id} name={'gallery'} closePopup={closePopup}/>}
+            {popupShow && <Popup id={_id} name={'gallery'} closePopup={closePopup} />}
         </>
     )
 }
