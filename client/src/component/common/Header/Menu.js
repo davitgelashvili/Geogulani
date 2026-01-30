@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
+import { useLanguage } from '../../../context/LanguageContext';
 
 export default function Menu({ className, setActive }) {
+    const { language } = useLanguage();
     const [activeSubmenu, setActiveSubmenu] = useState(null)
     const data = [
         {
@@ -27,6 +29,14 @@ export default function Menu({ className, setActive }) {
                         ru: ''
                     },
                     url: '/about',
+                },
+                {
+                    title: {
+                        ka: 'ფესტივალი გულანი',
+                        en: 'Gulani Festival',
+                        ru: ''
+                    },
+                    url: '/festgulani',
                 },
                 {
                     title: {
@@ -160,10 +170,10 @@ export default function Menu({ className, setActive }) {
                         {item?.url && <Link className={`${styles['menu__item--link']}`} to={item?.url} onClick={() => {
                             setActiveSubmenu(null)
                             setActive(false)
-                        }}>{item?.title?.ka}</Link>}
+                        }}>{item?.title?.[language]}</Link>}
                         {item?.data && (
                             <>
-                                <p className={`${styles['menu__item--link']} ${isCurrentSubmenuOpen ? styles['active'] : ''}`} onClick={() => handleToggle(item.title.en)}>{item?.title?.ka}</p>
+                                <p className={`${styles['menu__item--link']} ${isCurrentSubmenuOpen ? styles['active'] : ''}`} onClick={() => handleToggle(item.title.en)}>{item?.title?.[language]}</p>
                                 {isCurrentSubmenuOpen && (
                                     <ul className={`${styles['menu__category']}`} data-name={item?.title?.en}>
                                         {item?.data?.map((_item) => {
@@ -171,7 +181,7 @@ export default function Menu({ className, setActive }) {
                                                 <Link to={_item?.url} className={`${styles['menu__category--link']}`} key={_item?.title.en} onClick={() => {
                                                     setActive(false)
                                                     setActiveSubmenu(null)
-                                                }}>{_item?.title.ka}</Link>
+                                                }}>{_item?.title[language]}</Link>
                                             )
                                         })}
                                     </ul>

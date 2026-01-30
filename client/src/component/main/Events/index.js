@@ -7,8 +7,10 @@ import getApi from '../../../http/getApi'
 import Card from '../../Card/Card'
 import Loading from '../../Loading/Loading'
 import { SectionLink } from '../../SectionTitle/SectionLink'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export const LatestEvents = () => {
+    const {language} = useLanguage()
     const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
@@ -35,13 +37,13 @@ export const LatestEvents = () => {
 
     const sectionTitle = {
         ka: 'ღონისძიებები',
-        en: '',
+        en: 'EVENTS',
         ru: '',
     }
 
     return (
         <Section bgColor={'#e5e7eb'}>
-            <SectionTitle title={sectionTitle.ka} />
+            <SectionTitle title={sectionTitle[language]} />
             {load && <Loading />}
             <div className='row'>
                 {data && data?.map((item) => {
@@ -49,8 +51,8 @@ export const LatestEvents = () => {
                         <div className='col-lg-6' key={item._id}>
                             <Card
                                 cover={item.cover}
-                                title={item.title.ka}
-                                desc={item.desc.ka}
+                                title={item.title[language]}
+                                desc={item.desc[language]}
                                 url={`/events/${item._id}`}
                             />
                         </div>

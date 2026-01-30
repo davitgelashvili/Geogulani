@@ -10,8 +10,10 @@ import getApi from '../../../http/getApi';
 import Loading from '../../Loading/Loading';
 import { SectionLink } from '../../SectionTitle/SectionLink';
 import { Popup } from '../../Popup/Popup';
+import { useLanguage } from '../../../context/LanguageContext';
 
 export const LatestGallery = () => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [popupShow, setPopup] = useState(false)
     const [_id, set_id] = useState('')
@@ -46,7 +48,7 @@ export const LatestGallery = () => {
 
     const sectionTitle = {
         ka: 'გალერეა',
-        en: '',
+        en: 'GALLERY',
         ru: '',
     }
 
@@ -54,7 +56,7 @@ export const LatestGallery = () => {
         <>
             <div style={{ position: 'fixed', bottom: 0, width: '100%', height: '100vh', backgroundColor: 'rgba(255, 241, 242, 0.7)', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
                 <Section>
-                    <SectionTitle title={sectionTitle.ka} />
+                    <SectionTitle title={sectionTitle[language ]} />
                     {load && <Loading />}
                     <Swiper
                         onSlideChange={() => console.log('slide change')}

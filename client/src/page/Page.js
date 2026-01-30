@@ -17,15 +17,18 @@ import GeocalligraphyPage from './geocalligraphy/Geocalligraphy'
 import { Footer } from '../component/common/Footer/Footer'
 import ContactPage from './contact/Contact'
 import PartnersPage from './partners/Partners'
+import FestGulanPage from './festGulan/FestGulan'
+import { LanguageProvider } from '../context/LanguageContext'
 
 export default function Page() {
   return (
-    <>
+    <LanguageProvider>
       <Header />
       <>
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/about' element={<AboutPage />} />
+          <Route path='/festgulani' element={<FestGulanPage />} />
           <Route path='/geocalligraphy' element={<GeocalligraphyPage />} />
           <Route path='/teams' element={<TeamPage />} />
           <Route path='/message' element={<MessagePage />} />
@@ -42,6 +45,6 @@ export default function Page() {
         </Routes>
       </>
       <Footer />
-    </>
+    </LanguageProvider>
   )
 }

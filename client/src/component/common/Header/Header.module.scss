@@ -191,13 +191,22 @@
 }
 
 .language {
-    background-color: #ffffff1a;
-    outline: none;
-    border: none;
-    padding: 8px 12px;
+    background-color: rgba(#fff, 0.3);
     border-radius: 5px;
-    color: #fff;
     cursor: pointer;
+    
+    &__select {
+        color: #fff;
+        padding: 8px 12px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        option {
+            background-color: #a30026;
+            color: #fff;
+        }
+    }
 
     &:hover {
         background-color: #ffffff33;

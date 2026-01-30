@@ -9,8 +9,10 @@ import styles from './styles.module.scss'
 import getApi from '../../../http/getApi'
 import Loading from '../../Loading/Loading'
 import { SectionLink } from '../../SectionTitle/SectionLink'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export const LatestNews = () => {
+    const{language} = useLanguage()
     const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
@@ -37,13 +39,13 @@ export const LatestNews = () => {
 
     const sectionTitle = {
         ka: 'სიახლეები',
-        en: '',
+        en: 'NEWS',
         ru: '',
     }
 
     return (
         <Section bgColor={'#e5e7eb'}>
-            <SectionTitle title={sectionTitle.ka} />
+            <SectionTitle title={sectionTitle[language]} />
             {load && <Loading />}
             <Swiper
                 onSlideChange={() => console.log('slide change')}
@@ -71,8 +73,8 @@ export const LatestNews = () => {
                         <SwiperSlide key={item._id}>
                             <Card
                                 cover={item.cover}
-                                title={item.title.ka}
-                                desc={item.desc.ka}
+                                title={item.title[language]}
+                                desc={item.desc[language]}
                                 url={`/blogs/${item._id}`}
                             />
                         </SwiperSlide>
