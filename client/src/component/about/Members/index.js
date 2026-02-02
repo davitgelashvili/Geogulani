@@ -5,33 +5,68 @@ import styles from './styles.module.scss'
 import PageTitle from '../../SectionTitle/PageTitle'
 import ServiceCard from '../../ServiceCard/ServiceCard'
 import Card from '../../Card/Card'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export const Members = () => {
+    const { language } = useLanguage()
 
     const typesData = [
         {
             _id: 'vevsa3ca',
-            title: 'სტანდარტული წევრი',
-            desc: `
-            სტანდარტული წევრები პირველები იგებენ ასოციაციის სიახლეებს, ყოველგვარი საფასურის გარეშე მონაწილეობენ დაგეგმილ ღონისძიებებში და ქმნიან საკუთარ პროფილებს საერთაშორისო კალიგრაფიის ქსელში.
-            <p>საწევრო გადასახადი:</p> <strong>საქართველო  – 10 ₾ / თვეში</strong>
-            `,
+            title: {
+                ka: 'სტანდარტული წევრი',
+                en: `Standard Member`,
+                ru: ``,
+            },
+            desc: {
+                ka: `
+                სტანდარტული წევრები პირველები იგებენ ასოციაციის სიახლეებს, ყოველგვარი საფასურის გარეშე მონაწილეობენ დაგეგმილ ღონისძიებებში და ქმნიან საკუთარ პროფილებს საერთაშორისო კალიგრაფიის ქსელში.
+                <p>საწევრო გადასახადი:</p> <strong>საქართველო  – 10 ₾ / თვეში</strong>
+                `,
+                en: `
+                Standard members are the first to receive updates about the Association’s activities, may participate in planned events free of charge, and can create their own profiles within the international calligraphy network.
+                <p>Membership fee:</p> <strong>Georgia: 10 GEL / per month</strong>
+                `,
+                ru: ``
+            },
         },
         {
             _id: 'fa2cas',
-            title: 'საერთაშორისო წევრი',
-            desc: `
-            სტანდარტული წევრები პირველები იგებენ ასოციაციის სიახლეებს, ყოველგვარი საფასურის გარეშე მონაწილეობენ დაგეგმილ ღონისძიებებში და ქმნიან საკუთარ პროფილებს საერთაშორისო კალიგრაფიის ქსელში.
-            <p>საწევრო გადასახადი:</p> <strong>საერთაშორისო  – 10 € / თვეში</strong>
-            `,
+            title: {
+                ka: 'საერთაშორისო წევრი',
+                en: `International Member`,
+                ru: ``,
+            },
+            desc: {
+                ka: `
+                სტანდარტული წევრები პირველები იგებენ ასოციაციის სიახლეებს, ყოველგვარი საფასურის გარეშე მონაწილეობენ დაგეგმილ ღონისძიებებში და ქმნიან საკუთარ პროფილებს საერთაშორისო კალიგრაფიის ქსელში.
+                <p>საწევრო გადასახადი:</p> <strong>საერთაშორისო  – 10 € / თვეში</strong>
+                `,
+                en: `
+                Standard members are the first to receive updates about the Association’s activities, may participate in planned events free of charge, and can create their own profiles within the international calligraphy network.
+                <p>Membership fee:</p> <strong>International: 10 EUR / per month</strong>
+                `,
+                ru: ``
+            },
         },
         {
             _id: 'sda2dcsasd',
-            title: 'საპატიო წევრი',
-            desc: `
-            <p>საპატიო წევრობა ენიჭებათ იმ პირებს, რომლებიც გამორჩეულად ნაყოფიერად მოღვაწეობენ ქართული კალიგრაფიის ხელოვნების განვითარებისათვის, პოპულარიზაციისა და გავრცელებისათვის.</p></br>
-            საპატიო წევრებს ირჩევს ასოციაციის დირექტორატი. მათ გადაეცემათ ასოციაციის სპეციალური გრან-პრი  და აქვთ შესაძლებლობა მიიღონ მონაწილეობა ასოციაციის მიერ ორგანიზებულ ნებისმიერ ღონისძიებაში, ფესტივალებსა და საერთაშორისო ფორუმებში.
-            `,
+            title: {
+                ka: 'საპატიო წევრი',
+                en: `Honorary Member`,
+                ru: ``,
+            },
+            desc: {
+                ka: `
+                <p>საპატიო წევრობა ენიჭებათ იმ პირებს, რომლებიც გამორჩეულად ნაყოფიერად მოღვაწეობენ ქართული კალიგრაფიის ხელოვნების განვითარებისათვის, პოპულარიზაციისა და გავრცელებისათვის.</p></br>
+                საპატიო წევრებს ირჩევს ასოციაციის დირექტორატი. მათ გადაეცემათ ასოციაციის სპეციალური გრან-პრი  და აქვთ შესაძლებლობა მიიღონ მონაწილეობა ასოციაციის მიერ ორგანიზებულ ნებისმიერ ღონისძიებაში, ფესტივალებსა და საერთაშორისო ფორუმებში.
+                `,
+                en: `
+                <p>Honorary membership is granted to individuals who have made an outstanding and productive contribution to the development, promotion, and dissemination of Georgian calligraphic art.</p></br>
+                Honorary members are selected by the Association’s Directorate. They are awarded the Association’s special Grand Prix and are entitled to participate in any event, festival, or international forum organized by the Association.
+                `,
+                ru: ``
+            },
         }
     ]
 
@@ -58,7 +93,7 @@ export const Members = () => {
 
     const pageTitle = {
         ka: 'წევრობა',
-        en: '',
+        en: 'Membership',
         ru: '',
     }
     const pageText = {
@@ -77,8 +112,8 @@ export const Members = () => {
         <>
             <Section>
                 <PageTitle
-                    title={pageTitle.ka}
-                    text={pageText.ka}
+                    title={pageTitle[language]}
+                    text={pageText[language]}
                 />
                 {/* <SectionTitle title={'წევრობა'} /> */}
                 <div className='row'>
@@ -87,8 +122,8 @@ export const Members = () => {
                             <div className='col-lg-4' key={item._id}>
                                 <Card
                                     cover={item.cover}
-                                    title={item.title}
-                                    desc={item.desc}
+                                    title={item.title[language]}
+                                    desc={item.desc[language]}
                                     contactLink
                                 />
                             </div>
@@ -104,8 +139,8 @@ export const Members = () => {
                             <div className='col-lg-6' key={item._id}>
                                 <ServiceCard
                                     cover={item.cover}
-                                    title={item.title}
-                                    desc={item.desc}
+                                    title={item.title[language]}
+                                    desc={item.desc[language]}
                                 />
                             </div>
                         )

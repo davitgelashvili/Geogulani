@@ -7,8 +7,10 @@ import Loading from '../../Loading/Loading'
 import GalleryCard from '../../GalleryCard/GalleryCard'
 import getApi from '../../../http/getApi'
 import { ImageBox } from '../../ImageBox/ImageBox'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export const PresidentMessage = () => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
@@ -35,13 +37,13 @@ export const PresidentMessage = () => {
 
     const pageTitle = {
         ka: 'პრეზიდენტის მისალმება',
-        en: '',
+        en: 'President’s Message',
         ru: '',
     }
 
     const pageText = {
         ka: 'ქართული კალიგრაფიის პირველი საერთაშორისო ასოციაციის პრეზიდენტი',
-        en: '',
+        en: 'President of the First International Association of Georgian Calligraphy',
         ru: '',
     }
 
@@ -49,8 +51,8 @@ export const PresidentMessage = () => {
         <>
             <Section>
                 <PageTitle
-                    title={pageTitle.ka}
-                    text={pageText.ka}
+                    title={pageTitle[language]}
+                    text={pageText[language]}
                 />
                 {load && <Loading />}
                 {data && data.map((item) => {
@@ -58,12 +60,12 @@ export const PresidentMessage = () => {
                         <div className='row' key={item?._id}>
                             <div className='col-lg-4'>
                                 <figure className={styles.message__cover}>
-                                    <ImageBox src={item?.cover} alt={item?.title?.ka} />
+                                    <ImageBox src={item?.cover} alt={item?.title?.[language]} />
                                 </figure>
                             </div>
                             <div className='col-lg-8'>
-                                <h1 className={styles.message__title}>{item?.title?.ka}</h1>
-                                <div className={styles.message__text} dangerouslySetInnerHTML={{ __html: item?.desc?.ka}}></div>
+                                <h1 className={styles.message__title}>{item?.title?.[language]}</h1>
+                                <div className={styles.message__text} dangerouslySetInnerHTML={{ __html: item?.desc?.[language] }}></div>
                             </div>
                         </div>
                     )

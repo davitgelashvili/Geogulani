@@ -3,8 +3,10 @@ import styles from './styles.module.scss'
 import PageTitle from '../../SectionTitle/PageTitle'
 import { ImageBox } from '../../ImageBox/ImageBox'
 import logo from './../../../assets/fest_gulani.png'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export const FestGulan = () => {
+    const { language } = useLanguage()
     const pageTitle = {
         ka: 'ფესტივალი „გულანი“',
         en: 'Gulani Festival',
@@ -39,8 +41,8 @@ export const FestGulan = () => {
         <>
             <Section bgColor={'#e5e7eb'}>
                 <PageTitle
-                    title={pageTitle.ka}
-                    text={pageText.ka}
+                    title={pageTitle[language]}
+                    text={pageText[language]}
                 />
                 <div>
                     <div className='row'>
@@ -50,7 +52,7 @@ export const FestGulan = () => {
                             </figure>
                         </div>
                         <div className='col-auto col-md'>
-                            <div className={styles['text']} dangerouslySetInnerHTML={{ __html: desc.ka }}></div>
+                            <div className={styles['text']} dangerouslySetInnerHTML={{ __html: desc[language] }}></div>
                         </div>
                     </div>
                 </div>
