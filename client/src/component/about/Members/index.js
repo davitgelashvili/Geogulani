@@ -74,20 +74,43 @@ export const Members = () => {
         {
             _id: 'dsad23ca',
             cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: 'მოსწავლეთა კლუბი',
-            desc: `
-            კლუბი განკუთვნილია 6-18 წლის ასაკის მოსწავლეთათვის,  წევრები მიიღებენ სპეციალურ სასწავლო მასალებს, ისინი პროფესიონალ კალიგრაფებთან შეისწავლიან ხელოვნების ამ დარგს და ექნებათ მონაწილეობის შესაძლებლობა ბავშვთა კონკურსებსა და ახალგაზრდულ ფესტივალებში; ასევე სარგებლობენ განსაკუთრებული შეღავათებითა და ექსკლუზიური შეთავაზებებით.
-            <p>საწევრო გადასახადი:</p><strong>12 ₾ / წელიწადში</strong>
-            `,
+            title: {
+                ka: `მოსწავლეთა კლუბი`,
+                en: `Students’ Club`,
+                ru: ``
+            },
+            desc: {
+                ka: `
+                კლუბი განკუთვნილია 6-18 წლის ასაკის მოსწავლეთათვის,  წევრები მიიღებენ სპეციალურ სასწავლო მასალებს, ისინი პროფესიონალ კალიგრაფებთან შეისწავლიან ხელოვნების ამ დარგს და ექნებათ მონაწილეობის შესაძლებლობა ბავშვთა კონკურსებსა და ახალგაზრდულ ფესტივალებში; ასევე სარგებლობენ განსაკუთრებული შეღავათებითა და ექსკლუზიური შეთავაზებებით.
+                <p>საწევრო გადასახადი:</p><strong>12 ₾ / წელიწადში</strong>
+                `,
+                en: `
+                The club is designed for students aged 6–18. Members receive specially developed educational materials, study calligraphy under the guidance of professional calligraphers, and gain opportunities to participate in children’s competitions and youth festivals. They also benefit from special discounts and exclusive offers.
+                <p>Membership fee:</p><strong>12 GEL / per year</strong>
+                `,
+                ru: ``
+            },
         },
         {
             _id: 'dsd2c',
             cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
-            title: 'უფროსთა კლუბი',
-            desc: `
+            title: {
+                ka: `უფროსთა კლუბი`,
+                en: `Adults’ Club`,
+                ru: ``
+            },
+            desc:
+            {
+                ka: `
                 წევრები იღებენ ექსკლუზიურ წვდომას შემოქმედებით პროგრამებსა და მასტერკლასებზე, პერსონალურ პროფესიულ კონსულტაციებს, მონაწილეობენ კონკურსებსა და ფესტივალებში, ასევე სარგებლობენ განსაკუთრებული შეღავათებითა და ექსკლუზიური შეთავაზებებით.
                 <p>საწევრო გადასახადი:</p><strong>120 ₾ / წელიწადში</strong>
-            `,
+                `,
+                en: `
+                Members receive exclusive access to creative programs and masterclasses, personalized professional consultations, and opportunities to participate in competitions and festivals. They also enjoy special discounts and exclusive offers.
+                <p>Membership fee:</p><strong>120 GEL / per year</strong>
+                `,
+                ru: ``
+            },
         }
     ]
 
@@ -98,13 +121,19 @@ export const Members = () => {
     }
     const pageText = {
         ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        en: '',
+        en: 'test text',
         ru: '',
     }
 
     const sectionTitle = {
         ka: 'კლუბი',
-        en: '',
+        en: 'Club',
+        ru: '',
+    }
+
+    const footerText = {
+        ka: `📌 კლუბების წევრებს ვთავაზობთ 50%- მდე  ფასდაკლებას ასოციაციის ყველა პროდუქციასა და აქტივობაზე.`,
+        en: '📌 Club members receive up to a 50% discount on all Association products and activities.',
         ru: '',
     }
 
@@ -132,7 +161,7 @@ export const Members = () => {
                 </div>
             </Section>
             <Section>
-                <SectionTitle title={sectionTitle.ka} />
+                <SectionTitle title={sectionTitle[language]} />
                 <div className='row'>
                     {apply && apply?.map((item) => {
                         return (
@@ -149,7 +178,7 @@ export const Members = () => {
             </Section>
             <div className='container'>
                 <Card
-                    desc={'📌 კლუბების წევრებს ვთავაზობთ 50%- მდე  ფასდაკლებას ასოციაციის ყველა პროდუქციასა და აქტივობაზე.'}
+                    desc={footerText[language]}
                 />
             </div>
         </>

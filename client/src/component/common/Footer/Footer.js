@@ -2,8 +2,59 @@ import React from 'react'
 import styles from './styles.module.scss'
 import { Link } from 'react-router-dom'
 import logo from './../../../assets/images/footer_logo.png'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export const Footer = () => {
+    const { language } = useLanguage()
+
+    const data = [
+        {
+            id: 'dsad2s',
+            url: '/',
+            title: {
+                ka: 'მთავარი',
+                en: 'Home',
+                ru: ''
+            }
+        },
+        {
+            id: 'fsa2fs',
+            url: '/about',
+            title: {
+                ka: 'ასოციაცია',
+                en: 'Association',
+                ru: ''
+            }
+        },
+        {
+            id: 'fast33f',
+            url: '/education',
+            title: {
+                ka: 'კურსები',
+                en: 'Courses',
+                ru: ''
+            }
+        },
+        {
+            id: 'sdgf3gd',
+            url: '/events',
+            title: {
+                ka: 'ღონისძიებები',
+                en: 'Events',
+                ru: ''
+            }
+        },
+        {
+            id: 'gs3d',
+            url: '/contact',
+            title: {
+                ka: 'კონტაქტი',
+                en: 'Contact',
+                ru: ''
+            }
+        }
+    ]
+
     return (
         <footer className={styles.footer}>
             <div className='container'>
@@ -13,11 +64,11 @@ export const Footer = () => {
                     </div>
                     <div className='col-lg-6 d-flex flex-column align-items-md-end'>
                         <ul className={`${styles.footer__menu} d-block d-md-flex `}>
-                            <li><Link to={'/'}>მთავარი</Link></li>
-                            <li><Link to={'/about'}>ასოციაცია</Link></li>
-                            <li><Link to={'/education'}>კურსები</Link></li>
-                            <li><Link to={'/events'}>ღონისზიებები</Link></li>
-                            <li><Link to={'/contact'}>კონტაქტი</Link></li>
+                            {data?.map((item) => {
+                                return (
+                                    <li key={item.id}><Link to={item.url}>{item.title[language]}</Link></li>
+                                )
+                            })}
                         </ul>
                         <ul className={styles.footer__soc}>
                             <li>

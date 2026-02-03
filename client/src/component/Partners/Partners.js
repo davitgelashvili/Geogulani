@@ -4,8 +4,10 @@ import Section from '../SectionTitle/Section';
 import PageTitle from '../SectionTitle/PageTitle';
 import Card from '../Card/Card';
 import Loading from '../Loading/Loading';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Partners = () => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
@@ -37,15 +39,15 @@ export const Partners = () => {
     }
     const pageText = {
         ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        en: '',
+        en: 'test text',
         ru: '',
     }
 
     return (
         <Section>
             <PageTitle
-                title={pageTitle.ka}
-                text={pageText.ka}
+                title={pageTitle[language]}
+                text={pageText[language]}
             />
             {load && <Loading />}
             <div className='row'>
@@ -54,9 +56,9 @@ export const Partners = () => {
                         <div className='col-6 col-lg-4' key={item._id}>
                             <Card
                                 cover={item.cover}
-                                title={item.title.ka}
-                                desc={item.desc.ka}
-                                // url={`/partners/${item._id}`}
+                                title={item.title[language]}
+                                desc={item.desc[language]}
+                            // url={`/partners/${item._id}`}
                             />
                         </div>
                     )

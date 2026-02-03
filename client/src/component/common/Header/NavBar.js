@@ -26,7 +26,7 @@ export default function NavBar() {
                             <select className={styles.language__select} value={language} onChange={(e) => changeLanguage(e.target.value)}>
                                 <option value={'ka'}>ქარ</option>
                                 <option value={'en'}>ENG</option>
-                                <option value={'ru'}>KOR</option>
+                                {/* <option value={'ru'}>KOR</option> */}
                             </select>
                         </div>
                     </div>

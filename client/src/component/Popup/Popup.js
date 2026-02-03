@@ -4,8 +4,10 @@ import Loading from '../Loading/Loading';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { ImageBox } from '../ImageBox/ImageBox';
 import styles from './styles.module.scss'
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Popup = ({ id, name, closePopup }) => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [data, setData] = useState(null);
 
@@ -41,10 +43,10 @@ export const Popup = ({ id, name, closePopup }) => {
                                 <div className='col'>
                                     <div className={styles.popup__text}>
                                         <SectionTitle
-                                            title={data?.title?.ka}
+                                            title={data?.title?.[language]}
                                         />
-                                        <p>{data?.position?.ka}</p>
-                                        <div dangerouslySetInnerHTML={{ __html: data?.desc?.ka }}></div>
+                                        <p>{data?.position?.[language]}</p>
+                                        <div dangerouslySetInnerHTML={{ __html: data?.desc?.[language] }}></div>
                                     </div>
                                 </div>
                             </div>

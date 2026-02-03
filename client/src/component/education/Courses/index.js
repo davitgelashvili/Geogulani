@@ -7,8 +7,10 @@ import Card from '../../Card/Card'
 import { Link } from 'react-router-dom'
 import getApi from '../../../http/getApi'
 import Loading from '../../Loading/Loading'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export const Courses = () => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
@@ -35,12 +37,12 @@ export const Courses = () => {
 
     const pageTitle = {
         ka: 'კურსები',
-        en: '',
+        en: 'Courses',
         ru: '',
     }
     const pageText = {
         ka: 'ქართული კალიგრაფიის პირველი საერთაშორისო ასოციაცია გთავაზობთ ონლაინ (მთელი მსოფლიოს მასშტაბით) და ადგილზე გრძელვადიან, მოკლევადიან და ერთჯერად კალიგრაფიის კურსებსა და მასტერკლასებს.',
-        en: '',
+        en: 'test text',
         ru: '',
     }
 
@@ -48,8 +50,8 @@ export const Courses = () => {
         <>
             <Section>
                 <PageTitle
-                    title={pageTitle.ka}
-                    text={pageText.ka}
+                    title={pageTitle[language]}
+                    text={pageText[language]}
                 />
                 {load && <Loading />}
                 <div className='row'>
@@ -58,9 +60,9 @@ export const Courses = () => {
                             <div className='col-md-6 col-lg-4' key={item._id}>
                                 <Card
                                     cover={item.cover}
-                                    title={item.title.ka}
-                                    desc={item.desc.ka}
-                                    url={`/course/${item._id}`}/>
+                                    title={item.title[language]}
+                                    desc={item.desc[language]}
+                                    url={`/course/${item._id}`} />
                             </div>
                         )
                     })}

@@ -1,32 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import getApi from '../../http/getApi';
 import Section from '../SectionTitle/Section';
-import SectionTitle from '../SectionTitle/SectionTitle';
-import { useParams } from 'react-router-dom';
-import { ImageBox } from '../ImageBox/ImageBox';
-import Loading from '../Loading/Loading';
-import styles from './styles.module.scss'
 import PageTitle from '../SectionTitle/PageTitle';
 import { ContactCards } from './ContactCards/ContactCards';
 import { Form } from './Form';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Contact = () => {
+    const { language } = useLanguage()
     const pageTitle = {
         ka: 'კონტაქტი',
-        en: '',
+        en: 'Contact',
         ru: '',
     }
     const pageText = {
         ka: 'საკონტაქტო ინფორმაცია და შესავსები ფორმა',
-        en: '',
+        en: 'test text',
         ru: '',
     }
 
     return (
         <Section>
             <PageTitle
-                title={pageTitle.ka}
-                text={pageText.ka}
+                title={pageTitle[language]}
+                text={pageText[language]}
             />
             <div className='row'>
                 <div className='col-lg-6'>

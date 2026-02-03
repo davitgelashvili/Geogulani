@@ -82,14 +82,6 @@ export const Form = ({ courseName }) => {
             />
             {!courseName && (
                 <>
-                    {/* <CustomInput
-                        type={'text'}
-                        title={'აღწერა'}
-                        name={'text'}
-                        value={values.text}
-                        placeholder={'რატომ გსურთ ჩვენთან დაკავშირება'}
-                        onChange={handleChange}
-                    /> */}
                     <p>აღწერა</p>
                     <textarea
                         rows={7}

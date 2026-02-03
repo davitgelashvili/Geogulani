@@ -10,8 +10,10 @@ import styles from './styles.module.scss'
 import getApi from '../../../http/getApi'
 import { ImageBox } from '../../ImageBox/ImageBox'
 import Loading from '../../Loading/Loading'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export const Camps = () => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
@@ -38,54 +40,79 @@ export const Camps = () => {
 
     const pageTitle = {
         ka: 'კალიგრაფიული ბანაკები',
-        en: '',
+        en: 'Calligraphy Camps',
         ru: '',
     }
     const pageText = {
         ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        en: '',
+        en: 'test text',
         ru: '',
     }
 
     const sectionTitle = {
         ka: '1 კვირიანი საერთაშორისო ბანაკი',
-        en: '',
+        en: 'A one-week international camp ',
         ru: '',
     }
 
     const section2Title = {
         ka: 'დაგეგმილი ბანაკები',
-        en: '',
+        en: 'Planned Camps',
         ru: '',
+    }
+
+    const list = {
+        first: {
+            ka: `გამორჩეული გამოცდილება მათთვის, ვისაც სურს ქართული კალიგრაფიის ღრმა წვდომა და შემოქმედებით გარემოში საკუთარი შესაძლებლობების განვითარება.`,
+            en: `Offers a unique experience for those who seek in-depth engagement with Georgian calligraphy and wish to develop their creative potential in an inspiring environment.`,
+            ru: ``,
+        },
+        second: {
+            ka: `ბანაკები ტარდება როგორც საქართველოში, ასევე უცხოეთში პარტნიორი ორგანიზაციების აქტიური ჩართულობით.`,
+            en: `Camps are held both in Georgia and abroad, with the active involvement of partner organizations.`,
+            ru: ``,
+        },
+        body: {
+            ka: `
+                <li>ყოველდღიური ინტენსიური მასტერკლასები პროფესიონალი კალიგრაფებისგან;</li>
+                <li>სწავლება სამ კალიგრაფიულ სისტემაში – მხედრული, ასომთავრული, ნუსხური;</li>
+                <li>კულტურული მარშრუტები, ეკლესიების, ისტორიული მონუმენტებისა და მუზეუმების მონახულება;</li>
+                <li>საღამოს შემოქმედებითი სესიები და თემატური შეხვედრები;</li>
+                <li>ბანაკის დასასრულს – ასამბლეა და მონაწილეთა ნამუშევრების ოფიციალური გამოფენა.</li>
+            `,
+            en: `
+                <li>Daily intensive masterclasses led by professional calligraphers;</li>
+                <li>Instruction in all three Georgian scripts: Mkhedruli, Asomtavruli, and Nuskhuri;</li>
+                <li>Cultural routes, including visits to churches, historical monuments, and museums;</li>
+                <li>Evening creative sessions and thematic meetings;</li>
+                <li>A concluding assembly and an official exhibition of participants’ works.</li>
+            `,
+            ru: `
+            `,
+        }
     }
 
     return (
         <>
             <Section>
                 <PageTitle
-                    title={pageTitle.ka}
-                    text={pageText.ka}
+                    title={pageTitle[language]}
+                    text={pageText[language]}
                 />
                 <div className={styles['camps-container']}>
                     <div>
                         <SectionTitle
-                            title={sectionTitle.ka} />
+                            title={sectionTitle[language]} />
                     </div>
                     <div className='row flex-wrap-reverse flex-lg-row'>
                         <div className='col-lg-8'>
                             <div className={styles['camps-container__text']}>
                                 <p>
-                                გამორჩეული გამოცდილება მათთვის, ვისაც სურს ქართული კალიგრაფიის ღრმა წვდომა და შემოქმედებით გარემოში საკუთარი შესაძლებლობების განვითარება.
+                                    {list.first[language]}
                                 </p>
-                                <ul>
-                                    <li>ყოველდღიური ინტენსიური მასტერკლასები პროფესიონალი კალიგრაფებისგან;</li>
-                                    <li>სწავლება სამ კალიგრაფიულ სისტემაში – მხედრული, ასომთავრული, ნუსხური;</li>
-                                    <li>კულტურული მარშრუტები, ეკლესიების, ისტორიული მონუმენტებისა და მუზეუმების მონახულება;</li>
-                                    <li>საღამოს შემოქმედებითი სესიები და თემატური შეხვედრები;</li>
-                                    <li>ბანაკის დასასრულს – ასამბლეა და მონაწილეთა ნამუშევრების ოფიციალური გამოფენა.</li>
-                                </ul>
+                                <ul dangerouslySetInnerHTML={{ __html: list.body[language] }}></ul>
                                 <p>
-                                ბანაკები ტარდება როგორც საქართველოში, ასევე უცხოეთში პარტნიორი ორგანიზაციების აქტიური ჩართულობით.
+                                    {list.second[language]}
                                 </p>
                             </div>
                         </div>
@@ -98,7 +125,7 @@ export const Camps = () => {
                 </div>
             </Section>
             <Section>
-                <SectionTitle title={section2Title.ka} />
+                <SectionTitle title={section2Title[language]} />
                 {load && <Loading />}
                 <div className='row'>
                     {data && data?.map((item) => {
@@ -106,8 +133,8 @@ export const Camps = () => {
                             <div className='col-sm-6 col-lg-4' key={item._id}>
                                 <Card
                                     cover={item.cover}
-                                    title={item.title.ka}
-                                    desc={item.desc.ka}
+                                    title={item.title[language]}
+                                    desc={item.desc[language]}
                                     url={`/camps/${item._id}`} />
                             </div>
                         )

@@ -9,8 +9,10 @@ import 'swiper/css';
 import styles from './styles.module.scss'
 import getApi from '../../../http/getApi'
 import Loading from '../../Loading/Loading'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export const Exchange = () => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
@@ -65,6 +67,13 @@ export const Exchange = () => {
             `,
         },
     ]
+
+    const storyText = {
+        ka: 'წარმატების ისტორიები',
+        en: 'Succsess Stories',
+        ru: ''
+    }
+
     return (
         <>
 
@@ -79,7 +88,7 @@ export const Exchange = () => {
                     <li>გაეცნონ ქართულ ანბანსა და კალიგრაფიულ სტილებს;</li>
                     <li>მონაწილეობა მიიღონ მასტერკლასებსა და ადგილობრივ ექსპედიციებში;</li>
                     <li>გაეცნონ ქართულ ფოლკლორს, ეზიარონ ტრადიციებსა და სულიერ კულტურას.</li>
-                    <p style={{color: '#a30026'}}><strong>პროგრამის მიზნებია:</strong></p>
+                    <p style={{ color: '#a30026' }}><strong>პროგრამის მიზნებია:</strong></p>
                     <li>კულტურათშორისი კავშირის გაღრმავება;</li>
                     <li>გამოცდილებების გაზიარება;</li>
                     <li>ქართული კალიგრაფიის საერთაშორისო ცნობადობის ზრდა და განვითარება;</li>
@@ -88,8 +97,8 @@ export const Exchange = () => {
                     <li>ერთობლივი მასტერკლასების, პროექტებისა და შემოქმედებითი სემინარების ჩატარება;</li>
                     <li>ხელოვნების ინოვაციური პროექტების შექმნა და საერთაშორისო ასპარეზზე გატანა.</li>
                 </div>
-                
-                <div className='row' style={{marginTop: '32px'}}>
+
+                <div className='row' style={{ marginTop: '32px' }}>
                     <p>ჩვენი კულტურული ინტერაქციის პროგრამა ასევე მიზნად ისახავს ქართული კალიგრაფიის საერთაშორისო ცნობადობის გაზრდას, ქართული კალიგრაფიის პედაგოგიური სკოლისა და ბაზის შექმნას, დარგის განვითარების ხელშეწყობას როგორც შემოქმედებითი, ისე აკადემიური და სამეცნიერო თვალსაზრისით.</p>
                     {benefits && benefits?.map((item) => {
                         return (
@@ -106,7 +115,7 @@ export const Exchange = () => {
             </Section>
 
             <Section>
-                <SectionTitle title={'Succsess Stories'} />
+                <SectionTitle title={storyText[language]} />
                 {load && <Loading />}
                 <Swiper
                     onSlideChange={() => console.log('slide change')}
@@ -134,8 +143,8 @@ export const Exchange = () => {
                             <SwiperSlide key={item._id}>
                                 <Card
                                     cover={item.cover}
-                                    title={item.title.ka}
-                                    desc={item.desc.ka}
+                                    title={item.title[language]}
+                                    desc={item.desc[language]}
                                     url={`/blogs/${item._id}`}
                                 />
                             </SwiperSlide>

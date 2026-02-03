@@ -7,8 +7,10 @@ import GalleryCard from '../../GalleryCard/GalleryCard'
 import getApi from '../../../http/getApi'
 import Loading from '../../Loading/Loading'
 import { Popup } from '../../Popup/Popup'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export const Team = () => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [popupShow, setPopup] = useState(false)
     const [_id, set_id] = useState('')
@@ -38,7 +40,7 @@ export const Team = () => {
     const leadership = data?.filter((item) => item.category === 'leadership')
     const calligraphers = data?.filter((item) => item.category === 'calligraphers')
     const board = data?.filter((item) => item.category === 'board')
-    
+
     function closePopup() {
         document.body.style.overflow = 'unset'
         setPopup(false)
@@ -47,23 +49,41 @@ export const Team = () => {
 
     const pageTitle = {
         ka: 'ჩვენი გუნდი',
-        en: '',
+        en: 'Our Team',
         ru: '',
     }
     const pageText = {
         ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        en: '',
+        en: 'test text',
         ru: '',
+    }
+
+    const title = {
+        first: {
+            ka: `დირექტორატი`,
+            en: `Directorate`,
+            ru: ``
+        },
+        second: {
+            ka: `ბორდი`,
+            en: `Board`,
+            ru: ``
+        },
+        threed: {
+            ka: `კალიგრაფები`,
+            en: `Calligraphers`,
+            ru: ``
+        }
     }
 
     return (
         <>
             <Section>
                 <PageTitle
-                    title={pageTitle.ka}
-                    text={pageText.ka}
+                    title={pageTitle[language]}
+                    text={pageText[language]}
                 />
-                <SectionTitle title={'დირექტორატი'} />
+                <SectionTitle title={title.first[language]} />
                 {load && <Loading />}
                 <div className='row'>
                     {leadership && leadership.map((item) => {
@@ -71,9 +91,9 @@ export const Team = () => {
                             <div className='col-6 col-md-4 col-lg-3' key={item?._id}>
                                 <GalleryCard
                                     cover={item?.cover}
-                                    title={item?.title.ka}
-                                    position={item?.position.ka}
-                                    desc={item?.desc.ka}
+                                    title={item?.title[language]}
+                                    position={item?.position[language]}
+                                    desc={item?.desc[language]}
                                     _id={item._id}
                                     setPopup={setPopup}
                                     set_id={set_id}
@@ -84,7 +104,7 @@ export const Team = () => {
                 </div>
             </Section>
             <Section>
-                <SectionTitle title={'ბორდი'} />
+                <SectionTitle title={title.second[language]} />
                 {load && <Loading />}
                 <div className='row'>
                     {board && board.map((item) => {
@@ -92,8 +112,8 @@ export const Team = () => {
                             <div className='col-6 col-md-4 col-lg-3' key={item?._id}>
                                 <GalleryCard
                                     cover={item?.cover}
-                                    title={item?.title.ka}
-                                    desc={item?.desc.ka}
+                                    title={item?.title[language]}
+                                    desc={item?.desc[language]}
                                     _id={item._id}
                                     setPopup={setPopup}
                                     set_id={set_id}
@@ -104,7 +124,7 @@ export const Team = () => {
                 </div>
             </Section>
             <Section>
-                <SectionTitle title={'კალიგრაფები'} />
+                <SectionTitle title={title.threed[language]} />
                 {load && <Loading />}
                 <div className='row'>
                     {calligraphers && calligraphers.map((item) => {
@@ -112,8 +132,8 @@ export const Team = () => {
                             <div className='col-6 col-md-4 col-lg-3' key={item?._id}>
                                 <GalleryCard
                                     cover={item?.cover}
-                                    title={item?.title.ka}
-                                    desc={item?.desc.ka}
+                                    title={item?.title[language]}
+                                    desc={item?.desc[language]}
                                     _id={item._id}
                                     setPopup={setPopup}
                                     set_id={set_id}

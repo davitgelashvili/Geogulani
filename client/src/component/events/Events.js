@@ -4,8 +4,10 @@ import Section from '../SectionTitle/Section';
 import PageTitle from '../SectionTitle/PageTitle';
 import Card from '../Card/Card';
 import Loading from '../Loading/Loading';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Events = () => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
@@ -32,20 +34,20 @@ export const Events = () => {
 
     const pageTitle = {
         ka: 'ღონისძიებები',
-        en: '',
+        en: 'Events',
         ru: '',
     }
     const pageText = {
         ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        en: '',
+        en: 'test text',
         ru: '',
     }
 
     return (
         <Section>
             <PageTitle
-                title={pageTitle.ka}
-                text={pageText.ka}
+                title={pageTitle[language]}
+                text={pageText[language]}
             />
             {load && <Loading />}
             <div className='row'>
@@ -54,8 +56,8 @@ export const Events = () => {
                         <div className='col-sm-6 col-lg-4' key={item._id}>
                             <Card
                                 cover={item.cover}
-                                title={item.title.ka}
-                                desc={item.desc.ka}
+                                title={item.title[language]}
+                                desc={item.desc[language]}
                                 url={`/events/${item._id}`}
                             />
                         </div>

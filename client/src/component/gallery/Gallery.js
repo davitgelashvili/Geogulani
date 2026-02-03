@@ -6,8 +6,10 @@ import Card from '../Card/Card';
 import GalleryCard from '../GalleryCard/GalleryCard';
 import Loading from '../Loading/Loading';
 import { Popup } from '../Popup/Popup';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Gallery = () => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [pageLoad, setPageLoad] = useState(false)
     const [popupShow, setPopup] = useState(false)
@@ -58,12 +60,12 @@ export const Gallery = () => {
 
     const pageTitle = {
         ka: 'გალერეა',
-        en: '',
+        en: 'Gallery',
         ru: '',
     }
     const pageText = {
         ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        en: '',
+        en: 'test text',
         ru: '',
     }
 
@@ -71,8 +73,8 @@ export const Gallery = () => {
         <>
             <Section>
                 <PageTitle
-                    title={pageTitle.ka}
-                    text={pageText.ka}
+                    title={pageTitle[language]}
+                    text={pageText[language]}
                 />
                 {load && <Loading />}
                 <div className='row'>
@@ -81,8 +83,8 @@ export const Gallery = () => {
                             <div className='col-6 col-md-4 col-lg-3' key={item._id}>
                                 <GalleryCard
                                     cover={item.cover}
-                                    title={item.title.ka}
-                                    desc={item.desc.ka}
+                                    title={item.title[language]}
+                                    desc={item.desc[language]}
                                     _id={item._id}
                                     setPopup={setPopup}
                                     set_id={set_id}
@@ -95,11 +97,11 @@ export const Gallery = () => {
                     {pageLoad ? <Loading /> : (
                         <>
                             <button onClick={handlePrev} disabled={params.page === 1}>
-                                წინ
+                                Perv
                             </button>
-                            <span>გვერდი: {params.page} / {totalPages}</span>
+                            <span>Page: {params.page} / {totalPages}</span>
                             <button onClick={handleNext} disabled={params.page === totalPages}>
-                                შემდეგი
+                                Next
                             </button>
                         </>
                     )}

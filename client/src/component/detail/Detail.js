@@ -7,8 +7,10 @@ import { ImageBox } from '../ImageBox/ImageBox';
 import Loading from '../Loading/Loading';
 import styles from './styles.module.scss'
 import { Form } from '../contact/Form';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Detail = () => {
+    const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [data, setData] = useState(null);
     const params = useParams()
@@ -30,6 +32,12 @@ export const Detail = () => {
         console.log(params)
     }, [params]);
 
+    const regText = {
+        ka: 'რეგისტრაცია',
+        en: 'Registration',
+        ru: '',
+    }
+
     // if (!data) return null
     return (
         <Section>
@@ -37,7 +45,7 @@ export const Detail = () => {
             {!load && (
                 <>
                     <SectionTitle
-                        title={data?.title?.ka}
+                        title={data?.title?.[language]}
                     />
                     <figure className={styles.cover}>
                         <ImageBox src={data?.cover} alt='cover' />
@@ -45,14 +53,14 @@ export const Detail = () => {
 
                     {params.name === 'course' ? (
                         <div className='row'>
-                            <div dangerouslySetInnerHTML={{ __html: data?.desc?.ka }} className='col-lg-8'></div>
+                            <div dangerouslySetInnerHTML={{ __html: data?.desc?.[language] }} className='col-lg-8'></div>
                             <div className='col-lg-4'>
-                                <h1>რეგისტრაცია</h1>
-                                <Form courseName={data?.title?.ka} />
+                                <h1>{regText[language]}</h1>
+                                <Form courseName={data?.title?.[language]} />
                             </div>
                         </div>
                     ) : (
-                        <div dangerouslySetInnerHTML={{ __html: data?.desc?.ka }}></div>
+                        <div dangerouslySetInnerHTML={{ __html: data?.desc?.[language] }}></div>
                     )}
                 </>
             )}
