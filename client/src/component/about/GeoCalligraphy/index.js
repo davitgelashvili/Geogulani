@@ -15,7 +15,7 @@ export const GeoCalligraphy = () => {
     const { language } = useLanguage()
     const pageTitle = {
         ka: 'კალიგრაფია ეს არის ლამაზად წერის ხელოვნება',
-        en: 'text text text',
+        en: 'Calligraphy is the art of expressive and aesthetically refined writing.',
         ru: '',
     }
     const title = {

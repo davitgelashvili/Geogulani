@@ -64,8 +64,8 @@ export const Gallery = () => {
         ru: '',
     }
     const pageText = {
-        ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        en: 'test text',
+        ka: 'აქ წარმოდგენილია ჩვენი ასოციაციის კალიგრაფთა ნამუშევრები, რომელთა შეძენაც შესაძლებელია სურვილისამებრ.',
+        en: 'Here are presented the works of our association’s calligraphers, available for purchase upon request.',
         ru: '',
     }
 

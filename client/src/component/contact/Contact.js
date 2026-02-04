@@ -13,7 +13,7 @@ export const Contact = () => {
     }
     const pageText = {
         ka: 'საკონტაქტო ინფორმაცია და შესავსები ფორმა',
-        en: 'test text',
+        en: 'test',
         ru: '',
     }
 

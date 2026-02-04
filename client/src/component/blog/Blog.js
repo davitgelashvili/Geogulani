@@ -9,6 +9,7 @@ import { useLanguage } from '../../context/LanguageContext';
 export const Blog = () => {
     const { language } = useLanguage()
     const [load, setLoad] = useState(true)
+    const [pageLoad, setPageLoad] = useState(false)
     const [data, setData] = useState([]);
     const [params, setParams] = useState({
         page: 1,
@@ -26,11 +27,26 @@ export const Blog = () => {
                 console.error('Error fetching blogs:', err);
             } finally {
                 setLoad(false)
+                setPageLoad(false)
             }
         }
 
         fetchData();
     }, [params]);
+
+    const handleNext = () => {
+        if (params.page < totalPages) {
+            setPageLoad(true)
+            setParams(prev => ({ ...prev, page: prev.page + 1 }));
+        }
+    };
+
+    const handlePrev = () => {
+        if (params.page > 1) {
+            setPageLoad(true)
+            setParams(prev => ({ ...prev, page: prev.page - 1 }));
+        }
+    };
 
     const pageTitle = {
         ka: 'სიახლეები',
@@ -38,8 +54,8 @@ export const Blog = () => {
         ru: '',
     }
     const pageText = {
-        ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        en: 'test text',
+        ka: 'ტესტი',
+        en: 'test',
         ru: '',
     }
 
@@ -63,6 +79,19 @@ export const Blog = () => {
                         </div>
                     )
                 })}
+            </div>
+            <div style={{ width: '250px', height: '50px' }}>
+                {pageLoad ? <Loading /> : (
+                    <>
+                        <button onClick={handlePrev} disabled={params.page === 1}>
+                            Perv
+                        </button>
+                        <span>Page: {params.page} / {totalPages}</span>
+                        <button onClick={handleNext} disabled={params.page === totalPages}>
+                            Next
+                        </button>
+                    </>
+                )}
             </div>
         </Section>
     )

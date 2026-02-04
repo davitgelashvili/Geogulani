@@ -44,20 +44,14 @@ export const Camps = () => {
         ru: '',
     }
     const pageText = {
-        ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        en: 'test text',
+        ka: 'ტესტი',
+        en: 'test',
         ru: '',
     }
 
     const sectionTitle = {
         ka: '1 კვირიანი საერთაშორისო ბანაკი',
         en: 'A one-week international camp ',
-        ru: '',
-    }
-
-    const section2Title = {
-        ka: 'დაგეგმილი ბანაკები',
-        en: 'Planned Camps',
         ru: '',
     }
 
@@ -122,23 +116,6 @@ export const Camps = () => {
                             </figure>
                         </div>
                     </div>
-                </div>
-            </Section>
-            <Section>
-                <SectionTitle title={section2Title[language]} />
-                {load && <Loading />}
-                <div className='row'>
-                    {data && data?.map((item) => {
-                        return (
-                            <div className='col-sm-6 col-lg-4' key={item._id}>
-                                <Card
-                                    cover={item.cover}
-                                    title={item.title[language]}
-                                    desc={item.desc[language]}
-                                    url={`/camps/${item._id}`} />
-                            </div>
-                        )
-                    })}
                 </div>
             </Section>
         </>

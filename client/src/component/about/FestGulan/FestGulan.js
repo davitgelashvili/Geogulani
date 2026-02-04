@@ -13,8 +13,8 @@ export const FestGulan = () => {
         ru: '',
     }
     const pageText = {
-        ka: 'ქართული კალიგრაფიის პირველი საერთაშორისო ფესტივალი „გულანი“',
-        en: 'The First International Festival of Georgian Calligraphy – Gulani',
+        ka: 'ქართული კალიგრაფიის საერთაშორისო ფესტივალი „გულანი“',
+        en: 'International Festival of Georgian Calligraphy – Gulani',
         ru: '',
     }
 

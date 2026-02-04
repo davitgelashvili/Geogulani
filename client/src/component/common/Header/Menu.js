@@ -41,7 +41,7 @@ export default function Menu({ className, setActive }) {
                 {
                     title: {
                         ka: 'ქართული კალიგრაფია',
-                        en: 'Georgia Calligraphy',
+                        en: 'Georgian Calligraphy',
                         ru: ''
                     },
                     url: '/geocalligraphy',
