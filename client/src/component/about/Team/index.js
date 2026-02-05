@@ -10,6 +10,7 @@ import { Popup } from '../../Popup/Popup'
 import { useLanguage } from '../../../context/LanguageContext'
 
 export const Team = () => {
+    const [index, setIndex] = useState(0)
     const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [popupShow, setPopup] = useState(false)
@@ -86,7 +87,7 @@ export const Team = () => {
                 <SectionTitle title={title.first[language]} />
                 {load && <Loading />}
                 <div className='row'>
-                    {leadership && leadership.map((item) => {
+                    {leadership && leadership.map((item, index) => {
                         return (
                             <div className='col-6 col-md-4 col-lg-3' key={item?._id}>
                                 <GalleryCard
@@ -97,6 +98,8 @@ export const Team = () => {
                                     _id={item._id}
                                     setPopup={setPopup}
                                     set_id={set_id}
+                                    itemIndex={index}
+                                    setIndex={setIndex}
                                 />
                             </div>
                         )
@@ -107,7 +110,7 @@ export const Team = () => {
                 <SectionTitle title={title.second[language]} />
                 {load && <Loading />}
                 <div className='row'>
-                    {board && board.map((item) => {
+                    {board && board.map((item, index) => {
                         return (
                             <div className='col-6 col-md-4 col-lg-3' key={item?._id}>
                                 <GalleryCard
@@ -117,6 +120,8 @@ export const Team = () => {
                                     _id={item._id}
                                     setPopup={setPopup}
                                     set_id={set_id}
+                                    itemIndex={index}
+                                    setIndex={setIndex}
                                 />
                             </div>
                         )
@@ -127,7 +132,7 @@ export const Team = () => {
                 <SectionTitle title={title.threed[language]} />
                 {load && <Loading />}
                 <div className='row'>
-                    {calligraphers && calligraphers.map((item) => {
+                    {calligraphers && calligraphers.map((item, index) => {
                         return (
                             <div className='col-6 col-md-4 col-lg-3' key={item?._id}>
                                 <GalleryCard
@@ -137,13 +142,15 @@ export const Team = () => {
                                     _id={item._id}
                                     setPopup={setPopup}
                                     set_id={set_id}
+                                    itemIndex={index}
+                                    setIndex={setIndex}
                                 />
                             </div>
                         )
                     })}
                 </div>
             </Section>
-            {popupShow && <Popup id={_id} name={'teams'} closePopup={closePopup} />}
+            {popupShow && <Popup id={_id} name={'teams'} closePopup={closePopup} allGallery={data} setIndex={setIndex}/>}
         </>
     )
 }

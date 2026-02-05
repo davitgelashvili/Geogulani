@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.749ac70b.css",
-    "main.js": "/static/js/main.ef641090.js",
+    "main.js": "/static/js/main.01140e6c.js",
     "static/js/453.258b012d.chunk.js": "/static/js/453.258b012d.chunk.js",
     "static/media/Anbandidi_Gospel_—_12.png": "/static/media/Anbandidi_Gospel_—_12.d9ed2bce94a01c862a75.png",
     "static/media/Anbandidi_Gospel_—_1.png": "/static/media/Anbandidi_Gospel_—_1.8ce045e5d3d31284d853.png",
@@ -14,11 +14,11 @@
     "static/media/Asset5.png": "/static/media/Asset5.cbeec6fd0d0ca236d802.png",
     "index.html": "/index.html",
     "main.749ac70b.css.map": "/static/css/main.749ac70b.css.map",
-    "main.ef641090.js.map": "/static/js/main.ef641090.js.map",
+    "main.01140e6c.js.map": "/static/js/main.01140e6c.js.map",
     "453.258b012d.chunk.js.map": "/static/js/453.258b012d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.749ac70b.css",
-    "static/js/main.ef641090.js"
+    "static/js/main.01140e6c.js"
   ]
 }

@@ -13,6 +13,7 @@ import { Popup } from '../../Popup/Popup';
 import { useLanguage } from '../../../context/LanguageContext';
 
 export const LatestGallery = () => {
+    const [index, setIndex] = useState(0)
     const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [popupShow, setPopup] = useState(false)
@@ -23,6 +24,7 @@ export const LatestGallery = () => {
         limit: 5
     });
     const [totalPages, setTotalPages] = useState(1);
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -56,7 +58,7 @@ export const LatestGallery = () => {
         <>
             <div style={{ position: 'fixed', bottom: 0, width: '100%', height: '100vh', backgroundColor: 'rgba(255, 241, 242, 0.7)', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
                 <Section>
-                    <SectionTitle title={sectionTitle[language ]} />
+                    <SectionTitle title={sectionTitle[language]} />
                     {load && <Loading />}
                     <Swiper
                         onSlideChange={() => console.log('slide change')}
@@ -79,7 +81,7 @@ export const LatestGallery = () => {
                             },
                         }}
                     >
-                        {data && data?.map((item) => {
+                        {data && data?.map((item, index) => {
                             return (
                                 <SwiperSlide key={item._id}>
                                     <GalleryCard
@@ -89,6 +91,8 @@ export const LatestGallery = () => {
                                         _id={item._id}
                                         setPopup={setPopup}
                                         set_id={set_id}
+                                        itemIndex={index}
+                                        setIndex={setIndex}
                                     />
                                 </SwiperSlide>
                             )
@@ -99,7 +103,7 @@ export const LatestGallery = () => {
                     </div>
                 </Section>
             </div>
-            {popupShow && <Popup id={_id} name={'gallery'} closePopup={closePopup} />}
+            {popupShow && <Popup id={_id} name={'gallery'} closePopup={closePopup} allGallery={data} setIndex={setIndex} index={index} />}
         </>
     )
 }

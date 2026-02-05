@@ -14,7 +14,7 @@ export const Popup = ({ id, name, closePopup, allGallery, index, setIndex }) => 
     useEffect(() => {
         async function fetchData() {
             try {
-                const blogs = await getApi.getData(`/${name}/${allGallery[index]._id}`)
+                const blogs = await getApi.getData(`/${name}/${index ? allGallery[index]._id : id}`)
                 setData(blogs)
             } catch (err) {
                 console.error('Error fetching blogs:', err)
@@ -24,18 +24,22 @@ export const Popup = ({ id, name, closePopup, allGallery, index, setIndex }) => 
         }
 
         fetchData();
-        console.log(allGallery[index]._id,index)
+        // console.log(allGallery[index]._id, index)
 
-    }, [index]);
+    }, [index, id]);
 
     function handleNext() {
-        setLoad(true)
-        setIndex(index + 1)
+        if (index < allGallery.length - 1) {
+            setLoad(true)
+            setIndex(prev => prev + 1)
+        }
     }
 
     function handlePrev() {
-        setLoad(true)
-        setIndex(index - 1)
+        if (index > 0) {
+            setLoad(true)
+            setIndex(prev => prev - 1)
+        }
     }
 
     return (
@@ -45,7 +49,15 @@ export const Popup = ({ id, name, closePopup, allGallery, index, setIndex }) => 
             {!load && (
                 <div className={`${styles.custom_container}`}>
                     <div className='d-flex align-items-center'>
-                        <button style={{ zIndex: 1 }} onClick={handlePrev}>Prev</button>
+                        {index && (
+                            <button
+                                className="page-btn"
+                                disabled={index === 0}
+                                onClick={handlePrev}
+                            >
+                                ◀
+                            </button>
+                        )}
                         <div className={styles.popup__content}>
                             <div className='container'>
                                 <div className='row'>
@@ -66,7 +78,15 @@ export const Popup = ({ id, name, closePopup, allGallery, index, setIndex }) => 
                                 </div>
                             </div>
                         </div>
-                        <button style={{ zIndex: 1 }} onClick={handleNext}>Next</button>
+                        {index && (
+                            <button
+                                className="page-btn"
+                                disabled={index === allGallery.length - 1}
+                                onClick={handleNext}
+                            >
+                                ▶
+                            </button>
+                        )}
                     </div>
                 </div>
             )}

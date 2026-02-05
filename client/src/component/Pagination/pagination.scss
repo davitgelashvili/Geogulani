@@ -1,0 +1,94 @@
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    padding: 12px 18px;
+
+    background: #ffffff;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    width: fit-content;
+    margin: 12px auto;
+}
+
+
+/* Prev / Next */
+.page-btn {
+    width: 36px;
+    height: 36px;
+    z-index: 1;
+
+    border-radius: 8px;
+
+    border: none;
+
+    background: rgba(163, 0, 38, 0.9);
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: rgba(163, 0, 38, 0.9);
+    transform: translateY(-1px);
+}
+
+.page-btn:disabled {
+    background: #e5e7eb;
+    color: #9ca3af;
+
+    cursor: not-allowed;
+}
+
+
+/* Page Numbers */
+.page-number {
+    min-width: 36px;
+    height: 36px;
+
+    padding: 0 10px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    background: transparent;
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.page-number:hover {
+    background: #eef2ff;
+}
+
+
+/* Active page */
+.page-number.active {
+    background: rgba(163, 0, 38, 0.9);
+    color: #fff;
+
+    box-shadow: 0 3px 8px rgba(79, 70, 229, 0.4);
+}
+
+
+/* Dots */
+.page-dots {
+    padding: 0 6px;
+    font-size: 16px;
+    color: #9ca3af;
+}

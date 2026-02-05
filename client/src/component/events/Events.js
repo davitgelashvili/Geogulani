@@ -5,6 +5,7 @@ import PageTitle from '../SectionTitle/PageTitle';
 import Card from '../Card/Card';
 import Loading from '../Loading/Loading';
 import { useLanguage } from '../../context/LanguageContext';
+import Pagination from '../Pagination';
 
 export const Events = () => {
     const { language } = useLanguage()
@@ -59,6 +60,17 @@ export const Events = () => {
         ru: '',
     }
 
+    const handlePageChange = (page) => {
+        if (page === params.page) return;
+
+        setPageLoad(true);
+
+        setParams(prev => ({
+            ...prev,
+            page
+        }));
+    };
+
     return (
         <Section>
             <PageTitle
@@ -80,17 +92,13 @@ export const Events = () => {
                     )
                 })}
             </div>
-            <div style={{ width: '250px', height: '50px' }}>
+            <div>
                 {pageLoad ? <Loading /> : (
-                    <>
-                        <button onClick={handlePrev} disabled={params.page === 1}>
-                            Perv
-                        </button>
-                        <span>Page: {params.page} / {totalPages}</span>
-                        <button onClick={handleNext} disabled={params.page === totalPages}>
-                            Next
-                        </button>
-                    </>
+                    <Pagination
+                        currentPage={params.page}
+                        totalPages={totalPages}
+                        onPageChange={handlePageChange}
+                    />
                 )}
             </div>
         </Section>

@@ -7,6 +7,7 @@ import GalleryCard from '../GalleryCard/GalleryCard';
 import Loading from '../Loading/Loading';
 import { Popup } from '../Popup/Popup';
 import { useLanguage } from '../../context/LanguageContext';
+import Pagination from '../Pagination';
 
 export const Gallery = () => {
     const [index, setIndex] = useState(0)
@@ -21,6 +22,7 @@ export const Gallery = () => {
         limit: 20
     });
     const [totalPages, setTotalPages] = useState(1);
+    
     useEffect(() => {
         async function fetchData() {
             try {
@@ -39,19 +41,19 @@ export const Gallery = () => {
         fetchData();
     }, [params]);
 
-    const handleNext = () => {
-        if (params.page < totalPages) {
-            setPageLoad(true)
-            setParams(prev => ({ ...prev, page: prev.page + 1 }));
-        }
-    };
+    // const handleNext = () => {
+    //     if (params.page < totalPages) {
+    //         setPageLoad(true)
+    //         setParams(prev => ({ ...prev, page: prev.page + 1 }));
+    //     }
+    // };
 
-    const handlePrev = () => {
-        if (params.page > 1) {
-            setPageLoad(true)
-            setParams(prev => ({ ...prev, page: prev.page - 1 }));
-        }
-    };
+    // const handlePrev = () => {
+    //     if (params.page > 1) {
+    //         setPageLoad(true)
+    //         setParams(prev => ({ ...prev, page: prev.page - 1 }));
+    //     }
+    // };
 
     function closePopup() {
         document.body.style.overflow = 'unset'
@@ -70,6 +72,18 @@ export const Gallery = () => {
         ru: '',
     }
 
+    const handlePageChange = (page) => {
+        if (page === params.page) return;
+
+        setPageLoad(true);
+
+        setParams(prev => ({
+            ...prev,
+            page
+        }));
+    };
+
+
     return (
         <>
             <Section>
@@ -87,30 +101,26 @@ export const Gallery = () => {
                                     title={item.title[language]}
                                     desc={item.desc[language]}
                                     _id={item._id}
-                                    itemIndex={index}
                                     setPopup={setPopup}
                                     set_id={set_id}
+                                    itemIndex={index}
                                     setIndex={setIndex}
                                 />
                             </div>
                         )
                     })}
                 </div>
-                <div style={{ width: '250px', height: '50px' }}>
+                <div>
                     {pageLoad ? <Loading /> : (
-                        <>
-                            <button onClick={handlePrev} disabled={params.page === 1}>
-                                Perv
-                            </button>
-                            <span>Page: {params.page} / {totalPages}</span>
-                            <button onClick={handleNext} disabled={params.page === totalPages}>
-                                Next
-                            </button>
-                        </>
+                        <Pagination
+                            currentPage={params.page}
+                            totalPages={totalPages}
+                            onPageChange={handlePageChange}
+                        />
                     )}
                 </div>
             </Section>
-            {popupShow && <Popup id={_id} allGallery={data} name={'gallery'} closePopup={closePopup} setIndex={setIndex} index={index}/>}
+            {popupShow && <Popup id={_id} name={'gallery'} closePopup={closePopup} allGallery={data} setIndex={setIndex} index={index} />}
         </>
     )
 }
