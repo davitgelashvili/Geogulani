@@ -9,6 +9,7 @@ import { Popup } from '../Popup/Popup';
 import { useLanguage } from '../../context/LanguageContext';
 
 export const Gallery = () => {
+    const [index, setIndex] = useState(0)
     const { language } = useLanguage()
     const [load, setLoad] = useState(true)
     const [pageLoad, setPageLoad] = useState(false)
@@ -78,7 +79,7 @@ export const Gallery = () => {
                 />
                 {load && <Loading />}
                 <div className='row'>
-                    {data && data?.map((item) => {
+                    {data && data?.map((item, index) => {
                         return (
                             <div className='col-6 col-md-4 col-lg-3' key={item._id}>
                                 <GalleryCard
@@ -86,8 +87,10 @@ export const Gallery = () => {
                                     title={item.title[language]}
                                     desc={item.desc[language]}
                                     _id={item._id}
+                                    itemIndex={index}
                                     setPopup={setPopup}
                                     set_id={set_id}
+                                    setIndex={setIndex}
                                 />
                             </div>
                         )
@@ -107,7 +110,7 @@ export const Gallery = () => {
                     )}
                 </div>
             </Section>
-            {popupShow && <Popup id={_id} name={'gallery'} closePopup={closePopup} />}
+            {popupShow && <Popup id={_id} allGallery={data} name={'gallery'} closePopup={closePopup} setIndex={setIndex} index={index}/>}
         </>
     )
 }

@@ -32,8 +32,6 @@ export default function AddCars() {
         const blog = await getApi.getData(`/cars/${id}`);
         const blogData = blog
 
-        console.log(blog)
-
         setData((prev) => ({
           ...prev,
           ...blogData,
@@ -74,7 +72,6 @@ export default function AddCars() {
     try {
       if (id) {
         // ედიტირება
-        console.log(data)
         await getApi.putData(`/cars/${id}`, data);
         alert('ბლოგი წარმატებით განახლდა');
       } else {

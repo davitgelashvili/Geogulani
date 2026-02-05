@@ -163,7 +163,7 @@ export default function Menu({ className, setActive }) {
     return (
         <ul className={`${styles['menu']} position-absolute ${className}`}>
             {data && data?.map((item) => {
-                console.log(item)
+                
                 const isCurrentSubmenuOpen = activeSubmenu === item?.title?.en;
                 return (
                     <li className={`${styles['menu__item']}`} key={item?.title?.en}>
