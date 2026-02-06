@@ -35,20 +35,6 @@ export const Events = () => {
         fetchData();
     }, [params]);
 
-    const handleNext = () => {
-        if (params.page < totalPages) {
-            setPageLoad(true)
-            setParams(prev => ({ ...prev, page: prev.page + 1 }));
-        }
-    };
-
-    const handlePrev = () => {
-        if (params.page > 1) {
-            setPageLoad(true)
-            setParams(prev => ({ ...prev, page: prev.page - 1 }));
-        }
-    };
-
     const pageTitle = {
         ka: 'ღონისძიებები',
         en: 'Events',

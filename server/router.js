@@ -12,6 +12,7 @@ const CampsRouter = require("./allRouter/CampsRouter.js");
 const EventsRouter = require("./allRouter/EventsRouter.js");
 const MessageRouter = require("./allRouter/MessageRouter.js");
 const PartnersRouter = require("./allRouter/PartnersRouter.js");
+const FestivalRouter = require("./allRouter/FestivalRouter.js");
 
 mainRouter.get('/', (req, res) => {
     res.json({ message: 'გამარჯობა Frontend-იდან!' });
@@ -28,6 +29,7 @@ mainRouter.use("/camps", CampsRouter);
 mainRouter.use("/events", EventsRouter);
 mainRouter.use("/message", MessageRouter);
 mainRouter.use("/partners", PartnersRouter);
+mainRouter.use("/festival", FestivalRouter);
 mainRouter.use("/users", userRouter);
 
 

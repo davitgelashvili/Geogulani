@@ -49,6 +49,11 @@ export default function Sidebar() {
             _id: 'dsa3casca',
             title: 'პარტნიორები',
             url: '/adminpanel/partners'
+        },
+        {
+            _id: 'asdf3vfdds',
+            title: 'ფესტივალები',
+            url: '/adminpanel/festival'
         }
     ]
 

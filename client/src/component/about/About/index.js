@@ -34,6 +34,7 @@ export const About = () => {
             <p>წრიული ორნამენტის მთლიანი ფორმა კი  განასახიერებს ხევსურულ ფარს, რომელიც საქართველოს მდიდარი, ძლიერი, მტკიცე და უდრეკი მეომრული ტრადიციების სიმბოლოა.</p>
             <p>ორნამენტის გარშემო  განლაგებული  წითელი წერტილები ბროწეულის მარცვლების სიმბოლოებია, რომლებიც   ქართულ კულტურაში სიუხვეს, სიმრავლესა და ნაყოფიერებას გამოხატავს. მნიშვნლოვანია, რომ   ლოგოს  შემქმნელები ბროწეულის მარცვლებს  მოიაზრებენ   მრავალფეროვანი ქართული კულტურის  სიმბოლოდ.</p>
             <p>ჩვენი  ლოგო  სულიერი და კულტურული კოდების მატარებელი, ქართული კალიგრაფიის წარსულს, აწმყოსა და მომავალის გამაერთიანებელი   სიმბოლოა. </p>
+            <p>ლოგო შექმნილია ჩვენი ასოციაციის ვიცე-პრეზიდენტის კალიგრაფი მხატვარი და ხატმწერი დავით მოისწრაფიშვილის მიერ  </p>
             `,
         en: `
             <p>This unique logo embodies the spiritual depth, inner essence, character, and diversity of Georgian culture. Two fundamental colors are brought together in harmony: the red background symbolizes continuity and heritage, while the white graphic lines are associated with purity, perfection, and creative energy.</p>
@@ -43,7 +44,8 @@ export const About = () => {
             <p>The overall circular form of the ornament evokes a Khevsurian shield, a symbol of Georgia’s rich, strong, steadfast, and resilient warrior traditions.</p>
             <p>The red dots arranged around the ornament symbolize pomegranate seeds, which in Georgian culture signify abundance, multiplicity, and fertility. Importantly, the creators of the logo interpret these pomegranate seeds as a symbol of the diversity inherent in Georgian culture.</p>
             <p>Our logo is thus a bearer of spiritual and cultural codes—a unifying symbol that connects the past, present, and future of Georgian calligraphy.</p>
-        `,
+            <p>The logo was created by David Moistsrapishvili, calligrapher, artist, and iconographer, who serves as Vice President of our Association.</p>
+            `,
         ru: '',
     }
     return (

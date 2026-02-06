@@ -11,6 +11,7 @@ import CampsPage from './page/Camps'
 import EventsPage from './page/Events'
 import MessagePage from './page/Message'
 import PartnersPage from './page/partners'
+import FestivalPage from './page/Festival'
 
 export default function Adminpanel() {
     const [isLogin, setIsLogin] = useState(true)
@@ -42,6 +43,7 @@ export default function Adminpanel() {
                                 <Route path='/events*' element={<EventsPage />} />
                                 <Route path='/message*' element={<MessagePage />} />
                                 <Route path='/partners*' element={<PartnersPage />} />
+                                <Route path='/festival*' element={<FestivalPage />} />
                             </Routes>
                         </div>
                     </>
