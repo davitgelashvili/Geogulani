@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3cdb9674.css",
+    "main.js": "/static/js/main.688da4ca.js",
+    "static/js/453.258b012d.chunk.js": "/static/js/453.258b012d.chunk.js",
+    "static/media/Anbandidi_Gospel_—_12.png": "/static/media/Anbandidi_Gospel_—_12.d9ed2bce94a01c862a75.png",
+    "static/media/Anbandidi_Gospel_—_1.png": "/static/media/Anbandidi_Gospel_—_1.8ce045e5d3d31284d853.png",
+    "static/media/campscover.jpeg": "/static/media/campscover.4c9792d3f8416bcb03e3.jpeg",
+    "static/media/footer_logo.png": "/static/media/footer_logo.87082b8b01509ff7b441.png",
+    "static/media/logo_ka.png": "/static/media/logo_ka.e408ae8cad4a93771bba.png",
+    "static/media/original_red.png": "/static/media/original_red.be5ef6b1eb216c8c0a00.png",
+    "static/media/wearelogo.png": "/static/media/wearelogo.0817c33e59d9f979ae54.png",
+    "static/media/geocalligraphy_mkhedruli.png": "/static/media/geocalligraphy_mkhedruli.f096a6902c350f60109e.png",
+    "static/media/fest_gulani.png": "/static/media/fest_gulani.e609eb51d8d1498430c5.png",
+    "static/media/Asset5.png": "/static/media/Asset5.cbeec6fd0d0ca236d802.png",
+    "index.html": "/index.html",
+    "main.3cdb9674.css.map": "/static/css/main.3cdb9674.css.map",
+    "main.688da4ca.js.map": "/static/js/main.688da4ca.js.map",
+    "453.258b012d.chunk.js.map": "/static/js/453.258b012d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3cdb9674.css",
+    "static/js/main.688da4ca.js"
+  ]
+}
