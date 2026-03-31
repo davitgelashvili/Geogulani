@@ -68,7 +68,7 @@ export default function AddTeam() {
     setData((prev) => ({
       ...prev,
       [name]: {
-        ...prev.title,
+        ...prev[name],
         [language]: value,
       },
     }));
@@ -107,7 +107,7 @@ export default function AddTeam() {
         value={data.cover}
         name="cover"
       />
-      <select onChange={(e)=>setData({...data, category: e.target.value})}>
+      <select onChange={(e) => setData({ ...data, category: e.target.value })}>
         <option value={''} >choose</option>
         <option value={'leadership'}>Leadership</option>
         <option value={'calligraphers'}>Calligraphers</option>

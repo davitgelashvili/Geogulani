@@ -11,6 +11,7 @@ import getApi from '../../../http/getApi'
 import { ImageBox } from '../../ImageBox/ImageBox'
 import Loading from '../../Loading/Loading'
 import { useLanguage } from '../../../context/LanguageContext'
+import cover from '../../../assets/images/campscover.jpeg'
 
 export const Camps = () => {
     const { language } = useLanguage()
@@ -91,7 +92,7 @@ export const Camps = () => {
             <Section>
                 <PageTitle
                     title={pageTitle[language]}
-                    text={pageText[language]}
+                    text={''}
                 />
                 <div className={styles['camps-container']}>
                     <div>
@@ -112,9 +113,23 @@ export const Camps = () => {
                         </div>
                         <div className='col-4'>
                             <figure className={styles['cover']}>
-                                <ImageBox src='https://static.tkt.ge/next/static/images/zugdidi.jpg' alt='cover' />
+                                <ImageBox src={cover} alt='cover' />
                             </figure>
                         </div>
+                    </div>
+                    {load && <Loading />}
+                    <div className='row'>
+                        {data && data?.map((item) => {
+                            return (
+                                <div className='col-md-6 col-lg-4' key={item._id}>
+                                    <Card
+                                        cover={item.cover}
+                                        title={item.title[language]}
+                                        desc={item.desc[language]}
+                                        url={`/camps/${item._id}`} />
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </Section>

@@ -142,7 +142,7 @@ export const Members = () => {
             <Section>
                 <PageTitle
                     title={pageTitle[language]}
-                    text={pageText[language]}
+                    text={''}
                 />
                 {/* <SectionTitle title={'წევრობა'} /> */}
                 <div className='row'>
