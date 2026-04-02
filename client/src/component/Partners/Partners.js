@@ -74,7 +74,7 @@ export const Partners = () => {
         <Section>
             <PageTitle
                 title={pageTitle[language]}
-                text={pageText[language]}
+                text={''}
             />
             {load && <Loading />}
             <div className='row'>

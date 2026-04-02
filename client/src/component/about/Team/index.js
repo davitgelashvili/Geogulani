@@ -82,7 +82,7 @@ export const Team = () => {
             <Section>
                 <PageTitle
                     title={pageTitle[language]}
-                    text={pageText[language]}
+                    text={''}
                 />
                 <SectionTitle title={title.first[language]} />
                 {load && <Loading />}

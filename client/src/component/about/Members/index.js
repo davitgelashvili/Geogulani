@@ -6,6 +6,8 @@ import PageTitle from '../../SectionTitle/PageTitle'
 import ServiceCard from '../../ServiceCard/ServiceCard'
 import Card from '../../Card/Card'
 import { useLanguage } from '../../../context/LanguageContext'
+import studenticon from '../../../assets/images/studentsclub_icon.png'
+import adultsicon from '../../../assets/images/adultsclub_icon.png'
 
 export const Members = () => {
     const { language } = useLanguage()
@@ -73,10 +75,10 @@ export const Members = () => {
     const apply = [
         {
             _id: 'dsad23ca',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
+            cover: studenticon,
             title: {
                 ka: `მოსწავლეთა კლუბი`,
-                en: `Students’ Club`,
+                en: `Students Club`,
                 ru: ``
             },
             desc: {
@@ -93,10 +95,10 @@ export const Members = () => {
         },
         {
             _id: 'dsd2c',
-            cover: 'https://static.tkt.ge/next/static/images/zugdidi.jpg',
+            cover: adultsicon,
             title: {
                 ka: `უფროსთა კლუბი`,
-                en: `Adults’ Club`,
+                en: `Adults Club`,
                 ru: ``
             },
             desc:
