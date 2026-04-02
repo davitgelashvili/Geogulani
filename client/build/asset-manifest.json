@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3cdb9674.css",
-    "main.js": "/static/js/main.688da4ca.js",
+    "main.css": "/static/css/main.9dc75a05.css",
+    "main.js": "/static/js/main.3bc75e52.js",
     "static/js/453.258b012d.chunk.js": "/static/js/453.258b012d.chunk.js",
     "static/media/Anbandidi_Gospel_—_12.png": "/static/media/Anbandidi_Gospel_—_12.d9ed2bce94a01c862a75.png",
     "static/media/Anbandidi_Gospel_—_1.png": "/static/media/Anbandidi_Gospel_—_1.8ce045e5d3d31284d853.png",
@@ -13,13 +13,15 @@
     "static/media/geocalligraphy_mkhedruli.png": "/static/media/geocalligraphy_mkhedruli.f096a6902c350f60109e.png",
     "static/media/fest_gulani.png": "/static/media/fest_gulani.e609eb51d8d1498430c5.png",
     "static/media/Asset5.png": "/static/media/Asset5.cbeec6fd0d0ca236d802.png",
+    "static/media/studentsclub_icon.png": "/static/media/studentsclub_icon.f153fb4b984192e7f6f7.png",
+    "static/media/adultsclub_icon.png": "/static/media/adultsclub_icon.61e70b9d10c83d2a61a2.png",
     "index.html": "/index.html",
-    "main.3cdb9674.css.map": "/static/css/main.3cdb9674.css.map",
-    "main.688da4ca.js.map": "/static/js/main.688da4ca.js.map",
+    "main.9dc75a05.css.map": "/static/css/main.9dc75a05.css.map",
+    "main.3bc75e52.js.map": "/static/js/main.3bc75e52.js.map",
     "453.258b012d.chunk.js.map": "/static/js/453.258b012d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cdb9674.css",
-    "static/js/main.688da4ca.js"
+    "static/css/main.9dc75a05.css",
+    "static/js/main.3bc75e52.js"
   ]
 }
