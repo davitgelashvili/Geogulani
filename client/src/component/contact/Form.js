@@ -11,15 +11,15 @@ export const Form = ({ courseName }) => {
     const [loading, setLoading] = useState(false);
 
     const t = {
-        courseName:   { ka: 'კურსის სახელი',       en: 'Course Name',    ru: '코스 이름' },
-        fullname:     { ka: 'სახელი და გვარი',      en: 'Full Name',      ru: '이름 및 성' },
-        email:        { ka: 'ელ. ფოსტა',            en: 'Email',          ru: '이메일' },
-        phone:        { ka: 'ტელეფონის ნომერი',     en: 'Phone Number',   ru: '전화번호' },
-        placeholder:  { ka: 'შეიყვანეთ მონაცემები', en: 'Enter data',     ru: '데이터를 입력하세요' },
-        description:  { ka: 'აღწერა',               en: 'Description',    ru: '설명' },
-        send:         { ka: 'გაგზავნა',             en: 'Send',           ru: '보내기' },
-        success:      { ka: 'მაილი გაიგზავნა წარმატებით', en: 'Email sent successfully', ru: '이메일이 성공적으로 전송되었습니다' },
-        error:        { ka: 'დაფიქსირდა შეცდომა',  en: 'An error occurred', ru: '오류가 발생했습니다' },
+        courseName:   { ka: 'კურსის სახელი',       en: 'Course Name',    ru: 'コース名' },
+        fullname:     { ka: 'სახელი და გვარი',      en: 'Full Name',      ru: '氏名' },
+        email:        { ka: 'ელ. ფოსტა',            en: 'Email',          ru: 'メールアドレス' },
+        phone:        { ka: 'ტელეფონის ნომერი',     en: 'Phone Number',   ru: '電話番号' },
+        placeholder:  { ka: 'შეიყვანეთ მონაცემები', en: 'Enter data',     ru: '（内容をご入力ください）' },
+        description:  { ka: 'აღწერა',               en: 'Description',    ru: '内容' },
+        send:         { ka: 'გაგზავნა',             en: 'Send',           ru: '送信' },
+        success:      { ka: 'მაილი გაიგზავნა წარმატებით', en: 'Email sent successfully', ru: 'メールが正常に送信されました' },
+        error:        { ka: 'დაფიქსირდა შეცდომა',  en: 'An error occurred', ru: 'エラーが発生しました' },
     };
     const [values, setValues] = useState({
         fullname: "",

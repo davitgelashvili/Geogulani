@@ -33,7 +33,7 @@ export const Detail = () => {
     const regText = {
         ka: 'რეგისტრაცია',
         en: 'Registration',
-        ru: '등록',
+        ru: '登録',
     }
 
     // if (!data) return null

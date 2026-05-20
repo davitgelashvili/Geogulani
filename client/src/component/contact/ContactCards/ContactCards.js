@@ -9,10 +9,10 @@ export const ContactCards = () => {
     const { language } = useLanguage()
 
     const t = {
-        address1: { ka: '11. გრიშაშვილის ქ. თბილისი, საქართველო.', en: '11 Grishashvili St. Tbilisi, Georgia.', ru: '11 그리샤쉬빌리 거리, 트빌리시, 조지아.' },
-        address2: { ka: 'ზემო ნიქოზის ხელოვნების სკოლა', en: 'Zemo Niqozi Art School', ru: '제모 니코지 예술학교' },
-        address3: { ka: 'წნორის შშმ ბავშთა სახლი', en: "Tsnori Children's Home", ru: '츠노리 장애아동의 집' },
-        weekend:  { ka: 'შაბათ-კვირა - დახურულია', en: 'Weekend - Close', ru: '주말 - 휴무' },
+        address1: { ka: '11. გრიშაშვილის ქ. თბილისი, საქართველო.', en: '11 Grishashvili St. Tbilisi, Georgia.', ru: '11 Grishashvili St., Tbilisi, Georgia' },
+        address2: { ka: 'ზემო ნიქოზის ხელოვნების სკოლა', en: 'Zemo Niqozi Art School', ru: 'グルジア・ニコジ美術学校' },
+        address3: { ka: 'წნორის შშმ ბავშთა სახლი', en: "Tsnori Children's Home", ru: 'ツノリ障がい児童支援施設' },
+        weekend:  { ka: 'შაბათ-კვირა - დახურულია', en: 'Weekend - Close', ru: '週末 - 休業' },
     }
 
     const data1 = [

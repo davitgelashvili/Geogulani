@@ -9,12 +9,12 @@ export const Contact = () => {
     const pageTitle = {
         ka: 'კონტაქტი',
         en: 'Contact',
-        ru: '연락처',
+        ru: 'お問い合わせ',
     }
     const pageText = {
         ka: 'საკონტაქტო ინფორმაცია და შესავსები ფორმა',
         en: 'Contact information and inquiry form',
-        ru: '연락처 정보 및 문의 양식',
+        ru: 'お問い合わせ情報・お問い合わせフォーム',
     }
 
     return (

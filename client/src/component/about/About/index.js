@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Section from '../../SectionTitle/Section'
 import SectionTitle from '../../SectionTitle/SectionTitle'
 import styles from './styles.module.scss'
@@ -10,14 +10,14 @@ import { useLanguage } from '../../../context/LanguageContext'
 export const About = () => {
     const {language} = useLanguage()
     const pageTitle = {
-        ka: 'ასოციაცია',
-        en: 'Association',
-        ru: '',
+        ka: `ასოციაცია`,
+        en: `Association`,
+        ru: `協会`,
     }
     const pageText = {
-        ka: 'ქართული კალიგრაფიის პირველი საერთაშორისო ასოციაცია შეიქმნა უძველესი და უნიკალური ქართული კალიგრაფიული ხელოვნების მრავალფეროვნების ასახვისა და თანამედროვეობაში გაცოცხლების მიზნით. ჩვენ ვცდილობთ შევინარჩუნოთ მრავალსაუკუნოვანი ტრადიცია და მოვძებნოთ მოდერნული შემოქმედებითი ფორმები, რათა  ფართო აუდიტორიას გავაცნოთ  კაცობრიობის  არამატერიალურ კულტურულ მემკვიდრეობად აღიარებული  ქართული  ანბანი.  ჩვენი ასოციაცია აერთიანებს როგორც პროფესიონალ კალიგრაფებს, ასევე მათაც, ვინც დაინტერესებულია კალიგრაფიული ხელოვნების შესწავლით. ჩვენ გვსურს უნიკალური ქართული კალიგრაფიის შენარჩუნება, განვითარება და მისი დაბრუნება თანამედროვე ქართულ   კულტურასა  და  განათლებაში.',
-        en: 'The first International Association of Georgian Calligraphy was established with the aim of presenting the diversity of ancient and unique Georgian calligraphic art and revitalizing it within a contemporary context. We strive to preserve a centuries-old tradition while simultaneously exploring modern creative forms through which we can introduce the Georgian alphabet—recognized as an element of humanity’s intangible cultural heritage—to a broad audience.',
-        ru: '',
+        ka: `ქართული კალიგრაფიის პირველი საერთაშორისო ასოციაცია შეიქმნა უძველესი და უნიკალური ქართული კალიგრაფიული ხელოვნების მრავალფეროვნების ასახვისა და თანამედროვეობაში გაცოცხლების მიზნით. ჩვენ ვცდილობთ შევინარჩუნოთ მრავალსაუკუნოვანი ტრადიცია და მოვძებნოთ მოდერნული შემოქმედებითი ფორმები, რათა  ფართო აუდიტორიას გავაცნოთ  კაცობრიობის  არამატერიალურ კულტურულ მემკვიდრეობად აღიარებული  ქართული  ანბანი.  ჩვენი ასოციაცია აერთიანებს როგორც პროფესიონალ კალიგრაფებს, ასევე მათაც, ვინც დაინტერესებულია კალიგრაფიული ხელოვნების შესწავლით. ჩვენ გვსურს უნიკალური ქართული კალიგრაფიის შენარჩუნება, განვითარება და მისი დაბრუნება თანამედროვე ქართულ   კულტურასა  და  განათლებაში.`,
+        en: `The first International Association of Georgian Calligraphy was established with the aim of presenting the diversity of ancient and unique Georgian calligraphic art and revitalizing it within a contemporary context. We strive to preserve a centuries-old tradition while simultaneously exploring modern creative forms through which we can introduce the Georgian alphabet—recognized as an element of humanity’s intangible cultural heritage—to a broad audience.`,
+        ru: `ジョージア書道国際協会は、古くから受け継がれてきた独自のジョージア書道芸術の多様性を表現し、現代に蘇らせることを目的として設立されました。私たちは、何世紀にもわたる伝統を守りながら、現代的で創造的な表現方法を探求し、人類の無形文化遺産として認められているジョージア文字を広く紹介することを目指しています。本協会には、プロの書道家だけでなく、書道芸術の学習に関心を持つ人々も参加しています。私たちは、独自性あふれるジョージア書道を保存・発展させ、現代のジョージア文化と教育の中に再び根付かせたいと考えています。`,
     }
 
     const title = {

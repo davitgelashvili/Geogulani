@@ -38,12 +38,12 @@ export const Events = () => {
     const pageTitle = {
         ka: 'ღონისძიებები',
         en: 'Events',
-        ru: '이벤트',
+        ru: 'イベント',
     }
     const pageText = {
         ka: 'ტესტი',
         en: 'test',
-        ru: '테스트',
+        ru: 'テスト',
     }
 
     const handlePageChange = (page) => {
