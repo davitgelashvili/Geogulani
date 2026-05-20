@@ -42,30 +42,30 @@ export const Camps = () => {
     const pageTitle = {
         ka: 'კალიგრაფიული ბანაკები',
         en: 'Calligraphy Camps',
-        ru: '',
+        ru: 'カリグラフィーキャンプ   ',
     }
     const pageText = {
-        ka: 'ტესტი',
-        en: 'test',
+        ka: '',
+        en: '',
         ru: '',
     }
 
     const sectionTitle = {
         ka: '1 კვირიანი საერთაშორისო ბანაკი',
         en: 'A one-week international camp ',
-        ru: '',
+        ru: '1週間の国際キャンプでは、ジョージア書道を深く学び、創造力を高める特別な体験を提供します。',
     }
 
     const list = {
         first: {
             ka: `გამორჩეული გამოცდილება მათთვის, ვისაც სურს ქართული კალიგრაფიის ღრმა წვდომა და შემოქმედებით გარემოში საკუთარი შესაძლებლობების განვითარება.`,
             en: `Offers a unique experience for those who seek in-depth engagement with Georgian calligraphy and wish to develop their creative potential in an inspiring environment.`,
-            ru: ``,
+            ru: `主な内容： `,
         },
         second: {
             ka: `ბანაკები ტარდება როგორც საქართველოში, ასევე უცხოეთში პარტნიორი ორგანიზაციების აქტიური ჩართულობით.`,
             en: `Camps are held both in Georgia and abroad, with the active involvement of partner organizations.`,
-            ru: ``,
+            ru: `キャンプはジョージア国内および海外で開催され、パートナー機関と協力して実施します。`,
         },
         body: {
             ka: `
@@ -83,6 +83,11 @@ export const Camps = () => {
                 <li>A concluding assembly and an official exhibition of participants’ works.</li>
             `,
             ru: `
+            <li>書道家による毎日の集中講座</li>
+            <li>ジョージア三書体（ムヘドルリ、アソムタヴルリ、ヌスフリ）の学習</li>
+            <li>教会・歴史遺跡・博物館の見学</li>
+            <li>夜間の創作ワークショップとテーマ別交流</li>
+            <li>最終発表会および作品展示</li>
             `,
         }
     }
@@ -92,7 +97,7 @@ export const Camps = () => {
             <Section>
                 <PageTitle
                     title={pageTitle[language]}
-                    text={''}
+                    text={pageText[language]}
                 />
                 <div className={styles['camps-container']}>
                     <div>

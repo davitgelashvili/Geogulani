@@ -11,7 +11,7 @@ export default function Menu({ className, setActive }) {
             title: {
                 ka: 'მთავარი',
                 en: 'Home',
-                ru: '',
+                ru: 'ホーム',
             },
             url: '/'
         },
@@ -19,14 +19,14 @@ export default function Menu({ className, setActive }) {
             title: {
                 ka: 'ჩვენ',
                 en: 'About',
-                ru: '',
+                ru: '私たちについて',
             },
             data: [
                 {
                     title: {
                         ka: 'ასოციაცია',
                         en: 'Asociation',
-                        ru: ''
+                        ru: '協会'
                     },
                     url: '/about',
                 },
@@ -34,7 +34,7 @@ export default function Menu({ className, setActive }) {
                     title: {
                         ka: 'ფესტივალი გულანი',
                         en: 'Gulani Festival',
-                        ru: ''
+                        ru: 'グラニ・フェスティバル'
                     },
                     url: '/festgulani',
                 },
@@ -42,7 +42,7 @@ export default function Menu({ className, setActive }) {
                     title: {
                         ka: 'ქართული კალიგრაფია',
                         en: 'Georgian Calligraphy',
-                        ru: ''
+                        ru: 'ジョージア書道'
                     },
                     url: '/geocalligraphy',
                 },
@@ -50,7 +50,7 @@ export default function Menu({ className, setActive }) {
                     title: {
                         ka: 'პრეზიდენტის მიმართვა',
                         en: 'Message',
-                        ru: ''
+                        ru: 'メッセージ'
                     },
                     url: '/message',
                 },
@@ -58,7 +58,7 @@ export default function Menu({ className, setActive }) {
                     title: {
                         ka: 'გუნდი',
                         en: 'Our Team',
-                        ru: ''
+                        ru: 'チーム'
                     },
                     url: '/teams',
                 },
@@ -66,7 +66,7 @@ export default function Menu({ className, setActive }) {
                     title: {
                         ka: 'წევრობა',
                         en: 'Membership',
-                        ru: ''
+                        ru: '会員資格'
                     },
                     url: '/members',
                 },
@@ -74,7 +74,7 @@ export default function Menu({ className, setActive }) {
                     title: {
                         ka: 'პარტნიორები',
                         en: 'Partners',
-                        ru: ''
+                        ru: 'パートナー'
                     },
                     url: '/partners',
                 },
@@ -84,14 +84,14 @@ export default function Menu({ className, setActive }) {
             title: {
                 ka: 'განათლება',
                 en: 'Education',
-                ru: '',
+                ru: '教育',
             },
             data: [
                 {
                     title: {
                         ka: 'კურსები',
                         en: 'Course',
-                        ru: ''
+                        ru: 'コース'
                     },
                     url: '/education',
                 },
@@ -99,7 +99,7 @@ export default function Menu({ className, setActive }) {
                     title: {
                         ka: 'ბანაკები',
                         en: 'Camps',
-                        ru: ''
+                        ru: 'キャンプ'
                     },
                     url: '/camps',
                 },
@@ -107,7 +107,7 @@ export default function Menu({ className, setActive }) {
                     title: {
                         ka: 'საერთაშორისო ინტეგრაცია',
                         en: 'Exchange',
-                        ru: ''
+                        ru: '国際交流'
                     },
                     url: '/exchange',
                 }
@@ -117,14 +117,14 @@ export default function Menu({ className, setActive }) {
             title: {
                 ka: 'მედია',
                 en: 'Media',
-                ru: '',
+                ru: 'メディア',
             },
             data: [
                 {
                     title: {
                         ka: 'სიახლეები',
                         en: 'News',
-                        ru: ''
+                        ru: 'ニュース'
                     },
                     url: '/blogs',
                 },
@@ -132,7 +132,7 @@ export default function Menu({ className, setActive }) {
                     title: {
                         ka: 'გალერეა',
                         en: 'Gallery',
-                        ru: ''
+                        ru: 'ギャラリー'
                     },
                     url: '/gallery',
                 },
@@ -140,7 +140,7 @@ export default function Menu({ className, setActive }) {
                     title: {
                         ka: 'ღონისძიებები',
                         en: 'Events',
-                        ru: ''
+                        ru: 'イベント'
                     },
                     url: '/events',
                 },
@@ -150,7 +150,7 @@ export default function Menu({ className, setActive }) {
             title: {
                 ka: 'კონტაქტი',
                 en: 'Contact',
-                ru: '',
+                ru: 'お問い合わせ',
             },
             url: '/contact'
         }

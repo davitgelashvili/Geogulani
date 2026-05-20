@@ -14,7 +14,7 @@ export const Footer = () => {
             title: {
                 ka: 'მთავარი',
                 en: 'Home',
-                ru: ''
+                ru: '홈'
             }
         },
         {
@@ -23,7 +23,7 @@ export const Footer = () => {
             title: {
                 ka: 'ასოციაცია',
                 en: 'Association',
-                ru: ''
+                ru: '협회'
             }
         },
         {
@@ -32,7 +32,7 @@ export const Footer = () => {
             title: {
                 ka: 'კურსები',
                 en: 'Courses',
-                ru: ''
+                ru: '코스'
             }
         },
         {
@@ -41,7 +41,7 @@ export const Footer = () => {
             title: {
                 ka: 'ღონისძიებები',
                 en: 'Events',
-                ru: ''
+                ru: '이벤트'
             }
         },
         {
@@ -50,7 +50,7 @@ export const Footer = () => {
             title: {
                 ka: 'კონტაქტი',
                 en: 'Contact',
-                ru: ''
+                ru: '연락처'
             }
         }
     ]

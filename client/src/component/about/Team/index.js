@@ -51,29 +51,29 @@ export const Team = () => {
     const pageTitle = {
         ka: 'ჩვენი გუნდი',
         en: 'Our Team',
-        ru: '',
+        ru: 'チーム',
     }
     const pageText = {
         ka: 'ტესტი',
         en: 'test',
-        ru: '',
+        ru: 'テスト',
     }
 
     const title = {
         first: {
             ka: `დირექტორატი`,
             en: `Directorate`,
-            ru: ``
+            ru: `ディレクトレート`
         },
         second: {
             ka: `ბორდი`,
             en: `Board`,
-            ru: ``
+            ru: `ボード`
         },
         threed: {
             ka: `კალიგრაფები`,
             en: `Calligraphers`,
-            ru: ``
+            ru: `書道家`
         }
     }
 

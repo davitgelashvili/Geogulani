@@ -38,7 +38,7 @@ export const LatestEvents = () => {
     const sectionTitle = {
         ka: 'ღონისძიებები',
         en: 'EVENTS',
-        ru: '',
+        ru: 'イベント',
     }
 
     return (

@@ -51,12 +51,12 @@ export const Partners = () => {
     const pageTitle = {
         ka: 'პარტნიორები',
         en: 'Partners',
-        ru: '',
+        ru: 'パートナー',
     }
     const pageText = {
         ka: 'ტესტი',
         en: 'test',
-        ru: '',
+        ru: 'テスト',
     }
 
         const handlePageChange = (page) => {

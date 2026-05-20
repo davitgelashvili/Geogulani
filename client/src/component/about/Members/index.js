@@ -18,7 +18,7 @@ export const Members = () => {
             title: {
                 ka: 'სტანდარტული წევრი',
                 en: `Standard Member`,
-                ru: ``,
+                ru: `スタンダード会員   `,
             },
             desc: {
                 ka: `
@@ -29,7 +29,10 @@ export const Members = () => {
                 Standard members are the first to receive updates about the Association’s activities, may participate in planned events free of charge, and can create their own profiles within the international calligraphy network.
                 <p>Membership fee:</p> <strong>Georgia: 10 GEL / per month</strong>
                 `,
-                ru: ``
+                ru: `
+                協会の活動情報を優先的に受け取り、イベントに無料で参加できるほか、国際書道ネットワーク上でプロフィールを作成することができます。
+                <p>会費：</p> <strong>ジョージア：月額10ラリ　海外：月額10ユーロ</strong>
+                `
             },
         },
         {
@@ -37,7 +40,7 @@ export const Members = () => {
             title: {
                 ka: 'საერთაშორისო წევრი',
                 en: `International Member`,
-                ru: ``,
+                ru: `インターナショナル会員`,
             },
             desc: {
                 ka: `
@@ -48,7 +51,10 @@ export const Members = () => {
                 Standard members are the first to receive updates about the Association’s activities, may participate in planned events free of charge, and can create their own profiles within the international calligraphy network.
                 <p>Membership fee:</p> <strong>International: 10 EUR / per month</strong>
                 `,
-                ru: ``
+                ru: `
+                協会の活動情報を優先的に受け取り、イベントに無料で参加できるほか、国際書道ネットワーク上でプロフィールを作成することができます。
+                <p>会費：</p> <strong>海外：月額10ユーロ</strong>
+                `
             },
         },
         {
@@ -56,7 +62,7 @@ export const Members = () => {
             title: {
                 ka: 'საპატიო წევრი',
                 en: `Honorary Member`,
-                ru: ``,
+                ru: `名誉会員`,
             },
             desc: {
                 ka: `
@@ -67,7 +73,10 @@ export const Members = () => {
                 <p>Honorary membership is granted to individuals who have made an outstanding and productive contribution to the development, promotion, and dissemination of Georgian calligraphic art.</p></br>
                 Honorary members are selected by the Association’s Directorate. They are awarded the Association’s special Grand Prix and are entitled to participate in any event, festival, or international forum organized by the Association.
                 `,
-                ru: ``
+                ru: `
+                <p>ジョージア書道の発展・普及に顕著な貢献をした人物に授与されます。</p></br>
+                協会理事会によって選出され、特別グランプリの授与や、すべてのイベント・フェスティバルへの参加資格が与えられます。
+                `
             },
         }
     ]
@@ -79,7 +88,7 @@ export const Members = () => {
             title: {
                 ka: `მოსწავლეთა კლუბი`,
                 en: `Students Club`,
-                ru: ``
+                ru: `学生会員`
             },
             desc: {
                 ka: `
@@ -90,7 +99,10 @@ export const Members = () => {
                 The club is designed for students aged 6–18. Members receive specially developed educational materials, study calligraphy under the guidance of professional calligraphers, and gain opportunities to participate in children’s competitions and youth festivals. They also benefit from special discounts and exclusive offers.
                 <p>Membership fee:</p><strong>12 GEL / per year</strong>
                 `,
-                ru: ``
+                ru: `
+                6〜18歳を対象とし、専門教材の提供、書道家による指導、子ども向けコンテストやフェスティバルへの参加機会があります。
+                <p>会費：</p><strong>年額12ラリ</strong>
+                `
             },
         },
         {
@@ -99,7 +111,7 @@ export const Members = () => {
             title: {
                 ka: `უფროსთა კლუბი`,
                 en: `Adults Club`,
-                ru: ``
+                ru: `成人会員`
             },
             desc:
             {
@@ -111,7 +123,10 @@ export const Members = () => {
                 Members receive exclusive access to creative programs and masterclasses, personalized professional consultations, and opportunities to participate in competitions and festivals. They also enjoy special discounts and exclusive offers.
                 <p>Membership fee:</p><strong>120 GEL / per year</strong>
                 `,
-                ru: ``
+                ru: `
+                マスタークラス、個別指導、コンテストやフェスティバルへの参加機会が提供されます。
+                <p>会費：</p><strong>年額120ラリ</strong>
+                `
             },
         }
     ]
@@ -119,12 +134,12 @@ export const Members = () => {
     const pageTitle = {
         ka: 'წევრობა',
         en: 'Membership',
-        ru: '',
+        ru: 'メンバーシップ   ',
     }
     const pageText = {
-        ka: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
-        en: 'test text',
-        ru: '',
+        ka: '',
+        en: '',
+        ru: '第一国際ジョージア書道協会には、会員として参加することができます。会員の方には、文化・教育プロジェクトへの参加機会や、各種特典を受けることができます。',
     }
 
     const sectionTitle = {
@@ -136,7 +151,7 @@ export const Members = () => {
     const footerText = {
         ka: `📌 კლუბების წევრებს ვთავაზობთ 50%- მდე  ფასდაკლებას ასოციაციის ყველა პროდუქციასა და აქტივობაზე.`,
         en: '📌 Club members receive up to a 50% discount on all Association products and activities.',
-        ru: '',
+        ru: '※会員は、協会の各種商品・活動に対して最大50％の割引を受けられます。',
     }
 
     return (
@@ -144,7 +159,7 @@ export const Members = () => {
             <Section>
                 <PageTitle
                     title={pageTitle[language]}
-                    text={''}
+                    text={pageText[language]}
                 />
                 {/* <SectionTitle title={'წევრობა'} /> */}
                 <div className='row'>

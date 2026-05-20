@@ -38,12 +38,12 @@ export const Courses = () => {
     const pageTitle = {
         ka: 'კურსები',
         en: 'Courses',
-        ru: '',
+        ru: 'コース',
     }
     const pageText = {
         ka: 'ქართული კალიგრაფიის პირველი საერთაშორისო ასოციაცია გთავაზობთ ონლაინ (მთელი მსოფლიოს მასშტაბით) და ადგილზე გრძელვადიან, მოკლევადიან და ერთჯერად კალიგრაფიის კურსებსა და მასტერკლასებს.',
-        en: 'test text',
-        ru: '',
+        en: 'The First International Association of Georgian Calligraphy offers online (worldwide) and in-person long-term, short-term, and one-time calligraphy courses and masterclasses.',
+        ru: 'テストテキスト',
     }
 
     return (

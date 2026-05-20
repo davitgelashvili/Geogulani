@@ -33,7 +33,7 @@ export const Detail = () => {
     const regText = {
         ka: 'რეგისტრაცია',
         en: 'Registration',
-        ru: '',
+        ru: '등록',
     }
 
     // if (!data) return null
@@ -54,7 +54,7 @@ export const Detail = () => {
                             <div dangerouslySetInnerHTML={{ __html: data?.desc?.[language] }} className='col-lg-8'></div>
                             <div className='col-lg-4'>
                                 <h1>{regText[language]}</h1>
-                                <Form courseName={data?.title?.[language]} />
+                                <Form courseName={data?.title?.[language] || data?.title?.en} />
                             </div>
                         </div>
                     ) : (

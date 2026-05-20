@@ -62,14 +62,14 @@ export const Gallery = () => {
     }
 
     const pageTitle = {
-        ka: 'გალერეა',
-        en: 'Gallery',
-        ru: '',
+        ka: `გალერეა`,
+        en: `Gallery`,
+        ru: `갤러리`,
     }
     const pageText = {
-        ka: 'აქ წარმოდგენილია ჩვენი ასოციაციის კალიგრაფთა ნამუშევრები, რომელთა შეძენაც შესაძლებელია სურვილისამებრ.',
-        en: 'Here are presented the works of our association’s calligraphers, available for purchase upon request.',
-        ru: '',
+        ka: `აქ წარმოდგენილია ჩვენი ასოციაციის კალიგრაფთა ნამუშევრები, რომელთა შეძენაც შესაძლებელია სურვილისამებრ.`,
+        en: `Here are presented the works of our association’s calligraphers, available for purchase upon request.`,
+        ru: `여기에는 협회 서예가들의 작품이 전시되어 있으며, 원하시면 구매하실 수 있습니다.`,
     }
 
     const handlePageChange = (page) => {

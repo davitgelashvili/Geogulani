@@ -51,7 +51,7 @@ export const LatestGallery = () => {
     const sectionTitle = {
         ka: 'გალერეა',
         en: 'GALLERY',
-        ru: '',
+        ru: 'ギャラリー',
     }
 
     return (

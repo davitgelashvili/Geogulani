@@ -16,12 +16,12 @@ export const GeoCalligraphy = () => {
     const pageTitle = {
         ka: 'კალიგრაფია ეს არის ლამაზად წერის ხელოვნება',
         en: 'Calligraphy is the art of expressive and aesthetically refined writing.',
-        ru: '',
+        ru: '書道は、美しく表現豊かな文字を書く芸術です。  ',
     }
     const title = {
         ka: 'ქართული კალიგრაფიის სამყაროში',
         en: 'In the World of Georgian Calligraphy',
-        ru: '',
+        ru: 'ジョージア書道の世界  ',
     }
     const desc = {
         ka: `
@@ -43,7 +43,15 @@ export const GeoCalligraphy = () => {
         <p>The full beauty of the Georgian alphabet is preserved in Georgian handwritten books created by Georgian calligraphers. Georgian manuscript tradition and the art of the book span a history of sixteen centuries. Today, approximately 11,000 Georgian manuscript books are known, preserved in major libraries and collections both in Georgia and abroad.</p>
         <p>The history of Georgian calligraphy records more than sixty significant calligraphers. Nevertheless, it must be emphasized that even today, in the 21st century, numerous contemporary artists continue to work creatively, producing calligraphic masterpieces in the classical Georgian alphabet and ensuring the living continuity of this remarkable artistic tradition.</p>
         `,
-        ru: '',
+        ru: `
+            <p>書道とは、筆の運びによって形づくられる線の芸術であり、紙に刻まれる文字の美しさです。ジョージア文字は優雅さや繊細さ、そして流れるような形によって独自の美しい世界観を生み出し、「書く」という行為そのものを繊細な芸術へと高めています。</p>
+            <p>ジョージア文字は世界で最も古い文字体系の一つであり、世界でわずか14種類しかないアルファベット体系のひとつに数えられています。2016年11月30日には、ユネスコの「人類の無形文化遺産の代表一覧」に登録されました。</p>
+            <p>ジョージア文字の起源を明確に示す史料はありません。11世紀の歴史家レオンティ・ムロヴェリは、紀元前3世紀のファルナヴァズ1世がジョージア文字を作り、ジョージア語を公用語として整えたと記しています。特徴の一つは、書いた通りに読めるという点です。</p>
+            <p>現存する最古の例は、西暦430年のパレスチナのジョージア修道院（ビル・エル・クット）の碑文で、現在はエルサレムのフランシスコ会博物館に保存されています。また、ジョージア東部のネクレシでは碑文が発見され、学術的な研究が進められています。さらに、グラクリアニ遺跡の碑文は、文字の歴史に新たな視点をもたらす可能性がある重要な発見とされています。</p>
+            <p>ジョージア文字には、アソムタヴルリ、ヌスフリ、ムヘドルリの３種類があります。それぞれが独自の造形美を持っており、最も古いのはアソムタヴルリとされています。文字の発展の流れとしては、アソムタヴルリからヌスフリが生まれ、さらにヌスフリからムヘドルリへと発展しました。ヌスフリが使われた記録は9世紀まで遡り、12世紀以降にはヌスフリのみで書かれた写本も現れます。一方、ムヘドルリは現代のジョージア文字として用いられており、最古の記録は10世紀に遡ります。</p>
+            <p>ジョージア文字の美しさは、書道家たちによって生み出された手書きの書物に受け継がれています。ジョージアの写本と書物の文化は、16世紀にわたる歴史を持ち、現在では約11,000点の写本が世界各地の図書館などに保存されています。</p>
+            <p>ジョージア書道の歴史には、60名以上の著名な書家が知られています。現在でも、多くのアーティストが創作活動を続け、古典的なジョージア文字を用いた作品を生み出しながら、この伝統を生きた文として継承しています。</p>
+        `,
     }
     return (
         <>

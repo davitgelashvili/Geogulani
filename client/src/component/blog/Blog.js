@@ -63,12 +63,12 @@ export const Blog = () => {
     const pageTitle = {
         ka: 'სიახლეები',
         en: 'NEWS',
-        ru: '',
+        ru: '뉴스',
     }
     const pageText = {
         ka: 'ტესტი',
         en: 'test',
-        ru: '',
+        ru: '테스트',
     }
 
     return (

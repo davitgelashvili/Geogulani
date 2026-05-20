@@ -40,7 +40,7 @@ export const LatestNews = () => {
     const sectionTitle = {
         ka: 'სიახლეები',
         en: 'NEWS',
-        ru: '',
+        ru: 'ニュース',
     }
 
     return (

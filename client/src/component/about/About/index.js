@@ -23,7 +23,7 @@ export const About = () => {
     const title = {
         ka: 'სიმბოლოს შესახებ',
         en: 'About the Symbol',
-        ru: '',
+        ru: 'ロゴマークについて',
     }
     const desc = {
         ka: `
@@ -46,7 +46,15 @@ export const About = () => {
             <p>Our logo is thus a bearer of spiritual and cultural codes—a unifying symbol that connects the past, present, and future of Georgian calligraphy.</p>
             <p>The logo was created by David Moistsrapishvili, calligrapher, artist, and iconographer, who serves as Vice President of our Association.</p>
             `,
-        ru: '',
+        ru: `
+            <p>赤と白を基調としており、赤い背景は継承と伝統を、白い線は純粋さ、完成美、そして創造性を象徴しています。</p>
+            <p>ロゴのモチーフは、最古のジョージア文字体系に属するアソムタヴルリ書体の文字「カン（Kan）」を基に構成しています。このデザインは、神と人間との深い結びつきを表しています。</p>
+            <p>中央にある円形の装飾は、ジョージアの歴史的美術に見られる古典的なモチーフです。絶え間ない動きと発展を象徴するとともに、脈々と受け継がれてきた豊かな伝統を表しています。</p>
+            <p>中央の赤い十字は、ジョージア国旗を想起させるものです。広い意味では、ジョージアにおけるキリスト教文化とのつながりを示しています。</p>
+            <p>また、装飾全体にある円形のデザインは、ヘヴスレティ地方の盾をイメージしました。ジョージアに受け継がれる、力強い戦士の伝統を象徴しています。</p>
+            <p>周囲にある赤い点は、ザクロの種を表しています。ジョージア文化において、繁栄、多様性、生命力の象徴とされています。</p>
+            <p>本協会のロゴマークには、ジョージアの精神性と文化的な意味を込め、ジョージア書道の過去・現在・未来を結ぶ象徴としました。</p>
+        `,
     }
     return (
         <>

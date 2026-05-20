@@ -40,13 +40,13 @@ export const Exchange = () => {
     const pageTitle = {
         ka: `კულტურული ინტერაქცია`,
         en: `Cultural Interaction`,
-        ru: ``
+        ru: `文化交流プログラム  `
     }
 
     const pageText = {
         ka: `ჩვენი კულტურული ინტერაქციის პროგრამა აერთიანებს საერთაშორისო სიახლეებს, ხელოვნებასა და განათლებას, ასევე საერთაშორისო ფესტივალებში, გამოფენებსა და კონფერენციებში მონაწილეობას და ქართველი კალიგრაფების აქტიურ სამეცნიერო პრაქტიკაში ჩაბმას.`,
         en: `Our Cultural Interaction Program integrates international initiatives in art and education, participation in international festivals, exhibitions, and conferences, and the active engagement of Georgian calligraphers in global academic and professional practice.`,
-        ru: ``
+        ru: `芸術・教育分野の国際的な活動、国際フェスティバルや展示会への参加、そしてジョージア書道家の海外での活動を支援する取り組みです。`
     }
 
     const benefits = [
@@ -58,7 +58,7 @@ export const Exchange = () => {
             title: {
                 ka: 'საერთაშორისო ფესტივალები, გამოფენები და კონფერენციები',
                 en: 'International Festivals, Exhibitions, and Conferences',
-                ru: ''
+                ru: '国際フェスティバル・展示会・会議   '
             },
             desc: {
                 ka: `
@@ -81,7 +81,12 @@ export const Exchange = () => {
                 <p></p>
                 <p>These platforms enable them to present the distinctive character of Georgian calligraphy, introduce the world to Georgia’s unique alphabet and stylistic traditions, and establish professional connections with calligraphers from other countries.</p>
                 `,
-                ru: ``
+                ru: `
+                <p>国際書道フェスティバル</p>
+                <p>芸術ビエンナーレ</p>
+                <p>専門会議、セミナー</p>
+                <p>文化フォーラム</p>
+                `
             }
         },
         {
@@ -92,7 +97,7 @@ export const Exchange = () => {
             title: {
                 ka: 'მეცნიერული და კვლევითი თანამშრომლობა',
                 en: 'Scholarly and Research Collaboration',
-                ru: ''
+                ru: '学術研究協力 '
             },
             desc: {
                 ka: `
@@ -111,7 +116,12 @@ export const Exchange = () => {
                 <li>Work with archives, libraries, and collections of academies of sciences.</li>
                 <p>This area of activity plays a crucial role in establishing Georgian calligraphy internationally as both a scholarly discipline and a vital element of cultural heritage.</p>
                 `,
-                ru: ``,
+                ru: `
+                <p>写本学・古文書学・文字史研究</p>
+                <p>国際共同研究</p>
+                <p>学術論文の発表</p>
+                <p>図書館・アーカイブでの調査</p>
+                `,
             }
         },
     ]

@@ -42,7 +42,7 @@ export const FestGulan = () => {
     const pageTitle = {
         ka: 'ფესტივალი „გულანი“',
         en: 'Gulani Festival',
-        ru: '',
+        ru: 'グラニ・フェスティバル   ',
     }
     const festTitle = {
         ka: 'ფესტივალი',
@@ -72,7 +72,14 @@ export const FestGulan = () => {
             <p>In light of these historical and cultural associations, the official website and the festival itself were naturally and symbolically named: </p>
             <p><strong>geogulani.com</strong></p>
         `,
-        ru: '',
+        ru: `
+            <p>第一回国際ジョージア書道フェスティバル「グラニ」は、2025年に第一国際ジョージア書道協会の主導で創設しました。初年度から国際的な評価を得ており、海外在住のジョージア人に加え、日本など書道文化を持つ国々からの参加者もいます。</p>
+            <p>本フェスティバルは毎年開催され、ジョージア書道の普及と発展を目的としています。作品展示・販売のほか、書道パフォーマンス、集中講義、講演会、文化交流プログラムなどが行われます。</p>
+            <p>グランプリが設けられており、さらにジョージア書道の発展に貢献した人物には名誉賞が授与されます。</p>
+            <p>「グラニ」という名称は、古ジョージア語に由来し、礼拝で使われる文書を意味します。これは福音書や詩篇などを特別な聖典としてまとめた書物であり、ジョージア独自の文化的遺産です。</p>
+            <p>これらの文化的背景から、公式サイトおよびフェスティバル名は象徴的に「geogulani.com」と名付けました。</p>
+            <p><strong>geogulani.com</strong></p>
+        `,
     }
 
     const handlePageChange = (page) => {
